@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="governo.mdh.portal">
+  <body tal:define="is_empty view/is_empty">
+
+    <p tal:condition="python: is_empty and view.is_compose_mode()" i18n:translate="">
+        Drag&amp;drop an image or link here to populate the tile.
+    </p>
+
+    <div class="brasil-photogallery-tile tile-content"
+         tal:attributes="id string:gallery-${view/id}"
+         tal:condition="not:is_empty">
+      <h3 class="gallery-title" tal:content="view/tile_title" />
+      <div class="swiper-container photogallery-container">
+        <div class="swiper-wrapper">
+          <tal:items repeat="obj view/results">
+            <div class="swiper-slide"
+                 tal:attributes="data-tile-id view/id;
+                                 data-content-type obj/portal_type;
+                                 data-content-uuid python:view.get_uuid(obj)">
+              <div class="image-container"
+                  tal:define="scales obj/@@images;
+                              thumbnail python:scales.scale('image', scale=None)">
+                  <tal:image define="scales obj/@@images;
+                                     thumbnail python:scales.scale('image', scale=None)"
+                             condition="thumbnail">
+                    <img tal:attributes="src thumbnail/url;
+                                         class string:gallery-image;
+                                         alt python:view.get_alt(obj);" />
+                  </tal:image>
+
+                  <div class="container-bar">
+                      <div class="text-bottom">
+                        <p class="description" tal:content="python:view.get_description(obj)">Description</p>
+                        <p class="credits" tal:content="python:view.get_credits(obj)">Credits</p>
+                      </div>
+
+                      <div class="links-bottom">
+                        <a tal:attributes="href string:${thumbnail/url}" class="zoom-icon">Zoom</a>
+                        <a tal:attributes="href string:${obj/absolute_url}/@@download/image" class="download-icon">Download</a>
+                      </div>
+                  </div>
+                </div>
+            </div>
+          </tal:items>
+        </div>
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+      </div>
+    </div>
+  </body>
+</html>

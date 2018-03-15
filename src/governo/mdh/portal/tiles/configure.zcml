@@ -1,0 +1,87 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="governo.mdh.portal">
+
+  <include package="plone.tiles" file="meta.zcml" />
+
+  <plone:tile
+      name="brasil.gallery"
+      for="*"
+      title="Gallery"
+      description="Display an image gallery."
+      icon="++resource++collective.cover/img/tile-generic.png"
+      add_permission="cmf.ModifyPortalContent"
+      schema=".gallery.IGalleryTile"
+      class=".gallery.GalleryTile"
+      permission="zope2.View"
+      template="gallery.pt"
+      />
+
+  <plone:tile
+      name="brasil.carousel"
+      for="*"
+      title="Carousel"
+      description="Display a carousel of items."
+      icon="++resource++collective.cover/img/tile-generic.png"
+      add_permission="cmf.ModifyPortalContent"
+      schema=".carousel.ICarouselTile"
+      class=".carousel.CarouselTile"
+      permission="zope2.View"
+      template="carousel.pt"
+      />
+
+  <plone:tile
+      name="brasil.navigation"
+      for="*"
+      title="Navigation"
+      description="Display a section navigation."
+      icon="++resource++collective.cover/img/tile-generic.png"
+      add_permission="cmf.ModifyPortalContent"
+      schema=".navigation.INavigationTile"
+      class=".navigation.NavigationTile"
+      permission="zope2.View"
+      template="navigation.pt"
+      />
+
+  <plone:tile
+      name="brasileficiente.highlights"
+      for="*"
+      title="Highlights"
+      description="Display a highlights section."
+      icon="++resource++collective.cover/img/tile-generic.png"
+      add_permission="cmf.ModifyPortalContent"
+      schema=".highlights.IHighlightsTile"
+      class=".highlights.HighlightsTile"
+      permission="zope2.View"
+      template="highlights.pt"
+      />
+
+  <plone:tile
+      name="brasil.photoday"
+      for="*"
+      title="Photo day"
+      description="Display a photo of the day section."
+      icon="++resource++collective.cover/img/tile-banner.png"
+      add_permission="cmf.ModifyPortalContent"
+      schema=".photo_day.IPhotoDayTile"
+      class=".photo_day.PhotoDayTile"
+      permission="zope2.View"
+      template="photo_day.pt"
+      />
+
+   <plone:tile
+      name="brasil.photogallery"
+      for="*"
+      title="Photo Gallery"
+      description="Display a photo of the day section."
+      icon="++resource++collective.cover/img/tile-banner.png"
+      add_permission="cmf.ModifyPortalContent"
+      schema=".photogallery.IPhotoGalleryTile"
+      class=".photogallery.PhotoGalleryTile"
+      permission="zope2.View"
+      template="photogallery.pt"
+      />
+
+</configure>

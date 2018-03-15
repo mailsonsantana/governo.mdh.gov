@@ -1,0 +1,65 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    i18n_domain="governo.mdh.portal">
+
+  <five:registerPackage package="." />
+
+  <i18n:registerTranslations directory="locales" />
+
+  <permission
+      id="governo.mdh.portal.addMinistry"
+      title="governo.mdh.portal: Add Ministry"
+      />
+
+  <permission
+      id="governo.mdh.portal.Setup"
+      title="governo.mdh.portal: Setup"
+      />
+
+  <include package="brasil.gov.portal" />
+  <include package="z3c.jbot" />
+
+  <include package=".browser" />
+  <include package=".tiles" />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="Portal do Ministério dos Direitos Humanos"
+      directory="profiles/default"
+      description=""
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      post_handler=".setuphandlers.post_install"
+      i18n:attributes="title; description"
+      />
+
+  <utility factory=".setuphandlers.NonInstallable" name="governo.mdh.portal" />
+
+  <utility
+      provides="zope.schema.interfaces.IVocabularyFactory"
+      component=".vocabularies.DocumentTypesVocabulary"
+      name="governo.mdh.portal.DocumentTypes"
+      />
+
+  <include package="plone.behavior" file="meta.zcml" />
+
+  <plone:behavior
+      title="Document classification"
+      description="Adds extra fields for document classification."
+      provides="governo.mdh.portal.behaviors.IDocumentClassification"
+      for="plone.app.contenttypes.interfaces.IFile"
+      i18n:attributes="title; description"
+      />
+
+  <class class=".widgets.textlinessortable.TextLinesSortableWidget">
+    <require
+        permission="zope.Public"
+        interface="collective.cover.widgets.interfaces.ITextLinesSortableWidget"
+        />
+  </class>
+
+</configure>

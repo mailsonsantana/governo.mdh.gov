@@ -1,0 +1,84 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2018-02-19 16:57+0000\n"
+"PO-Revision-Date: 2018-02-19 13:59-0300\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: pt_BR\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#: governo/planalto/portal/profiles/default/types/Ministry.xml
+msgid "A ministry."
+msgstr "Um ministério."
+
+#: governo/planalto/portal/interfaces.py:59
+msgid "Body text"
+msgstr "Corpo do texto"
+
+#: governo/planalto/portal/profiles/default/types/Ministry.xml
+msgid "Ministry"
+msgstr "Ministério"
+
+#: governo/planalto/portal/configure.zcml:31
+msgid "Portal da Presidência da República"
+msgstr "Portal da Presidência da República"
+
+#. Default: "A brief text describing the mission of the ministry."
+#: governo/planalto/portal/interfaces.py:27
+msgid "help_description"
+msgstr "Un texto breve descrevendo a missão do ministério."
+
+#. Default: "A photo of the minister in close-up."
+#: governo/planalto/portal/interfaces.py:44
+msgid "help_image"
+msgstr "Uma foto do ministro em close-up."
+
+#. Default: "A photo of the minister to be used as lead image."
+#: governo/planalto/portal/interfaces.py:52
+msgid "help_lead_image"
+msgstr "Uma foto do ministro para ser usada como imagem principal."
+
+#. Default: "The name of the minister."
+#: governo/planalto/portal/interfaces.py:36
+msgid "help_minister"
+msgstr "O nome do ministro."
+
+#. Default: "The name of the ministry."
+#: governo/planalto/portal/interfaces.py:19
+msgid "help_title"
+msgstr "O nome do ministério."
+
+#. Default: "Description"
+#: governo/planalto/portal/interfaces.py:26
+msgid "label_description"
+msgstr "Descrição"
+
+#. Default: "Photo (close-up)"
+#: governo/planalto/portal/interfaces.py:43
+msgid "label_image"
+msgstr "Foto (close-up)"
+
+#. Default: "Photo (lead image)"
+#: governo/planalto/portal/interfaces.py:51
+msgid "label_lead_image"
+msgstr "Foto (imagem principal)"
+
+#. Default: "Minister"
+#: governo/planalto/portal/browser/ministry.pt:32
+#: governo/planalto/portal/interfaces.py:35
+msgid "label_minister"
+msgstr "Ministro"
+
+#. Default: "Name"
+#: governo/planalto/portal/interfaces.py:18
+msgid "label_title"
+msgstr "Nome"

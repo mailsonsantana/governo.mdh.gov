@@ -1,0 +1,37 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="governo.mdh.portal">
+  <body>
+    <div tal:attributes="class string:brasileficiente-highlights-tile tile-content highlights-size-${view/data/tile_size};">
+      <tal:image condition="view/has_image">
+        <img class="highlights-image"
+             sizes="100vw"
+             tal:define="scales view/@@images;
+                         thumbnail python:scales.scale('image', scale=None)"
+             tal:attributes="src thumbnail/url;
+                             srcset view/get_srcset;
+                             alt view/data/image_description">
+      </tal:image>
+      <div class="highlights-content">
+        <div class="highlights-text"
+          tal:condition="view/data/text">
+          <div tal:replace="structure view/data/text/raw">Rich Text</div>
+          <a class="highlights-video"
+             tal:define="video_link view/data/video_link"
+             tal:condition="video_link"
+             tal:attributes="href video_link">
+            Assista ao vídeo
+          </a>
+          <a class="highlights-more"
+             tal:condition="view/more_link"
+             tal:attributes="href view/more_link/href"
+             tal:content="view/more_link/text">
+            Saiba mais
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

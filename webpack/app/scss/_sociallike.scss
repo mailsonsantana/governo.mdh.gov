@@ -1,0 +1,91 @@
+/* tile likes */
+#content .cover-richtext-tile,
+#content .nitf-basic-tile {
+  .likes {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    display: flex;
+
+    height: 29px;
+    margin: 0 10px 0 0;
+
+    list-style: none;
+  }
+  .likes-item {
+    width: 20px;
+  }
+  .likes-item,
+  .likes-item > a {
+    display: none;
+  }
+  .likes-item > a {
+    overflow: hidden;
+
+    transform: scale(.6);
+    white-space: nowrap;
+    text-indent: -3000px;
+
+    filter: invert(100%);
+  }
+  .likes-open,
+  .likes-open > a,
+  .likes-pinned,
+  .likes-pinned > a {
+    display: block;
+  }
+  .likes-fb > a {
+    @include sprite($fb-ic);
+  }
+  .likes-twitter > a {
+    @include sprite($twitter-ic);
+  }
+  .likes-linkedin > a {
+    @include sprite($linkedin-ic);
+  }
+  .likes-gplus > a {
+    @include sprite($gplus-ic);
+  }
+  .likes-link > a {
+    @include sprite($link-ic);
+  }
+  .likes-more > a {
+    font-weight: bold;
+
+    width: 20px;
+    padding-left: 6px;
+
+    text-align: center;
+  }
+  .likes-more > a:link,
+  .likes-more > a:visited,
+  .likes-more > a:hover {
+    color: #FFF !important;
+  }
+  .likes-more.likes-open > a {
+    font-size: 14px;
+    font-weight: normal;
+
+    transform: translateY(0);
+  }
+}
+#content .cover-richtext-tile {
+  .likes {
+    transform: translate(-10px, -11px);
+  }
+  .likes-more > a {
+    transform: translateY(-6px);
+  }
+}
+#content .nitf-basic-tile {
+  .likes-more > a {
+    transform: translateY(-1px);
+  }
+}
+#content .box-branco .cover-richtext-tile,
+#content .box-branco .nitf-basic-tile {
+  .likes {
+    filter: invert(100%);
+  }
+}

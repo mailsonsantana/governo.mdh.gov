@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<layers>
+  <layer
+      name="governo.mdh.portal"
+      interface="governo.mdh.portal.interfaces.IBrowserLayer"
+      />
+</layers>

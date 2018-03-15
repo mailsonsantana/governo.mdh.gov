@@ -1,0 +1,76 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="governo.mdh.portal">
+
+  <include package="z3c.jbot" file="meta.zcml" />
+
+  <includeOverrides file="overrides.zcml" />
+
+  <browser:jbot directory="overrides" />
+
+  <browser:resourceDirectory name="portalmdh" directory="static" />
+
+  <browser:page
+      class="governo.mdh.portal.browser.ministry.View"
+      for="governo.mdh.portal.interfaces.IMinistry"
+      layer="governo.mdh.portal.interfaces.IBrowserLayer"
+      name="view"
+      permission="zope2.View"
+      template="ministry.pt"
+      />
+
+  <browser:menuItem
+      for="plone.app.contenttypes.interfaces.IFolder"
+      menu="plone_displayviews"
+      title="Centrais de conteúdo"
+      action="centrais-de-conteudo"
+      description="Mostra um formulário de busca de conteúdo."
+      />
+
+  <browser:page
+      name="centrais-de-conteudo"
+      for="plone.app.contenttypes.interfaces.IFolder"
+      class=".contentcentral.ContentCentralView"
+      permission="zope2.View"
+      template="contentcentral.pt"
+      layer="governo.mdh.portal.interfaces.IBrowserLayer"
+      />
+
+  <browser:page
+      name="tile-download"
+      for="*"
+      class=".download.DownloadView"
+      layer="governo.mdh.portal.interfaces.IBrowserLayer"
+      permission="zope.Public"
+      />
+
+  <browser:viewlet
+      class=".viewlets.MinistersViewlet"
+      for="governo.mdh.portal.interfaces.IMinistry"
+      layer="governo.mdh.portal.interfaces.IBrowserLayer"
+      manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+      name="mdh.ministers"
+      permission="zope2.View"
+      template="ministers_viewlet.pt"
+      />
+
+  <browser:menuItem
+      for="plone.app.contenttypes.interfaces.ICollection"
+      menu="plone_displayviews"
+      title="Filtro de resultados"
+      action="filter-results"
+      description="Aplica uma query customizada aos resultados da coleção."
+      />
+
+  <browser:page
+      name="filter-results"
+      for="plone.app.contenttypes.interfaces.ICollection"
+      class=".filterresults.FilterResultsView"
+      permission="zope2.View"
+      template="filterresults.pt"
+      layer="governo.mdh.portal.interfaces.IBrowserLayer"
+      />
+
+</configure>

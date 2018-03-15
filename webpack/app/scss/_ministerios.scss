@@ -1,0 +1,89 @@
+/* largura da area de texto */
+
+.template-view.portaltype-ministry {
+	#content-core p {
+		width: 900px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.image-right {
+		margin-right: 10vw;
+	}
+	.image-left {
+		margin-left: 10vw;
+	}
+	.image-inline {
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		dd {
+		 	max-width: 100%;
+		}
+		img {
+		  max-width: 100%;
+		  height: auto;
+		}
+	}
+	.linha-destaquetopo {
+	    height: 400px;
+	    display: flex;
+	    flex-direction: column;
+	    justify-content: center;
+	    margin-bottom: 100px;
+	}
+	#parent-fieldname-lead_image img {
+		height: 680px;
+		width: 100%;
+		object-fit: cover;
+		position: absolute!important;
+		top: 0;
+		left: 0;
+		z-index: -2;
+	}
+	#parent-fieldname-lead_image:before {
+		background-color: transparent;
+	    background-image: -o-radial-gradient(transparent,#000);
+	    background-image: radial-gradient(transparent,#000);
+	    content: " ";
+	    white-space: nowrap;
+	    display: block;
+	    height: 680px;
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    right: 0;
+	    opacity: .8;
+	    z-index: -1;
+	    text-indent: -3000px;
+	}
+	h1.documentFirstHeading, 
+	#content .documentDescription {
+		color: #fff;
+		text-align: left;
+		width: 600px;
+		max-width: 100%;
+		margin: 0px 0 15px 0;
+	}
+	#content .documentDescription {
+		width: 300px;
+	}
+	.label-minister {
+		color: #2969bd;
+		text-align: center;
+		font-size: 1.125rem;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	h2#parent-fieldname-minister {
+		font-size: 3rem;
+		font-weight: 900;
+		color: #333333;
+		text-align: center;
+	}
+	.tile-header h2 {
+		font-size: 2.25rem;
+	}
+	.brasil-carousel-tile .carousel-thumbs {
+        width: 960px!important;
+    }
+}
