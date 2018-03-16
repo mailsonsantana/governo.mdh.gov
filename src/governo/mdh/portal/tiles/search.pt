@@ -1,0 +1,74 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="governo.mdh.portal">
+<body  tal:define="data view/get_dados;
+                   results data/list|nothing;
+                   uuid context/UID">
+
+
+<div class="container-search"
+     tal:define="id_ajax string:results-${uuid};">
+
+    <form action="" method="GET" class="form-filter use-ajax">
+      <div>
+        <input type="text" name="buscar" placeholder="Buscar em biblioteca" /> | <span>Filtrar por</span>
+      </div>
+
+      <div>
+        <p> Tipo de conteúdo </p>
+        <input type="checkbox" value="" name="">
+      </div>
+
+      <div>
+        <p>Por Tema</p>
+        <ul tal:define="tags view/subject_factory">
+            <li tal:repeat="tag tags">
+                <input type="checkbox"
+                       tal:content="tag/title"
+                       tal:attributes="value tag/value">
+            </li>
+        </ul>
+      </div>
+      <div>
+          <input class=""
+                 type="button" name="submitted" value="Aplicar filtro" 
+                 tal:attributes="ajax-url context/absolute_url;
+                                 ajax-id id_ajax;
+                                 ajax-filter id_ajax;" />
+      </div>
+    </form>
+
+    <!-- <div class="container-results" 
+       tal:attributes="ajax-content id_ajax;">
+                     
+        <div class="results-search"
+             tal:condition="results"
+             tal:define="Batch python:modules['Products.CMFPlone'].Batch;
+                         b_size request/b_size|python:10;
+                         b_start python:0;
+                         b_start request/b_start | b_start;
+                         batch python:Batch(results, b_size, int(b_start));">
+        </div>
+
+        <tal:resultsbatchview define="batchview nocall:context/@@temasbatchview;"
+                              replace="structure python:batchview(batch,
+                                                        show_page_range=True,
+                                                        ajaxcontentid=id_ajax)">
+                                                                
+        </tal:resultsbatchview>
+    </div -->
+
+                
+        <div class="results-empty"
+             tal:condition="not:results">
+            
+            <h3>Não foram encontrados resultados para sua pesquisa.</h3>
+
+        </div>
+
+  <div class="visualClear"><!-- --></div>
+</div>
+</body>
+</html>

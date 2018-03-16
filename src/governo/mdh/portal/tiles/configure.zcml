@@ -84,4 +84,17 @@
       template="photogallery.pt"
       />
 
+   <plone:tile
+      name="brasil.search"
+      for="*"
+      title="Search"
+      description="Display a search content"
+      icon="++resource++collective.cover/img/tile-generic.png"
+      add_permission="cmf.ModifyPortalContent"
+      schema=".search.ISearchTile"
+      class=".search.SearchTile"
+      permission="zope2.View"
+      template="search.pt"
+      />
+
 </configure>

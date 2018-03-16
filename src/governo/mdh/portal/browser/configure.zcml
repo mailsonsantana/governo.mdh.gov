@@ -73,4 +73,15 @@
       layer="governo.mdh.portal.interfaces.IBrowserLayer"
       />
 
+  <!-- view pagination tile library -->
+  <browser:page
+      name="temasbatchview"
+      for="*"
+      class=".batch.TemasBatchView"
+      permission="zope2.View"
+      allowed_attributes=""
+      layer="governo.mdh.portal.interfaces.IBrowserLayer"
+      />
+
+
 </configure>
