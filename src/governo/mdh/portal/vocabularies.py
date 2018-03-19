@@ -10,7 +10,7 @@ def DocumentTypesVocabulary(context):
     """Document types vocabulary."""
     normalizer = getUtility(IIDNormalizer)
     registry = getUtility(IRegistry)
-    settings = registry.forInterface(IPlanaltoSettings)  # noqa: P001
+    settings = registry.forInterface(IMdhSettings)  # noqa: P001
     items = []
     for document_type in settings.available_document_types:
         token = normalizer.normalize(document_type)

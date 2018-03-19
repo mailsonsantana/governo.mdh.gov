@@ -8,7 +8,7 @@
       <element>brasileficiente.highlights</element>
       <element>brasil.photoday</element>
       <element>brasil.photogallery</element>
-      <element>brasil.library</element>
+      <element>brasil.search</element>
     </value>
   </record>
   <record name="collective.cover.controlpanel.ICoverSettings.available_tiles">
@@ -19,7 +19,7 @@
       <element>brasileficiente.highlights</element>
       <element>brasil.photoday</element>
       <element>brasil.photogallery</element>
-      <element>brasil.library</element>
+      <element>brasil.search</element>
     </value>
   </record>
 

@@ -32,7 +32,7 @@
         </div>
 
         <div class="navigation"
-        	tal:condition="python: batch.has_next or batch.has_previous">
+          tal:condition="python: batch.has_next or batch.has_previous">
             <!-- Current page -->
             <span tal:condition="batch/navlist"
                   tal:omit-tag=""> <span tal:content="batch/pagenumber">Current page number</span> </span>

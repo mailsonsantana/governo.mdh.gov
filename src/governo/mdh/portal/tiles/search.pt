@@ -6,8 +6,6 @@
 <body  tal:define="data view/get_dados;
                    results data/list|nothing;
                    uuid context/UID">
-
-
 <div class="container-search"
      tal:define="id_ajax string:results-${uuid};">
 
@@ -39,7 +37,6 @@
                                  ajax-filter id_ajax;" />
       </div>
     </form>
-
     <!-- <div class="container-results" 
        tal:attributes="ajax-content id_ajax;">
                      
@@ -58,16 +55,13 @@
                                                         ajaxcontentid=id_ajax)">
                                                                 
         </tal:resultsbatchview>
-    </div -->
-
-                
+    </div -->               
         <div class="results-empty"
              tal:condition="not:results">
             
             <h3>Não foram encontrados resultados para sua pesquisa.</h3>
 
         </div>
-
   <div class="visualClear"><!-- --></div>
 </div>
 </body>
