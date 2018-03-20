@@ -73,7 +73,7 @@
       layer="governo.mdh.portal.interfaces.IBrowserLayer"
       />
 
-  <!-- view pagination tile library -->
+  <!-- view pagination tile search -->
   <browser:page
       name="temasbatchview"
       for="*"

@@ -1,0 +1,345 @@
+/********** Top **********/
+
+header#main-header {
+  color: $top-text;
+  background-color: $top-color;
+
+  a:link,
+  a:hover,
+  a:visited {
+    text-decoration: none;
+    color: $top-link;
+  }
+
+  .header-wrapper {
+    @extend .ct-width;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(256, 256, 256, 0.2);
+  }
+
+/********** Navegacao **********/
+  .navigation-wrapper {
+    display: none;
+    background-color: $nav-color;
+    color: $nav-link;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 40px 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    box-shadow: 0 8px 6px -6px #ccc;
+
+
+    h4 {
+      margin-bottom: 20px;
+    }
+
+    ul li {
+      display: list-item;
+      margin-bottom: .8rem;
+    }
+    #portal-redes li {
+      display: inline-block;
+    }
+  }
+
+  .navigation-content:before {
+    content: "\25B2";
+    position: absolute;
+    top: -50px;
+    left: -4px;
+    color: #fff;
+    font-size: 36px;
+    line-height: 1rem;
+  }
+  .navigation-content {
+    @extend .ct-width;
+    position: relative;
+  }
+  #navigation-redes {
+    border-right: none;
+  }
+}
+/* navegacao */
+#main-navigation {
+  display: flex;
+  .list-navigation {
+    display: flex;
+    li {
+      font-weight: 900;
+      border-right: 1px solid #f1f1f1;
+      display: block;
+      margin-right: 25px;
+      padding-right: 20px;
+    }
+  }
+  a:link,
+  a:hover,
+  a:visited {
+    color: #333 !important;
+  }
+  .submenu {
+    li {
+      width: 100%;
+      font-weight: normal;
+      margin-right: 0;
+      font-size: 0.875rem;
+    }
+  }
+}
+ul.submenu {
+  display: block;
+  position: relative;
+  top: 25px;
+}
+
+/********** Icones **********/
+.header-icons {
+  margin: 15px 20px 15px 0;
+
+  .ico-navegacao {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+    text-indent: -3000px;
+    @include sprite($nav);
+  }
+  .ico-busca {
+    display: inline-block;
+    cursor: pointer;
+    text-indent: -3000px;
+    @include sprite($busca);
+  }
+}
+/********** Links do topo **********/
+.header-accessibility {
+    width: 280px;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 0.6875rem;
+    line-height: 1.2rem;
+    font-weight: bold;
+
+  .link-contraste {
+    display: inline-block;
+    position: relative;
+    padding: 0 20px 0 20px;
+    border-right: 1px solid rgba(256, 256, 256, 0.2);
+  }
+  .link-contraste:before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0;
+    @include sprite($contraste-escuro);
+  }
+  .link-vlibras {
+    display: inline-block;
+    position: relative;
+    padding: 0 0 0 20px;
+    margin-left: 20px;
+  }
+  .link-vlibras:before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 0;
+    @include sprite($vlibras-escuro);
+  }
+}
+
+/********** Logo **********/
+#portal-logo {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+#logo {
+  flex-grow: 1;
+  font-size: 28px;
+  font-weight: normal;
+  margin: 0 20px 0 0;
+
+  h1, #portal-title {
+    display: inline;
+    color: $top-link;
+    font-size: 1.875rem;
+    font-weight: 900;
+  }
+  #portal-title-1 {
+    margin-right: 0.5rem;
+  }
+  #portal-description {
+    width: 100%;
+    order: -2;
+    font-family: Raleway;
+    font-size: 0.5rem;;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    text-align: left;
+    color: #282828;
+  }
+}
+/********** Segunda linha  **********/
+
+.search-wrapper {
+  display: flex;
+  justify-content: space-between;
+  @extend .ct-width;
+}
+
+.links-destaque {
+  flex-grow: 1;
+  margin-top: 18px;
+
+  li {
+    margin-right: 20px;
+  }
+}
+
+/********** Busca **********/
+#portal-searchbox {
+  float: none;
+  width: 408px;
+  margin: 9px 0;
+
+  fieldset {
+    margin: 0;
+    padding: 0 10px 0 30px;
+    border: 0;
+    background: #fff;
+    border-radius: 30px;
+  }
+  .searchField {
+    border: none;
+    width: 92%;
+    padding: 12px 0;
+    color: #ccc;
+  }
+  .searchButton {
+    border: none;
+    text-indent: -3000px;
+  @include sprite($botao-busca);
+  }
+}
+
+
+
+header#main-header.busca-ativa {
+  color: #222 !important;
+  background-color: $top-text !important;
+
+  a, a:link, #logo #portal-title, #logo h1 {
+    color: #222 !important;
+  }
+  .header-wrapper {
+    border-bottom: 1px solid #e4e4e4;
+  }
+  .header-icons {
+    border-right: 1px solid #e4e4e4;
+  }
+  .ico-navegacao {
+    @include sprite($nav-escuro);
+  }
+  .ico-busca {
+    @include sprite($busca-escuro);
+  }
+  .link-contraste:before {
+    @include sprite($contraste-escuro);
+  }
+  .link-vlibras:before {
+    @include sprite($vlibras-escuro);
+  }
+  .header-accessibility .link-contraste {
+    border-right: 1px solid #e4e4e4;
+  }
+}
+
+/********** Breadcrumb **********/
+#portal-breadcrumbs {
+  @extend .ct-width;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+  font-size: 90%;
+
+  #breadcrumbs-you-are-here {
+    display: none;
+  }
+  #breadcrumbs-home a {
+    text-indent: -3000px;
+    display: inline-block;
+  position: relative;
+  width: 20px;
+  }
+  #breadcrumbs-home a:before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 0;
+  @include sprite($casinha);
+  }
+  a,
+  a:hover {
+    text-decoration: none;
+    color: $txt-color;
+  }
+  #breadcrumbs-current {
+    font-weight: bold;
+  }
+  .breadcrumbSeparator {
+    padding: 0 10px;
+  }
+}
+
+.section-pagina-inicial #portal-breadcrumbs {
+  display: none;
+}
+
+#portal-personaltools {
+  position: fixed;
+}
+
+/* inversão de cores para casos especiais */
+header.inverter {
+  background-color: transparent !important;
+  margin-bottom: 0 !important
+}
+#portal-breadcrumbs.inverter {
+  border-bottom: 1px solid hsla(0,0%,100%,.2);
+  color: #fff;
+  margin-bottom: 0;
+  a, .breadcrumbSeparator {
+    color: #fff !important;
+  }
+  #breadcrumbs-home a:before {
+    @include sprite($casinha-branca);
+  }
+}
+
+/* variacao de cor do header */
+.section-fale-conosco header#main-header {
+  background-color: #244a7c;
+}
+.portaltype-collective-nitf-content header#main-header {
+  background-color: #06acff;
+}
+.section-centrais-de-conteudo header#main-header {
+  background-color: #000;
+}
+
+/* Barra Brasil custom */
+#barra-brasil {
+  background: #222222 !important;
+}
+
+#barra-brasil .link-barra {
+    color: #fff !important;
+}

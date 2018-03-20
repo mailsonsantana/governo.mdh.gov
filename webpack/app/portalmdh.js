@@ -8,6 +8,9 @@ import NavigationTile from './js/tiles/navigation.js';
 import PhotoDayTile from './js/tiles/photoday.js';
 import PhotoGalleryTile from './js/tiles/photogallery.js';
 
+import Contraste from './js/contrast.js';
+import GaleriaDeFotos from './js/albuns.js';
+
 
 // https://hacks.mozilla.org/2015/04/es6-in-depth-iterators-and-the-for-of-loop/
 jQuery.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
@@ -38,6 +41,24 @@ $(() => {
     }
   }
 });
+
+$(document).ready(function(){
+  $(".ico-navegacao").click(function(){
+    $(".navigation-wrapper").toggleClass("ativo");
+  });
+  $(".ico-busca").click(function(){
+    $("#main-header").toggleClass("busca-ativa");
+    $("#portal-searchbox").toggleClass("ativo");
+  });
+  $('.tile-faq dt').on('click', function () {
+    $(this).next("dd").slideToggle();
+    $(this).toggleClass("aberto");
+  });
+  if ($('.template-galeria_de_fotos').length > 0) {
+    new GaleriaDeFotos();
+  }
+});
+
 
 
 export default {

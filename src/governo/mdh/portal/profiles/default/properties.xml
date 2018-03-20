@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<site>
+ <property name="title">Ministério dos Direitos Humanos </property>
+ <property name="title_1" type="string">Ministério dos</property>
+ <property name="title_2" type="string">Direitos Humanos</property>
+ <property name="orgao" type="string">Ministério dos</property>
+ <property name="description">Departamento de Proteção e Defesa dos Direitos Humanos; Ministério dos Direitos Humanos</property>
+ <property name="selectable_views" type="lines">
+  <element value="listing_view"/>
+  <element value="news_listing"/>
+ </property>
+ <property name="email_from_address" type="string"></property>
+ <property name="email_from_name" type="string"></property>
+ <property name="validate_email" type="boolean">True</property>
+ <property name="email_charset" type="string">utf-8</property>
+ <property name="enable_permalink" type="boolean">False</property>
+</site>
