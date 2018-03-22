@@ -17,7 +17,7 @@ header#main-header {
     justify-content: space-between;
     align-items: center;
     padding: 12px 0;
-    border-bottom: 1px solid rgba(256, 256, 256, 0.2);
+    border-bottom: 1px solid #ddd;
   }
 
 /********** Navegacao **********/
@@ -25,7 +25,7 @@ header#main-header {
     display: none;
     background-color: $nav-color;
     color: $nav-link;
-    border-bottom: 1px solid #f1f1f1;
+    border-bottom: 1px solid #ddd;
     padding: 40px 0;
     position: absolute;
     left: 0;
@@ -71,7 +71,7 @@ header#main-header {
     display: flex;
     li {
       font-weight: 900;
-      border-right: 1px solid #f1f1f1;
+      border-right: 1px solid #c9c9c9;
       display: block;
       margin-right: 25px;
       padding-right: 20px;
@@ -128,7 +128,7 @@ ul.submenu {
     display: inline-block;
     position: relative;
     padding: 0 20px 0 20px;
-    border-right: 1px solid rgba(256, 256, 256, 0.2);
+    border-right: 1px solid #ddd;
   }
   .link-contraste:before {
     content: "";

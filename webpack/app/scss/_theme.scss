@@ -1,0 +1,93 @@
+/* Scss for Theme */
+
+.template-view.portaltype-theme {
+	#content-core h1 {
+		text-align: center;
+	}
+	.image-right {
+		margin-right: 10vw;
+	}
+	.image-left {
+		margin-left: 10vw;
+	}
+	.image-inline {
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		dd {
+			max-width: 100%;
+		}
+		img {
+		  max-width: 100%;
+		  height: auto;
+		}
+	}
+	.linha-destaquetopo {
+		height: 400px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-bottom: 100px;
+	}
+	#parent-fieldname-theme_top_image img {
+		height: 210px;
+		width: 100%;
+		object-fit: cover;
+		position: absolute!important;
+		top: 0;
+		left: 0;
+		z-index: -2;
+	}
+	#parent-fieldname-theme_top_image:before {
+		background-color: transparent;
+		background-image: -o-radial-gradient(transparent,#000);
+		background-image: radial-gradient(transparent,#000);
+		content: " ";
+		white-space: nowrap;
+		display: block;
+		height: 210px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		opacity: .8;
+		z-index: -1;
+		text-indent: -3000px;
+	}
+	h1.documentFirstHeading, 
+	#content .documentDescription {
+		color: #000;
+		text-align: left;
+		max-width: 100%;
+		font-size: 24px;
+		font-weight: 900;
+		font-style: normal;
+		font-stretch: normal;
+		line-height: normal;
+		letter-spacing: normal;
+		text-align: left;
+		color: #222222;
+	}
+	#content .documentDescription {
+		width: 300px;
+	}
+	.label-minister {
+		color: #2969bd;
+		text-align: center;
+		font-size: 1.125rem;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+	h2#parent-fieldname-minister {
+		font-size: 3rem;
+		font-weight: 900;
+		color: #333333;
+		text-align: center;
+	}
+	.tile-header h2 {
+		font-size: 2.25rem;
+	}
+	.brasil-carousel-tile .carousel-thumbs {
+		width: 960px!important;
+	}
+}

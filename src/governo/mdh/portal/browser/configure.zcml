@@ -21,6 +21,24 @@
       template="ministry.pt"
       />
 
+  <browser:page
+      class="governo.mdh.portal.browser.timeline.View"
+      for="governo.mdh.portal.interfaces.ITimeline"
+      layer="governo.mdh.portal.interfaces.IBrowserLayer"
+      name="view"
+      permission="zope2.View"
+      template="timeline.pt"
+      />
+
+  <browser:page
+      class="governo.mdh.portal.browser.theme.View"
+      for="governo.mdh.portal.interfaces.ITheme"
+      layer="governo.mdh.portal.interfaces.IBrowserLayer"
+      name="view"
+      permission="zope2.View"
+      template="theme.pt"
+      />
+
   <browser:menuItem
       for="plone.app.contenttypes.interfaces.IFolder"
       menu="plone_displayviews"

@@ -17,6 +17,16 @@
       />
 
   <permission
+      id="governo.mdh.portal.addTimeline"
+      title="governo.mdh.portal: Add Timeline"
+      />
+
+  <permission
+      id="governo.mdh.portal.addTheme"
+      title="governo.mdh.portal: Add Theme"
+      />
+
+  <permission
       id="governo.mdh.portal.Setup"
       title="governo.mdh.portal: Setup"
       />

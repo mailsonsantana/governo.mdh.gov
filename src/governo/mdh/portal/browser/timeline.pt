@@ -1,0 +1,23 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+    xmlns:tal="http://xml.zope.org/namespaces/tal"
+    xmlns:metal="http://xml.zope.org/namespaces/metal"
+    metal:use-macro="context/main_template/macros/master"
+    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+    i18n:domain="governo.mdh.portal">
+  <body>
+    <metal:main fill-slot="main">
+    <div>
+      <h1 tal:content="context/Title"></h1>
+    </div>
+    <div class="left">
+      <p class="subtitle"
+         tal:content="context/subtitle | nothing"></p>
+      <p class="description"
+         tal:content="context/description | nothing"></p>
+
+      <button type="button" name="Mais Informações" value="Mais Informações"></button>
+    </div>
+     </metal:main>
+  </body>
+</html>
+
