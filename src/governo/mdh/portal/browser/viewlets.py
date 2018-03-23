@@ -10,7 +10,7 @@ def catalog_counter_cachekey(method, self):
     return str(catalog.getCounter())
 
 
-class MinistersViewlet(ViewletBase):
+class CompositionViewlet(ViewletBase):
     """A viewlet to display a gallery of Ministers."""
 
     @property
@@ -26,7 +26,7 @@ class MinistersViewlet(ViewletBase):
     @property
     def ministers(self):
         # get all ministries except the current one
-        ministries = api.content.find(portal_type='Ministry')
+        ministries = api.content.find(portal_type='Conselho')
         ministries = [
             m.getObject() for m in ministries
             if m.UID != self.context.UID()]

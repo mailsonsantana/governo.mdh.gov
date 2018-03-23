@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<object name="Ministry" meta_type="Dexterity FTI"
+<object name="Conselho" meta_type="Dexterity FTI"
    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
    i18n:domain="governo.mdh.portal">
 
   <!-- Basic metadata -->
-  <property name="title" i18n:translate="">Ministry</property>
-  <property name="description" i18n:translate="">A ministry.</property>
+  <property name="title" i18n:translate="">Conselho</property>
+  <property name="description" i18n:translate="">A Conselho.</property>
   <property name="content_icon">++resource++portalmdh/img/ministry-icon.png</property>
   <property name="allow_discussion">True</property>
   <property name="global_allow">True</property>
@@ -13,13 +13,13 @@
   <property name="allowed_content_types" />
 
   <!-- schema interface -->
-  <property name="schema">governo.mdh.portal.interfaces.IMinistry</property>
+  <property name="schema">governo.mdh.portal.interfaces.IConselho</property>
 
   <!-- class used for content items -->
-  <property name="klass">governo.mdh.portal.content.Ministry</property>
+  <property name="klass">governo.mdh.portal.content.Conselho</property>
 
   <!-- add permission -->
-  <property name="add_permission">governo.mdh.portal.addMinistry</property>
+  <property name="add_permission">governo.mdh.portal.addConselho</property>
 
   <!-- enabled behaviors -->
   <property name="behaviors">

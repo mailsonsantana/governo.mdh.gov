@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <object name="portal_javascripts" purge="False">
-  <javascript id="++resource++mdh/swiper.min.js"
+  <javascript id="++resource++portalmdh/swiper.min.js"
     cacheable="True" compression="none" cookable="False" enabled="True"
     inline="False" authenticated="False" insert-before="*" />
   <javascript
@@ -9,7 +9,7 @@
       compression="none"
       cookable="True"
       enabled="True"
-      id="++resource++mdh/mdh.js"
+      id="++resource++portalmdh/portalmdh.js"
       inline="False"
       insert-after="*"
       />

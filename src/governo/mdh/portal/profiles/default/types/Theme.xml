@@ -13,6 +13,9 @@
   <property name="allowed_content_types">
     <element value="Timeline" />
     <element value="Folder" />
+    <element value="collective.nitf.content" />
+    <element value="sc.embedder" />
+    <element value="Audio" />
   </property>
 
   <!-- schema interface -->

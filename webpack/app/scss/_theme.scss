@@ -18,16 +18,16 @@
 			max-width: 100%;
 		}
 		img {
-		  max-width: 100%;
-		  height: auto;
+			max-width: 100%;
+			height: auto;
 		}
 	}
 	.linha-destaquetopo {
-		height: 400px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		margin-bottom: 100px;
+		margin-bottom: 20px;
+		border-bottom: 1px solid #d8d8d8;
 	}
 	#parent-fieldname-theme_top_image img {
 		height: 210px;
@@ -40,8 +40,6 @@
 	}
 	#parent-fieldname-theme_top_image:before {
 		background-color: transparent;
-		background-image: -o-radial-gradient(transparent,#000);
-		background-image: radial-gradient(transparent,#000);
 		content: " ";
 		white-space: nowrap;
 		display: block;
@@ -54,7 +52,7 @@
 		z-index: -1;
 		text-indent: -3000px;
 	}
-	h1.documentFirstHeading, 
+	.documentFirstHeading h1, 
 	#content .documentDescription {
 		color: #000;
 		text-align: left;
@@ -89,5 +87,40 @@
 	}
 	.brasil-carousel-tile .carousel-thumbs {
 		width: 960px!important;
+	}
+	/* Inverter theme for top white */
+	header.inverter-white {
+		background-color: transparent !important;
+		margin-bottom: 0 !important
+	}
+
+	#portal-title.inverter-white {
+		color: #fff;
+	}
+
+	.searchButton.inverter-white {
+		border: none;
+		text-indent: -3000px;
+	@include sprite($botao-busca-black);
+	}
+
+	.link-contraste.inverter-white a:before{
+		@include sprite($contraste);
+	}
+
+	a.link-contraste.inverter-white, a.link-vlibras.inverter-white{
+  	color:#fff !important;
+  }
+
+	#portal-breadcrumbs.inverter-white {
+		border-bottom: 1px solid hsla(0,0%,100%,.2);
+		color: #fff;
+		margin-bottom: 0;
+		a, .breadcrumbSeparator {
+			color: #fff !important;
+		}
+		#breadcrumbs-home a:before {
+			@include sprite($casinha-branca);
+		}
 	}
 }

@@ -26,28 +26,11 @@
         </div>
 
         <div i18n:translate="label_minister" class="label-minister">Minister</div>
-        <h2 id="parent-fieldname-minister"
-            tal:content="context/minister">Name</h2>
 
         <div tal:replace="structure provider:plone.belowcontenttitle" />
 
         <div tal:replace="structure provider:plone.abovecontentbody" />
 
-        <div id="content-core"
-            tal:define="is_editable context/@@plone_context_state/is_editable;
-                        text context/text/output|nothing">
-
-          <p class="discreet"
-              tal:condition="python:not text and is_editable"
-              i18n:domain="plone"
-              i18n:translate="no_body_text">
-            This item does not have any body text, click the edit tab to change it.
-          </p>
-
-          <div id="parent-fieldname-text" tal:condition="text">
-            <div tal:content="structure text">The body</div>
-          </div>
-        </div>
 
         <div tal:replace="structure provider:plone.belowcontentbody" />
       </article>

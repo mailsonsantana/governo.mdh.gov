@@ -6,6 +6,17 @@
     i18n:domain="governo.mdh.portal">
   <body>
     <metal:main fill-slot="main">
+    <tal:condition condition="python: context.color_top == 'inverter-white'">
+      <script type="text/javascript">
+        $(document).ready(function() {
+          $(".inverter").toggleClass('inverter-white');
+          $("#portal-title").css({'color':'#fff'});
+          $("#portal-description").css({'color':'#fff'});
+          $('.ico-navegacao').css({'background-position':'-198px -111px'})
+          $('.searchButton').css({'background-position':'-52px -174px'})
+        });
+      </script>
+    </tal:condition>
       <article>
         <div tal:replace="structure provider:plone.abovecontenttitle" />
 
@@ -17,12 +28,22 @@
                             scale python: scales.scale('theme_top_image', scale=None)"
                 tal:replace="structure scale/tag|nothing" />
           </div>
-          <h1 class="documentFirstHeading"
-              tal:content="context/title">Ministry</h1>
+          <div class="documentFirstHeading">
+            <h1 tal:content="context/title">Igualdade Racial</h1>
+          </div>
+          <div class="documentFeatures"
+               tal:content="context/features">Features</div>
 
-          <div class="documentDescription"
-              tal:content="context/description">Description</div>
-
+          <div class="documentSocial">
+            <ul id="portal-redes">
+                <li id="portalredes-facebook" class="portalredes-item">
+                    <a href="http://facebook.com/facebook">Facebook</a>
+                </li>
+                <li id="portalredes-twitter" class="portalredes-item">
+                    <a href="https://twitter.com/twitter">Twitter</a>
+                </li>
+            </ul>
+          </div>
         </div>
 
         <!-- <div i18n:translate="label_minister" class="label-minister">Minister</div>

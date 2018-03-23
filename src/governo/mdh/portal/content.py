@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
-from governo.mdh.portal.interfaces import IMinistry, ITimeline, ITheme
+from governo.mdh.portal.interfaces import IConselho, ITimeline, ITheme
 from plone.dexterity.content import Container
 from zope.interface import implementer
 
 
-@implementer(IMinistry)
-class Ministry(Container):
+@implementer(IConselho)
+class Conselho(Container):
     """A ministry."""
 
 @implementer(ITimeline)

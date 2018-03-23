@@ -7,8 +7,8 @@
     <div class="ministers-viewlet tile">
       <div class="ministers-carousel brasil-carousel-tile" id="">
         <div class="tile-header">
-          <h2 i18n:translate="">Other ministers</h2>
-          <p></p>
+          <h2 i18n:translate="">Composição</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
         </div>
         <div class="switch-carousel"></div>
         <div class="swiper-container carousel-thumbs">

@@ -12,8 +12,8 @@
   <i18n:registerTranslations directory="locales" />
 
   <permission
-      id="governo.mdh.portal.addMinistry"
-      title="governo.mdh.portal: Add Ministry"
+      id="governo.mdh.portal.addConselho"
+      title="governo.mdh.portal: Add Conselho"
       />
 
   <permission
