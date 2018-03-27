@@ -1,0 +1,50 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="governo.mdh.portal">
+  <body tal:define="is_empty view/is_empty">
+    <div class="brasil-services-tile tile-content">
+      <h2>Serviços</h2>
+      <form id="" action="">
+        <div class="">
+          <input name="SearchableText" placeholder="Procure um serviço" class="searchField" type="text">
+          <input class="searchButton" value="Buscar" type="submit">
+        </div>
+      </form>
+
+      <div>
+        <div>
+          <h3>Em destaque</h3>
+          <div>
+            <div>
+              <p>Seu emprego mais perto</p>
+              <p>Central de atendimento a mulher</p>
+              <a href="#">Acessar</a>
+            </div>
+            <div>
+              <p>Consulte o saldo do seu benefício</p>
+              <p>Bolsa familia</p>
+              <a href="#">Acessar</a>
+            </div>
+            <div>
+              <p>Saiba quando e como</p>
+              <p>Saque do FGTS</p>
+              <a href="#">Acessar</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h3>Mais acessados</h3>
+          <ul>
+            <li>Validar diploma de medicina</li>
+            <li>Validar diploma de medicina</li>
+            <li>Inscrever-se no Minha Casa, Minha Vida</li>
+            <li>Cadastro no Enem</li>
+          </ul>
+        </div>
+      </div>
+      <div><a href="#">Mais serviços</a></div>
+    </div>
+  </body>
+</html>

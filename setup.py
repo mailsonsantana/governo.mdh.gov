@@ -38,6 +38,9 @@ setup(
     zip_safe=False,
     install_requires=[
         'brasil.gov.portal',
+        'collective.texttospeech',
+        'ftw.upgrade',
+        'plone.app.imagecropping',
         'plone.app.theming',
         'plone.autoform',
         'plone.resource',

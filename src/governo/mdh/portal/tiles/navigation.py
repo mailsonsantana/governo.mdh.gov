@@ -19,7 +19,7 @@ class NavigationTile(PersistentCoverTile):
     is_configurable = False
     is_droppable = False
     is_editable = False
-    short_name = _(u'msg_short_name_apps', default=u'Navigation')
+    short_name = _(u'msg_short_name_navigation', default=u'Navigation')
 
     def __init__(self, context, request):
         super(NavigationTile, self).__init__(context, request)

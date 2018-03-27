@@ -48,12 +48,14 @@
         width: 100%;
         background: rgba(0,0,0,.5);
         margin-top: -58px;
+        display: flex;
 
         .tile-credits {
             font-size: 0.875rem;
             font-weight: 800;
             margin-left: 30px;
             color: #fff;
+            flex: 1 auto;
         }
 
         .tile-credits:before {
@@ -61,7 +63,6 @@
         }
 
         a {
-            float: right;
             margin-right: 30px;
             color: #fff !important;
         }

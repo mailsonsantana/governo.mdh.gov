@@ -29,7 +29,7 @@ class GalleryTile(ListTile):
     is_configurable = False
     is_droppable = True
     is_editable = True
-    short_name = _(u'msg_short_name_tags', default=u'Gallery')
+    short_name = _(u'msg_short_name_gallery', default=u'Gallery')
     limit = 5 * 3
 
     @property

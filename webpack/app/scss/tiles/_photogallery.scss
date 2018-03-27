@@ -42,16 +42,19 @@
       }
     }
   }
+  .swiper-wrapper {
+    height: 547px !important;
+  }
 
   .swiper-button-prev.swiper-button-white, 
   .swiper-container-rtl .swiper-button-next.swiper-button-white,
   .swiper-button-next.swiper-button-white, 
   .swiper-container-rtl .swiper-button-prev.swiper-button-white {
-    background-color: rgba(0, 0, 0, .5);
+    background-color: #37120d;
     border-radius: 47px;
     padding: 0px;
-    width: 48px;
-    height: 48px;
+    width: 33px;
+    height: 33px;
     background-size: 30%;
   }
 }

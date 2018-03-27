@@ -10,6 +10,7 @@ let createTheme = (theme) => {
   return {
     entry: [
       './app/portalmdh.js',
+      './app/portalmdh.scss',
       `./app/${theme}/mdh.scss`,
       `./app/${theme}/preview.png`
     ],

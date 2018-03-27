@@ -18,6 +18,7 @@
       </script>
     </tal:condition>
       <article>
+        
         <div tal:replace="structure provider:plone.abovecontenttitle" />
 
         <div  class="linha-destaquetopo">

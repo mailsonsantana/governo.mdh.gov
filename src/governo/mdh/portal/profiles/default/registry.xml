@@ -9,6 +9,10 @@
       <element>brasil.photoday</element>
       <element>brasil.photogallery</element>
       <element>brasil.search</element>
+      <element>brasil.theme</element>
+      <element>brasil.documentfinder</element>
+      <element>brasil.quote</element>
+      <element>brasil.services</element>
     </value>
   </record>
   <record name="collective.cover.controlpanel.ICoverSettings.available_tiles">
@@ -20,6 +24,10 @@
       <element>brasil.photoday</element>
       <element>brasil.photogallery</element>
       <element>brasil.search</element>
+      <element>brasil.theme</element>
+      <element>brasil.documentfinder</element>
+      <element>brasil.quote</element>
+      <element>brasil.services</element>
     </value>
   </record>
 

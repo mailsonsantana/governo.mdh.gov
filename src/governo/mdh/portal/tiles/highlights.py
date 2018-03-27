@@ -78,7 +78,7 @@ class HighlightsTile(PersistentCoverTile):
     is_configurable = True
     is_droppable = False
     is_editable = True
-    short_name = _(u'msg_short_name_apps', default=u'Highlights')
+    short_name = _(u'msg_short_name_highlights', default=u'Highlights')
 
     def get_srcset(self):
         data = self.data.get('image')

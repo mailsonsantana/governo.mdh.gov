@@ -38,8 +38,8 @@
                       </div>
 
                       <div class="links-bottom">
-                        <a tal:attributes="href string:${thumbnail/url}" class="zoom-icon">Zoom</a>
                         <a tal:attributes="href string:${obj/absolute_url}/@@download/image" class="download-icon">Download</a>
+                        <a tal:attributes="href string:${thumbnail/url}" class="zoom-icon">Zoom</a>
                       </div>
                   </div>
                 </div>

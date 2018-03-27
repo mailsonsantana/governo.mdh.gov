@@ -38,7 +38,7 @@
         </div>
       </div>
       <div class="gallery-thumbs-container">
-        <div class="swiper-container gallery-thumbs">
+        <div class="gallery-thumbs swiper-container">
           <div class="swiper-wrapper">
             <tal:items repeat="obj view/results">
               <div class="swiper-slide">

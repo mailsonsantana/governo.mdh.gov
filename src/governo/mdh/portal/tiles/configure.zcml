@@ -97,4 +97,56 @@
       template="search.pt"
       />
 
+   <plone:tile
+      name="brasil.theme"
+      for="*"
+      title="Theme"
+      description="Display theme"
+      icon="++resource++collective.cover/img/tile-generic.png"
+      add_permission="cmf.ModifyPortalContent"
+      schema=".theme.IThemeTile"
+      class=".theme.ThemeTile"
+      permission="zope2.View"
+      template="theme.pt"
+      />
+
+   <plone:tile
+      name="brasil.documentfinder"
+      for="*"
+      title="Document Finder"
+      description="A tile that allows filtering the results of a collection."
+      icon="++resource++collective.cover/img/tile-generic.png"
+      add_permission="cmf.ModifyPortalContent"
+      schema=".documentfinder.IDocumentFinderTile"
+      class=".documentfinder.DocumentFinderTile"
+      permission="zope2.View"
+      template="documentfinder.pt"
+      />
+
+   <plone:tile
+     name="brasil.quote"
+     for="*"
+     title="Quote"
+     description="A tile that shows an article quote."
+     icon="++resource++collective.cover/img/tile-generic.png"
+     add_permission="cmf.ModifyPortalContent"
+     schema=".quote.IQuoteTile"
+     class=".quote.QuoteTile"
+     permission="zope2.View"
+     template="quote.pt"
+     />
+
+   <plone:tile
+      name="brasil.services"
+      for="*"
+      title="Services"
+      description="Displays a search box and a list of service highlights."
+      icon="++resource++collective.cover/img/tile-generic.png"
+      add_permission="cmf.ModifyPortalContent"
+      schema=".services.IServicesTile"
+      class=".services.ServicesTile"
+      permission="zope2.View"
+      template="services.pt"
+      />
+
 </configure>

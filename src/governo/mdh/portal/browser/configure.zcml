@@ -101,5 +101,12 @@
       layer="governo.mdh.portal.interfaces.IBrowserLayer"
       />
 
+  <browser:page
+      name="mdh-settings"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class="governo.mdh.portal.browser.controlpanel.MdhSettingsControlPanel"
+      permission="governo.mdh.portal.Setup"
+      />
+
 
 </configure>

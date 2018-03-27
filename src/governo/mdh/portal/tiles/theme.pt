@@ -1,0 +1,48 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      i18n:domain="governo.mdh.portal">
+  <body tal:define="is_empty view/is_empty;
+                    color view/get_color_top">
+
+    <p tal:condition="python: is_empty and view.is_compose_mode()" i18n:translate="">
+        Drag&amp;drop an image to populate the tile.
+    </p>
+    <div class="brasil-theme-tile tile-content"
+         tal:condition="not:is_empty">
+        <script type="text/javascript">
+          $(document).ready(function() {
+                var banner = $('.brasil-theme-tile');
+                $('#content').append(banner);
+                var first_rowbanner = $('#content').find('.row')[0];
+              });
+        </script>
+        <tal:condition condition="python: color == 'inverter-white'">
+            <script type="text/javascript">
+              $(document).ready(function() {
+                $(".inverter").toggleClass('inverter-white');
+                $("#portal-title").css({'color':'#fff'});
+                $("#portal-description").css({'color':'#fff'});
+                $('.ico-navegacao').css({'background-position':'-198px -111px'});
+                $('.searchButton').css({'background-position':'-52px -174px'});
+              });
+            </script>
+        </tal:condition>
+          <article>
+            <div tal:replace="structure provider:plone.abovecontenttitle" />
+                <div class="linha-destaquetopo">
+                    <div id="parent-fieldname-theme_top_image"
+                         tal:define="scale view/scale;
+                                     scales view/@@images;
+                                     thumbnail python:scales.scale('image', scale=None)">
+                      <img tal:condition="thumbnail"
+                           tal:attributes="src thumbnail/url;
+                                           width thumbnail/width;
+                                           height thumbnail/height;" />
+                    </div>
+                </div>
+          </article>
+    </div>
+  </body>
+</html>

@@ -108,6 +108,18 @@
         label {
             font-weight: normal;
         }
+        .filter-button {
+            height: 50px;
+            border-radius: 30px;
+            border: 0;
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-top: 81px;
+            margin-left: 46%;
+        }
     }
     .actionMenuHeader {
         width: 180px;
@@ -145,7 +157,6 @@ fieldset.noborder {
     flex-wrap: wrap;
     list-style: none;
     margin: 0;
-    justify-content: space-between;
 
     li {
         margin-bottom: 15px;
@@ -155,6 +166,8 @@ fieldset.noborder {
         height: 264px;
         position: relative;
         z-index: 0;
+        flex: 0 0 23.5%;
+        margin-left: 2%;
     }
     li:after {
         background: #222;
@@ -230,3 +243,5 @@ fieldset.noborder {
 #results ul:first-child li:nth-child(5n-2) {background: #ffbc09 !important;}
 #results ul:first-child li:nth-child(5n-1) {background: #56c75f !important;}
 #results ul:first-child li:nth-child(5n-0) {background: #53cfd0 !important;}
+
+#results ul:first-child li:nth-child(4n-3) {margin-left: 0;}

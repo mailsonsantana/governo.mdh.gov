@@ -3,5 +3,7 @@
   <version>1000</version>
   <dependencies>
     <dependency>profile-brasil.gov.portal:default</dependency>
+    <dependency>profile-collective.texttospeech:default</dependency>
+    <dependency>profile-plone.app.imagecropping:default</dependency>
   </dependencies>
 </metadata>
