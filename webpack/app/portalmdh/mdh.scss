@@ -20,7 +20,7 @@ $nav-color: #fff;
 $nav-link: #000;
 
 $txt-color: #282828;
-$link-color: #0094ff;
+$link-color: #ff6d26;
 $header-color: #333333;
 $description-color: #a6a6a6;
 $byline-color: #a6a6a6;
@@ -50,5 +50,4 @@ $footer-link: #272727;
 
 /********** Estilos para o Portal MDH **********/
 
-@import '../scss/theme';
 @import '../scss/timeline';

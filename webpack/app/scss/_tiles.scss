@@ -39,7 +39,7 @@
 }
 
 .tile-subtitle {
-    color: #06acff;
+    color: #ff6d26;
     font-size: 0.875rem !important;
     font-weight: bold;
     margin-bottom: 0 !important;
@@ -73,8 +73,8 @@ p.tile-description {
     font-weight: bold !important;
 }
 #content a.outstanding-link:hover {
-	background: #06ACFF;
-	border-color: #06ACFF !important;
+	background: #ff6d26;
+	border-color: #ff6d26 !important;
 	color: #fff !important;
 }
 
@@ -119,7 +119,7 @@ p.tile-description {
 .tile.box-colorido {
     display: flex;
     >div {
-        background: #56c75f;
+        background: #37120d;
         padding: 20px 40px;
         color: #fff !important;
         font-size: 1.3rem;
@@ -128,17 +128,31 @@ p.tile-description {
         align-self: flex-end;
     }
     a {
-        color: #00d6d1 !important;
-        background: #fff;
+        color: #fff !important;
+        background: #37120d;
         border-radius: 30px;
         display: inline-block;
-        padding: 11px 29px;
+        padding: 0px 30px;
         font-size: 0.875rem;
         text-transform: uppercase;
         font-weight: bold;
+        border: solid 2px #ffffff;
+        border-bottom: solid 2px #fff !important;
     }
     h1 {
+        color: #ff6d26;
+        font-size: 3.75rem;
+        line-height: 3.063rem;
+        letter-spacing: -0.0625rem;
+    }
+    h2{
         color: #fff;
+        font-family: Raleway;
+        font-size: 24px;
+        font-weight: 800;
+    }
+    h3 {
+        color: #ff6d26;
         font-size: 3.75rem;
         line-height: 3.063rem;
         letter-spacing: -0.0625rem;
@@ -155,6 +169,37 @@ p.tile-description {
     margin-bottom: 12px;
 }
 
+/* tile box cinza */
+.tile.box-cinza {
+        background: #f6f6f6;
+        h1, h2, {
+            color: #000;
+        }
+        h3 {
+            color: #ff6d26;
+            font-size: 3.75rem;
+            line-height: 3.063rem;
+            letter-spacing: -0.0625rem;
+        }
+
+        a {
+            color: #000 !important;
+            background: #f8f8f8;
+            border-radius: 30px;
+            display: inline-block;
+            padding: 0px 30px;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            border: solid 2px #000;
+            border-bottom: solid 2px #000 !important;
+        }
+
+        a:hover {
+            color: #ff6d26 !important;
+        }
+
+    }
 
 /* tile de foto sobreposta */
 .tile.foto-sobreposta {
@@ -168,6 +213,7 @@ p.tile-description {
     img {
         object-fit: cover;
         height: 375px !important;
+        width:100%;
         position: absolute;
         top: 0;
         z-index: -2;
@@ -293,6 +339,8 @@ p.tile-description {
         a:link, a:visited, a:hover {
             color: #244a7c !important;
         }
+
+
     }
     .col-md-3 {flex-basis: 285px;}
     .col-md-4 {flex-basis: 335px;}
@@ -323,6 +371,22 @@ p.tile-description {
     }
 }
 
+/*linha diferenciada */
+.linha-diferenciada .tile .tile-subtitle {
+    background: #ff6d26;
+    color: #fff !important;
+    display: inline-block;
+    margin-left: 20px;
+    font-size: .875rem !important;
+    width: auto;
+    height: auto;
+    padding: 2px 12px !important;
+    margin-bottom: 10px !important;
+}
+.linha-diferenciada .tile .tile-subtitle:before {
+    display: none;
+}
+
 /*linha discreta */
 .portaltype-collective-cover-content div.row.linha-discreta {
     width: 100%!important;
@@ -338,7 +402,7 @@ p.tile-description {
         align-items: flex-end;
         justify-content: center;
         h1, h2, h3 {
-            color: #244a7c;
+            color: #000;
         }
     }
     .collection-item {
@@ -484,7 +548,7 @@ header.inverter .search-wrapper {
         color: #fff !important;
     }
     h1, h2, h3 {
-        color: #06acff !important;
+        color: #ff6d26 !important;
     }
 }
 
@@ -618,4 +682,8 @@ header.inverter .search-wrapper {
         padding-bottom: 10px;
         display:none;
     }
+    .tile .tile-subtitle:before {
+        background: #ff6d26 !important;
+    }
+    
 }

@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
-#from collective.z3cform.datagridfield import DataGridFieldFactory, DictRow
 from governo.mdh.portal import _
-from plone.app.textfield import RichText
 from plone.directives import form
 from plone.namedfile.field import NamedBlobImage
 from plone.supermodel import model
@@ -14,11 +12,6 @@ colors = SimpleVocabulary([
     SimpleTerm(value="default", token=2, title=u'Cores Pretas'),
 ])
 
-
-# class ITableRowSchema(form.Schema):
-
-#     title = schema.TextLine(title=u"Título", required=False)
-#     url = schema.TextLine(title=u"Link", required=False)
 
 class IBrowserLayer(Interface):
     """Add-on specific layer."""
@@ -122,18 +115,6 @@ class ITheme(model.Schema):
             u'help_title', default=u'The theme.'),
         default=u'',
         required=True,
-    )
-
-
-    # Verificar erro ao utilizar o collective.z3cform.datagridfield
-    # form.widget(features=DataGridFieldFactory)
-    features = schema.Text(
-        title=_(u'label_features', default=u'Features'),
-        description=_(
-            u'help_features', default=u'The list features.'),
-        required=False,
-        # value_type=DictRow(title=u"List features top",
-        #     schema=ITableRowSchema),
     )
 
     theme_top_image = NamedBlobImage(

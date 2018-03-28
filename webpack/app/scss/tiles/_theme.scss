@@ -52,43 +52,9 @@
 		z-index: -1;
 		text-indent: -3000px;
 	}
-	.documentFirstHeading h1, 
-	#content .documentDescription {
-		color: #000;
-		text-align: left;
-		max-width: 100%;
-		font-size: 24px;
-		font-weight: 900;
-		font-style: normal;
-		font-stretch: normal;
-		line-height: normal;
-		letter-spacing: normal;
-		text-align: left;
-		color: #222222;
-	}
-	#content .documentDescription {
-		width: 300px;
-	}
-	.label-minister {
-		color: #2969bd;
-		text-align: center;
-		font-size: 1.125rem;
-		font-weight: bold;
-		text-transform: uppercase;
-	}
-	h2#parent-fieldname-minister {
-		font-size: 3rem;
-		font-weight: 900;
-		color: #333333;
-		text-align: center;
-	}
-	.tile-header h2 {
-		font-size: 2.25rem;
-	}
-	.brasil-carousel-tile .carousel-thumbs {
-		width: 960px!important;
-	}
-	/* Inverter theme for top white */
+}
+
+/* Inverter theme for top white */
 	header.inverter-white {
 		background-color: transparent !important;
 		margin-bottom: 0 !important
@@ -101,9 +67,9 @@
 	
 	a.link-contraste.inverter-white, a.link-vlibras.inverter-white{
   	color:#fff !important;
-  }
+ }
 
-	#portal-breadcrumbs.inverter-white {
+#portal-breadcrumbs.inverter-white {
 		border-bottom: 1px solid hsla(0,0%,100%,.2);
 		color: #fff;
 		margin-bottom: 0;
@@ -114,4 +80,3 @@
 			@include sprite($casinha-branca);
 		}
 	}
-}

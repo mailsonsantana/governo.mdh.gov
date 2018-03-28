@@ -4,24 +4,22 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       i18n:domain="governo.mdh.portal">
   <body tal:define="is_empty view/is_empty;
-                    color view/get_color_top">
+                    color view/get_color_top;">
 
     <p tal:condition="python: is_empty and view.is_compose_mode()" i18n:translate="">
-        Drag&amp;drop an image to populate the tile.
+        Drag&amp;drop an content type Theme to populate the top tile.
     </p>
-    <div class="brasil-theme-tile tile-content"
-         tal:condition="not:is_empty">
+    <div class="brasil-theme-tile tile-content">
         <script type="text/javascript">
           $(document).ready(function() {
                 var banner = $('.brasil-theme-tile');
                 $('#content').append(banner);
-                var first_rowbanner = $('#content').find('.row')[0];
               });
         </script>
         <tal:condition condition="python: color == 'inverter-white'">
             <script type="text/javascript">
               $(document).ready(function() {
-                $(".inverter").toggleClass('inverter-white');
+                $(".inverter").addClass('inverter-white').removeClass('inverter');
                 $("#portal-title").css({'color':'#fff'});
                 $("#portal-description").css({'color':'#fff'});
                 $('.ico-navegacao').css({'background-position':'-198px -111px'});
@@ -30,8 +28,7 @@
             </script>
         </tal:condition>
           <article>
-            <div tal:replace="structure provider:plone.abovecontenttitle" />
-                <div class="linha-destaquetopo">
+            <div class="linha-destaquetopo">
                     <div id="parent-fieldname-theme_top_image"
                          tal:define="scale view/scale;
                                      scales view/@@images;

@@ -30,6 +30,22 @@
       <element>brasil.services</element>
     </value>
   </record>
+  <!-- estilos do collective.cover -->
+  <record name="collective.cover.controlpanel.ICoverSettings.styles" interface="collective.cover.controlpanel.ICoverSettings" field="styles">
+    <value>
+      <element>Box Branco|box-branco</element>
+      <element>Box Cinza|box-cinza</element>
+      <element>Box Colorido|box-colorido</element>
+      <element>FAQ|tile-faq</element>
+      <element>Foto Sobreposta|foto-sobreposta</element>
+      <element>Linha destacada|linha-destacada</element>
+      <element>Linha destaque topo|linha-destaquetopo</element>
+      <element>Linha discreta|linha-discreta</element>
+      <element>Linha diferenciada|linha-diferenciada</element>
+      <element>Linha recuada|linha-recuada</element>
+      <element>Lista Blocos|lista-blocos</element>
+    </value>
+  </record>
 
   <records interface="governo.mdh.portal.browser.controlpanel.IMdhSettings" />
 

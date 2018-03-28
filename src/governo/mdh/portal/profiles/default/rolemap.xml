@@ -8,14 +8,14 @@
       <role name="Contributor"/>
     </permission>
 
-    <permission name="governo.mdh.portal: Add Theme" acquire="True">
+    <permission name="governo.mdh.portal: Add Timeline" acquire="True">
       <role name="Manager" />
       <role name="Site Administrator" />
       <role name="Owner"/>
       <role name="Contributor"/>
     </permission>
 
-    <permission name="governo.mdh.portal: Add Timeline" acquire="True">
+    <permission name="governo.mdh.portal: Add Theme" acquire="True">
       <role name="Manager" />
       <role name="Site Administrator" />
       <role name="Owner"/>
