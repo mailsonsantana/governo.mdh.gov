@@ -1,0 +1,288 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$casinha-branca-name: 'casinha-branca';
+$casinha-branca-x: 39px;
+$casinha-branca-y: 153px;
+$casinha-branca-offset-x: -39px;
+$casinha-branca-offset-y: -153px;
+$casinha-branca-width: 17px;
+$casinha-branca-height: 12px;
+$casinha-branca-total-width: 210px;
+$casinha-branca-total-height: 173px;
+$casinha-branca-image: './img/sprite.png';
+$casinha-branca: (39px, 153px, -39px, -153px, 17px, 12px, 210px, 173px, './img/sprite.png', 'casinha-branca', );
+$fb-ic-name: 'fb-ic';
+$fb-ic-x: 0px;
+$fb-ic-y: 124px;
+$fb-ic-offset-x: 0px;
+$fb-ic-offset-y: -124px;
+$fb-ic-width: 29px;
+$fb-ic-height: 29px;
+$fb-ic-total-width: 210px;
+$fb-ic-total-height: 173px;
+$fb-ic-image: './img/sprite.png';
+$fb-ic: (0px, 124px, 0px, -124px, 29px, 29px, 210px, 173px, './img/sprite.png', 'fb-ic', );
+$filtro-audio-name: 'filtro-audio';
+$filtro-audio-x: 0px;
+$filtro-audio-y: 63px;
+$filtro-audio-offset-x: 0px;
+$filtro-audio-offset-y: -63px;
+$filtro-audio-width: 210px;
+$filtro-audio-height: 21px;
+$filtro-audio-total-width: 210px;
+$filtro-audio-total-height: 173px;
+$filtro-audio-image: './img/sprite.png';
+$filtro-audio: (0px, 63px, 0px, -63px, 210px, 21px, 210px, 173px, './img/sprite.png', 'filtro-audio', );
+$filtro-busca-name: 'filtro-busca';
+$filtro-busca-x: 20px;
+$filtro-busca-y: 153px;
+$filtro-busca-offset-x: -20px;
+$filtro-busca-offset-y: -153px;
+$filtro-busca-width: 19px;
+$filtro-busca-height: 19px;
+$filtro-busca-total-width: 210px;
+$filtro-busca-total-height: 173px;
+$filtro-busca-image: './img/sprite.png';
+$filtro-busca: (20px, 153px, -20px, -153px, 19px, 19px, 210px, 173px, './img/sprite.png', 'filtro-busca', );
+$filtro-imagem-name: 'filtro-imagem';
+$filtro-imagem-x: 0px;
+$filtro-imagem-y: 0px;
+$filtro-imagem-offset-x: 0px;
+$filtro-imagem-offset-y: 0px;
+$filtro-imagem-width: 210px;
+$filtro-imagem-height: 21px;
+$filtro-imagem-total-width: 210px;
+$filtro-imagem-total-height: 173px;
+$filtro-imagem-image: './img/sprite.png';
+$filtro-imagem: (0px, 0px, 0px, 0px, 210px, 21px, 210px, 173px, './img/sprite.png', 'filtro-imagem', );
+$filtro-infografico-name: 'filtro-infografico';
+$filtro-infografico-x: 0px;
+$filtro-infografico-y: 21px;
+$filtro-infografico-offset-x: 0px;
+$filtro-infografico-offset-y: -21px;
+$filtro-infografico-width: 210px;
+$filtro-infografico-height: 21px;
+$filtro-infografico-total-width: 210px;
+$filtro-infografico-total-height: 173px;
+$filtro-infografico-image: './img/sprite.png';
+$filtro-infografico: (0px, 21px, 0px, -21px, 210px, 21px, 210px, 173px, './img/sprite.png', 'filtro-infografico', );
+$filtro-video-name: 'filtro-video';
+$filtro-video-x: 0px;
+$filtro-video-y: 42px;
+$filtro-video-offset-x: 0px;
+$filtro-video-offset-y: -42px;
+$filtro-video-width: 210px;
+$filtro-video-height: 21px;
+$filtro-video-total-width: 210px;
+$filtro-video-total-height: 173px;
+$filtro-video-image: './img/sprite.png';
+$filtro-video: (0px, 42px, 0px, -42px, 210px, 21px, 210px, 173px, './img/sprite.png', 'filtro-video', );
+$gplus-ic-name: 'gplus-ic';
+$gplus-ic-x: 29px;
+$gplus-ic-y: 124px;
+$gplus-ic-offset-x: -29px;
+$gplus-ic-offset-y: -124px;
+$gplus-ic-width: 29px;
+$gplus-ic-height: 29px;
+$gplus-ic-total-width: 210px;
+$gplus-ic-total-height: 173px;
+$gplus-ic-image: './img/sprite.png';
+$gplus-ic: (29px, 124px, -29px, -124px, 29px, 29px, 210px, 173px, './img/sprite.png', 'gplus-ic', );
+$ico-audio-name: 'ico-audio';
+$ico-audio-x: 40px;
+$ico-audio-y: 84px;
+$ico-audio-offset-x: -40px;
+$ico-audio-offset-y: -84px;
+$ico-audio-width: 40px;
+$ico-audio-height: 40px;
+$ico-audio-total-width: 210px;
+$ico-audio-total-height: 173px;
+$ico-audio-image: './img/sprite.png';
+$ico-audio: (40px, 84px, -40px, -84px, 40px, 40px, 210px, 173px, './img/sprite.png', 'ico-audio', );
+$ico-filtrar-name: 'ico-filtrar';
+$ico-filtrar-x: 0px;
+$ico-filtrar-y: 153px;
+$ico-filtrar-offset-x: 0px;
+$ico-filtrar-offset-y: -153px;
+$ico-filtrar-width: 20px;
+$ico-filtrar-height: 20px;
+$ico-filtrar-total-width: 210px;
+$ico-filtrar-total-height: 173px;
+$ico-filtrar-image: './img/sprite.png';
+$ico-filtrar: (0px, 153px, 0px, -153px, 20px, 20px, 210px, 173px, './img/sprite.png', 'ico-filtrar', );
+$ico-imagem-name: 'ico-imagem';
+$ico-imagem-x: 80px;
+$ico-imagem-y: 84px;
+$ico-imagem-offset-x: -80px;
+$ico-imagem-offset-y: -84px;
+$ico-imagem-width: 40px;
+$ico-imagem-height: 40px;
+$ico-imagem-total-width: 210px;
+$ico-imagem-total-height: 173px;
+$ico-imagem-image: './img/sprite.png';
+$ico-imagem: (80px, 84px, -80px, -84px, 40px, 40px, 210px, 173px, './img/sprite.png', 'ico-imagem', );
+$ico-infografico-name: 'ico-infografico';
+$ico-infografico-x: 120px;
+$ico-infografico-y: 84px;
+$ico-infografico-offset-x: -120px;
+$ico-infografico-offset-y: -84px;
+$ico-infografico-width: 40px;
+$ico-infografico-height: 40px;
+$ico-infografico-total-width: 210px;
+$ico-infografico-total-height: 173px;
+$ico-infografico-image: './img/sprite.png';
+$ico-infografico: (120px, 84px, -120px, -84px, 40px, 40px, 210px, 173px, './img/sprite.png', 'ico-infografico', );
+$ico-video-name: 'ico-video';
+$ico-video-x: 160px;
+$ico-video-y: 84px;
+$ico-video-offset-x: -160px;
+$ico-video-offset-y: -84px;
+$ico-video-width: 40px;
+$ico-video-height: 40px;
+$ico-video-total-width: 210px;
+$ico-video-total-height: 173px;
+$ico-video-image: './img/sprite.png';
+$ico-video: (160px, 84px, -160px, -84px, 40px, 40px, 210px, 173px, './img/sprite.png', 'ico-video', );
+$image-download-name: 'image-download';
+$image-download-x: 174px;
+$image-download-y: 124px;
+$image-download-offset-x: -174px;
+$image-download-offset-y: -124px;
+$image-download-width: 27px;
+$image-download-height: 29px;
+$image-download-total-width: 210px;
+$image-download-total-height: 173px;
+$image-download-image: './img/sprite.png';
+$image-download: (174px, 124px, -174px, -124px, 27px, 29px, 210px, 173px, './img/sprite.png', 'image-download', );
+$image-zoom-name: 'image-zoom';
+$image-zoom-x: 116px;
+$image-zoom-y: 124px;
+$image-zoom-offset-x: -116px;
+$image-zoom-offset-y: -124px;
+$image-zoom-width: 29px;
+$image-zoom-height: 29px;
+$image-zoom-total-width: 210px;
+$image-zoom-total-height: 173px;
+$image-zoom-image: './img/sprite.png';
+$image-zoom: (116px, 124px, -116px, -124px, 29px, 29px, 210px, 173px, './img/sprite.png', 'image-zoom', );
+$link-ic-name: 'link-ic';
+$link-ic-x: 87px;
+$link-ic-y: 124px;
+$link-ic-offset-x: -87px;
+$link-ic-offset-y: -124px;
+$link-ic-width: 29px;
+$link-ic-height: 29px;
+$link-ic-total-width: 210px;
+$link-ic-total-height: 173px;
+$link-ic-image: './img/sprite.png';
+$link-ic: (87px, 124px, -87px, -124px, 29px, 29px, 210px, 173px, './img/sprite.png', 'link-ic', );
+$linkedin-ic-name: 'linkedin-ic';
+$linkedin-ic-x: 145px;
+$linkedin-ic-y: 124px;
+$linkedin-ic-offset-x: -145px;
+$linkedin-ic-offset-y: -124px;
+$linkedin-ic-width: 29px;
+$linkedin-ic-height: 29px;
+$linkedin-ic-total-width: 210px;
+$linkedin-ic-total-height: 173px;
+$linkedin-ic-image: './img/sprite.png';
+$linkedin-ic: (145px, 124px, -145px, -124px, 29px, 29px, 210px, 173px, './img/sprite.png', 'linkedin-ic', );
+$play-name: 'play';
+$play-x: 0px;
+$play-y: 84px;
+$play-offset-x: 0px;
+$play-offset-y: -84px;
+$play-width: 40px;
+$play-height: 40px;
+$play-total-width: 210px;
+$play-total-height: 173px;
+$play-image: './img/sprite.png';
+$play: (0px, 84px, 0px, -84px, 40px, 40px, 210px, 173px, './img/sprite.png', 'play', );
+$twitter-ic-name: 'twitter-ic';
+$twitter-ic-x: 58px;
+$twitter-ic-y: 124px;
+$twitter-ic-offset-x: -58px;
+$twitter-ic-offset-y: -124px;
+$twitter-ic-width: 29px;
+$twitter-ic-height: 29px;
+$twitter-ic-total-width: 210px;
+$twitter-ic-total-height: 173px;
+$twitter-ic-image: './img/sprite.png';
+$twitter-ic: (58px, 124px, -58px, -124px, 29px, 29px, 210px, 173px, './img/sprite.png', 'twitter-ic', );
+$spritesheet-width: 210px;
+$spritesheet-height: 173px;
+$spritesheet-image: './img/sprite.png';
+$spritesheet-sprites: ($casinha-branca, $fb-ic, $filtro-audio, $filtro-busca, $filtro-imagem, $filtro-infografico, $filtro-video, $gplus-ic, $ico-audio, $ico-filtrar, $ico-imagem, $ico-infografico, $ico-video, $image-download, $image-zoom, $link-ic, $linkedin-ic, $play, $twitter-ic, );
+$spritesheet: (210px, 173px, './img/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
