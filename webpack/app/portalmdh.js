@@ -17,6 +17,10 @@ jQuery.prototype[Symbol.iterator] = Array.prototype[Symbol.iterator];
 
 
 $(() => {
+  $('#viewlet-social-like').stop(true, true);
+  for (let carousel of $('.brasil-carousel-tile')) {
+    new CarouselTile(carousel);
+  }
   for (let tile of $('.brasil-photoday-tile')) {
     new PhotoDayTile();
   }
@@ -62,6 +66,7 @@ $(document).ready(function(){
 
 
 export default {
+  CarouselTile,
   PhotoDayTile,
   PhotoGalleryTile,
   Ministers,

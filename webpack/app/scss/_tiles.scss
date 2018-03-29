@@ -154,7 +154,7 @@ p.tile-description {
     h3 {
         color: #ff6d26;
         font-size: 3.75rem;
-        line-height: 3.063rem;
+        line-height: 1.063rem;
         letter-spacing: -0.0625rem;
     }
     p {    
@@ -394,6 +394,13 @@ p.tile-description {
     background: #F9F9F9;
     padding: 0 0 10px 0;
     margin: 0;
+
+    .box-branco {
+        background: #fff;
+        h1, h2, h3, {
+            color: #244a7c;
+            }
+        }
 
     .tile {
         padding:10px 20px;

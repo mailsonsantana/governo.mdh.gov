@@ -27,7 +27,7 @@
                                      data-content-uuid python:view.get_uuid(obj)">
                   <tal:image define="thumbnail python:view.thumbnail(obj);"
                              condition="thumbnail">
-                    <a tal:attributes="href obj/absolute_url">
+                    <a tal:attributes="href python:view.get_url(obj)">
                       <img tal:attributes="src thumbnail/url|string:${item/absolute_url}/download;
                                            width thumbnail/width;
                                            height thumbnail/height;
@@ -35,17 +35,20 @@
                                            alt python:view.get_alt(obj);" />
                     </a>
                   </tal:image>
-
-                  <h2 tal:replace="structure python:view.get_title_tag(obj)" />
-
-                  <p tal:content="obj/Description" />
+                  <div class="information">
+                      <h2>
+                        <a tal:attributes="href python:view.get_url(obj);"
+                           tal:content="python:view.get_title(obj)" />
+                      </h2>
+                      <p tal:content="python:view.get_description(obj)" />
+                  </div>
                 </div>
               </tal:items>
             </div>
           </tal:pages>
         </div>
-        <div class="swiper-button-next swiper-button-black"></div>
-        <div class="swiper-button-prev swiper-button-black"></div>
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
         <div class="swiper-pagination"></div>
       </div>
       <div class="tile-footer" tal:condition="view/more_link">
