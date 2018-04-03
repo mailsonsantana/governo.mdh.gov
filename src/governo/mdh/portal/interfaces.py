@@ -57,14 +57,6 @@ class ITimeline(model.Schema):
         required=True,
     )
 
-    subtitle = schema.TextLine(
-        title=_(u'label_subtitle', default=u'Subtitle'),
-        description=_(
-            u'help_subtitle', default=u'The subtitle of timeline.'),
-        default=u'',
-        required=False,
-    )
-
     description = schema.Text(
         title=_(u'label_description', default=u'Description'),
         description=_(

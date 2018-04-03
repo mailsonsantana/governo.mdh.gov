@@ -7,6 +7,7 @@ import GalleryTile from './js/tiles/gallery.js';
 import NavigationTile from './js/tiles/navigation.js';
 import PhotoDayTile from './js/tiles/photoday.js';
 import PhotoGalleryTile from './js/tiles/photogallery.js';
+import TimeLineTile from './js/tiles/timeline.js';
 
 import Contraste from './js/contrast.js';
 import GaleriaDeFotos from './js/albuns.js';
@@ -26,6 +27,9 @@ $(() => {
   }
   for (let tile of $('.brasil-photogallery-tile')) {
     new PhotoGalleryTile(tile);
+  }
+  for (let timeline of $('.brasil-timeline-tile')) {
+    new TimeLineTile(timeline);
   }
   if ($('.template-centrais-de-conteudo').length >= 0) {
     new ContentCentral();
@@ -69,6 +73,7 @@ export default {
   CarouselTile,
   PhotoDayTile,
   PhotoGalleryTile,
+  TimeLineTile,
   Ministers,
   SocialLike,
 };

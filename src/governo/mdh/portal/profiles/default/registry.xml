@@ -13,6 +13,7 @@
       <element>brasil.documentfinder</element>
       <element>brasil.quote</element>
       <element>brasil.services</element>
+      <element>brasil.timeline</element>
     </value>
   </record>
   <record name="collective.cover.controlpanel.ICoverSettings.available_tiles">
@@ -28,6 +29,7 @@
       <element>brasil.documentfinder</element>
       <element>brasil.quote</element>
       <element>brasil.services</element>
+      <element>brasil.timeline</element>
     </value>
   </record>
   <!-- estilos do collective.cover -->

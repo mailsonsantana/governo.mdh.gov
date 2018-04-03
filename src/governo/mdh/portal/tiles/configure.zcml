@@ -149,4 +149,17 @@
       template="services.pt"
       />
 
+   <plone:tile
+      name="brasil.timeline"
+      for="*"
+      title="Timeline"
+      description="Displays timeline."
+      icon="++resource++collective.cover/img/tile-generic.png"
+      add_permission="cmf.ModifyPortalContent"
+      schema=".timeline.ITimelineTile"
+      class=".timeline.TimelineTile"
+      permission="zope2.View"
+      template="timeline.pt"
+      />
+
 </configure>
