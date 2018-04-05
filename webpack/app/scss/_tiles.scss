@@ -248,6 +248,54 @@ p.tile-description {
     line-height: 1.563rem !important;
 }
 
+/* tile de foto sobreposta fonte branca */
+.tile.foto-sobreposta-fonte-branca {
+    position: relative;
+    height: 270px;
+    display: flex;
+
+    .tile-content {
+        align-self: flex-end;
+    }
+    img {
+        object-fit: cover;
+        height: auto;
+        width:100%;
+        position: absolute;
+        top: 0;
+        z-index: -2;
+    }
+    h1,
+    h2,
+    h3 {
+        padding: 0 100px 20px 20px;
+        margin: 0 !important;
+        color: #FFF !important;
+
+    }
+    h2 {
+        font-size: 1.75rem;
+        line-height: 2.188rem;
+    }
+    h2 a, h1 a, h3 a,
+    h2 a:hover, h1 a:hover, h3 a:hover {
+        color: #FFF !important;
+    }
+
+    .tile-section {
+        color: #0094ff;
+        left: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 0 100px 10px 20px;
+    }
+}
+#content .tile.foto-sobreposta p {
+    padding: 0px 0px;
+    color: #fff;
+    line-height: 1.563rem !important;
+}
+
 
 /* tile de foto sobreposta grande */
 .tile.foto-sobreposta-grande {
