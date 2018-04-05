@@ -204,7 +204,7 @@ p.tile-description {
 /* tile de foto sobreposta */
 .tile.foto-sobreposta {
     position: relative;
-    height: auto;
+    height: 270px;
     display: flex;
 
     .tile-content {
@@ -243,7 +243,7 @@ p.tile-description {
     }
 }
 #content .tile.foto-sobreposta p {
-    padding: 0 20px;
+    padding: 0px 0px;
     color: #fff;
     line-height: 1.563rem !important;
 }
