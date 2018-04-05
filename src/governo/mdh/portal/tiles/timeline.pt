@@ -20,20 +20,7 @@
           <tal:pages repeat="page view/results">
             <div class="swiper-slide">
               <tal:items repeat="obj page">
-                <div class="timeline-item"
-                     tal:attributes="data-tile-id view/id;
-                                     data-content-type obj/portal_type;
-                                     data-content-uuid python:view.get_uuid(obj)">
-                  <tal:image define="thumbnail python:view.thumbnail(obj);"
-                             condition="thumbnail">
-                    <a tal:attributes="href python:view.get_url(obj)">
-                      <img tal:attributes="src thumbnail/url|string:${item/absolute_url}/download;
-                                           width thumbnail/width;
-                                           height thumbnail/height;
-                                           class view/get_image_position;
-                                           alt python:view.get_alt(obj);" />
-                    </a>
-                  </tal:image>
+                <div class="timeline-item">
                   <div class="information-timeline">
                       <h2>
                         <a tal:attributes="href python:view.get_url(obj);"
@@ -49,12 +36,21 @@
                            tal:content="python: view.get_more_link_text(obj)">Mais Informações</a>
                       </p>
                   </div>
-                </div>
-                <div class="year">
-                    <span tal:content="python: view.get_year(obj)"></span>
-                </div>
-                <div class="month">
-                    <span tal:content="python: view.get_month(obj)"></span>
+                  <div class="image-timeline"
+                       tal:attributes="data-tile-id view/id;
+                                       data-content-type obj/portal_type;
+                                       data-content-uuid python:view.get_uuid(obj)">
+                  <tal:image define="thumbnail python:view.get_image(obj);"
+                             tal:condition="thumbnail">
+                    <a tal:attributes="href python:view.get_url(obj)">
+                      <img tal:attributes="src thumbnail/url|string:${obj/absolute_url}/download;
+                                           width thumbnail/width;
+                                           height thumbnail/height;
+                                           class view/get_image_position;
+                                           alt python:view.get_alt(obj);" />
+                    </a>
+                  </tal:image>
+                  </div>
                 </div>
               </tal:items>
             </div>
@@ -63,6 +59,14 @@
         <div class="swiper-button-next swiper-button-black"></div>
         <div class="swiper-button-prev swiper-button-black"></div>
         <div class="swiper-pagination"></div>
+      </div>
+      <div class="line-timeline"
+           tal:define="itens python: view.get_between_years(view.results())">
+          <div class="info-left"
+               tal:content="itens/year_left">1965</div>
+
+          <div class="info-right"
+               tal:content="itens/year_right">1979</div>
       </div>
       <div class="tile-footer" tal:condition="view/more_link">
         <a tal:attributes="href view/more_link/href" tal:content="view/more_link/text"></a>

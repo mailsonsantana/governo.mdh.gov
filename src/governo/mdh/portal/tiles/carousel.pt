@@ -27,6 +27,7 @@
                                      data-content-uuid python:view.get_uuid(obj)">
                   <tal:image define="thumbnail python:view.thumbnail(obj);"
                              condition="thumbnail">
+                  <div class="image-carousel">
                     <a tal:attributes="href python:view.get_url(obj)">
                       <img tal:attributes="src thumbnail/url|string:${item/absolute_url}/download;
                                            width thumbnail/width;
@@ -34,6 +35,7 @@
                                            class view/get_image_position;
                                            alt python:view.get_alt(obj);" />
                     </a>
+                  </div>
                   </tal:image>
                   <div class="information">
                       <h2>

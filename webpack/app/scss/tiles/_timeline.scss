@@ -1,4 +1,7 @@
 /* tile de timeline */
+#content a:hover, dl.portlet a:hover{
+    color: #000!important;
+}
 .brasil-timeline-tile {
   display: block;
   .tile-header {
@@ -25,8 +28,7 @@
   }
   .timeline-item {
     display: flex;
-    flex-direction: column;
-    width: 70%;
+    width: 80%;
     text-align: left;
     padding-top: 0px;
     img {
@@ -118,4 +120,32 @@
   .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 30px;
     }
+
+  .line-timeline {
+    width: 80%;
+    border-top: solid 2px #222222;
+    margin:-24px auto;
+    .info-left {
+          float:left;
+          opacity: 0.5;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 2.4;
+          letter-spacing: normal;
+          text-align: left;
+          color: #222222;
+    }
+    .info-right {
+          float:right;
+          opacity: 0.5;
+          font-weight: bold;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 2.4;
+          letter-spacing: normal;
+          text-align: left;
+          color: #222222;
+    }
+  }
 }

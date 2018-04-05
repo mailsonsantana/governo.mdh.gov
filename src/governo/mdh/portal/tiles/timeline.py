@@ -144,3 +144,26 @@ class TimelineTile(ListTile):
                 # If we had a custom month set, then get that
                 month = uuids[uuid].get('custom_month')
         return month
+
+    def get_image(self,item):
+        if item:
+            image = item.image_timeline
+            scales = item.restrictedTraverse('@@images')
+            scale = scales.scale('image_timeline', scale='tile_album_view')
+            return scale
+            
+
+
+    def get_between_years(self,itens):
+        if itens:
+            years = [year[0].year for year in itens]
+            year_left = years[0]
+            year_right = years[-1]
+            D={}
+            D['year_left'] = year_left
+            D['year_right'] = year_right
+        else:
+            D={}
+            D['year_left'] = ''
+            D['year_right'] = ''
+        return D

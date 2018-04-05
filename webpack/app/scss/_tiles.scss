@@ -204,7 +204,7 @@ p.tile-description {
 /* tile de foto sobreposta */
 .tile.foto-sobreposta {
     position: relative;
-    height: 375px;
+    height: auto;
     display: flex;
 
     .tile-content {
@@ -212,7 +212,7 @@ p.tile-description {
     }
     img {
         object-fit: cover;
-        height: 375px !important;
+        height: auto;
         width:100%;
         position: absolute;
         top: 0;
@@ -240,23 +240,6 @@ p.tile-description {
         font-weight: bold;
         text-transform: uppercase;
         padding: 0 100px 10px 20px;
-    }
-    >div:before {
-        background-color: transparent;
-        background-image:
-        linear-gradient(
-          transparent, #000
-        );
-        content: ".";
-        display: block;
-        height: 375px;
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        opacity: .8;
-        z-index: -1;
-        text-indent: -3000px;
     }
 }
 #content .tile.foto-sobreposta p {

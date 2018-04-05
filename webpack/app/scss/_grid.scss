@@ -30,6 +30,10 @@
   .col-md-12 {
     display: inline-flex;
   }
+  .col-md-16 {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
   .col-md-12 {
     flex-basis: 100%;
     max-width: 100%;
