@@ -6,6 +6,11 @@ export default class TimeLineTile {
     this.initSecondTimeLine();
   }
   initSwiper() {
+    var months = [];
+    $('.swiper-container .swiper-slide').each(function(i) {
+      months.push($(this).find('.month').attr('data-swiper-month'))
+    });
+
     this.swiper = new Swiper(`#${this.tile.id} .timeline-thumbs`, {
       navigation: {
         nextEl: `#${this.tile.id} .timeline-thumbs .swiper-button-next`,
@@ -14,6 +19,9 @@ export default class TimeLineTile {
       pagination: {
         el: `#${this.tile.id} .timeline-thumbs .swiper-pagination`,
         clickable: true,
+        renderBullet: function (index, className) {
+          return '<span class="swiper-month ' + className + '">' + months[index] + '</span>';
+        },
       },
     });
   }

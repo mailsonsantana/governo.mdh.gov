@@ -33,6 +33,7 @@
                            data-mce-href=""
                            class="internal-link"
                            target="_self"
+                           tal:attributes="href python:view.get_url(obj)"
                            tal:content="python: view.get_more_link_text(obj)">Mais Informações</a>
                       </p>
                   </div>
@@ -52,6 +53,8 @@
                   </tal:image>
                   </div>
                 </div>
+                <div class="month"
+                   tal:attributes="data-swiper-month python: view.get_month(obj)"></div>
               </tal:items>
             </div>
           </tal:pages>
