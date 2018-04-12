@@ -8,6 +8,7 @@ import NavigationTile from './js/tiles/navigation.js';
 import PhotoDayTile from './js/tiles/photoday.js';
 import PhotoGalleryTile from './js/tiles/photogallery.js';
 import TimeLineTile from './js/tiles/timeline.js';
+import ComposicaoTile from './js/tiles/composicao.js';
 
 import Contraste from './js/contrast.js';
 import GaleriaDeFotos from './js/albuns.js';
@@ -21,6 +22,9 @@ $(() => {
   $('#viewlet-social-like').stop(true, true);
   for (let carousel of $('.brasil-carousel-tile')) {
     new CarouselTile(carousel);
+  }
+  for (let carousel of $('.brasil-composicao-tile')) {
+    new ComposicaoTile(carousel);
   }
   for (let tile of $('.brasil-photoday-tile')) {
     new PhotoDayTile();
@@ -71,6 +75,7 @@ $(document).ready(function(){
 
 export default {
   CarouselTile,
+  ComposicaoTile,
   PhotoDayTile,
   PhotoGalleryTile,
   TimeLineTile,
