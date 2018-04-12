@@ -13,12 +13,12 @@
   <browser:resourceDirectory name="portalmdh" directory="static" />
 
   <browser:page
-      class="governo.mdh.portal.browser.conselho.View"
-      for="governo.mdh.portal.interfaces.IConselho"
+      class="governo.mdh.portal.browser.ministry.View"
+      for="governo.mdh.portal.interfaces.IMinistry"
       layer="governo.mdh.portal.interfaces.IBrowserLayer"
       name="view"
       permission="zope2.View"
-      template="conselho.pt"
+      template="ministry.pt"
       />
 
   <browser:page
@@ -55,15 +55,15 @@
       permission="zope.Public"
       />
 
-  <browser:viewlet
+  <!-- <browser:viewlet
       class=".viewlets.CompositionViewlet"
-      for="governo.mdh.portal.interfaces.IConselho"
+      for="governo.mdh.portal.interfaces.IMinistry"
       layer="governo.mdh.portal.interfaces.IBrowserLayer"
       manager="plone.app.layout.viewlets.interfaces.IBelowContent"
       name="mdh.compostion"
       permission="zope2.View"
       template="composition_viewlet.pt"
-      />
+      /> -->
 
   <browser:menuItem
       for="plone.app.contenttypes.interfaces.ICollection"

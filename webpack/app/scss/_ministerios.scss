@@ -1,6 +1,25 @@
 /* largura da area de texto */
 
 .template-view.portaltype-ministry {
+	#logo #portal-title, #logo h1, #portal-description ,#portal-breadcrumbs.inverter{
+		color:#FFF !important;
+	}
+	.link-contraste.inverter, .link-vlibras.inverter  {
+		color: #FFF !important;
+	}
+
+	#portal-breadcrumbs.inverter-white {
+		border-bottom: 1px solid hsla(0,0%,100%,.2);
+		color: #fff;
+		margin-bottom: 0;
+		a, .breadcrumbSeparator {
+			color: #fff !important;
+		}
+		#breadcrumbs-home a:before {
+			@include sprite($casinha-branca);
+		}
+	}
+
 	#content-core p {
 		width: 900px;
 		margin-left: auto;
@@ -85,5 +104,16 @@
 	}
 	.brasil-carousel-tile .carousel-thumbs {
         width: 960px!important;
+    }
+}
+.ministers-carousel a {
+    text-align: left;
+    p {
+	    color: #a3a3a3 !important;
+	    font-size: 14px;
+	    }
+    .ministers-carousel a h3 {
+	    margin: 10px 0;
+	    font-size: 26px;
     }
 }
