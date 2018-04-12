@@ -1,0 +1,99 @@
+/* tile de composicao */
+.brasil-composicao-tile {
+  display: block;
+  .tile-header {
+    text-align: center;
+    p {
+        color: #333;
+        opacity: .5;
+    }
+  }
+
+  .information {
+    h2 {
+      font-size: 26px !important;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #222222;
+    }
+    p {
+      font-size: 14px !important;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: left;
+      color: #a3a3a3;
+    }
+  }
+  .composicao-thumbs {
+    width: 1060px !important;
+    box-sizing: border-box;
+    padding: 0 0 30px 0;
+  }
+  .swiper-slide {
+    display: flex;
+    justify-content: space-evenly;
+
+  }
+  .composicao-item {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    text-align: center;
+    padding-top: 30px;
+    img {
+        float: none !important;
+        margin: 0;
+    }
+  }
+  h2 {
+    display: table;
+    height: 30px;
+    width: 100%;
+    font-size: 2.25rem;
+
+    a {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+  .composicao-item:hover {
+    background: #f9f9f9;
+  }
+  .switch-composicao li {
+    cursor: pointer;
+    display: inline-block !important;
+    padding: 10px;
+    margin: 0 25px;
+    text-transform: uppercase;
+  }
+  .switch-composicao li.active {
+    border-bottom: 5px solid #333;
+  }
+  .switch-composicao ul {
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    margin: 0 0 20px 0;
+  }
+  .swiper-button-black,
+  .swiper-button-black.disabled {
+    color: #222 !important;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet {
+    border-radius: 0;
+    width: 30px;
+  }
+  .swiper-pagination-bullet-active {
+    background: #333;
+  }
+  .swiper-button-next, .swiper-button-prev {
+    height: 25px;
+  }
+}

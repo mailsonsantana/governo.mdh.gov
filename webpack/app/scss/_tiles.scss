@@ -182,6 +182,12 @@ p.tile-description {
     color: #fff !important;
 }
 
+/* tile linha-altura-fixa */
+
+.linha-altura-fixa {
+    height:550px !important;
+}
+
 /* tile de lista */
 .lista-blocos .tile-content {
     display: flex;
@@ -691,7 +697,7 @@ p.tile-description {
     }
     h1, h2, h3, p, time {
         width: 1140px;
-        padding-right: 300px;
+        padding-right: 500px;
         box-sizing:border-box;
         margin: 0 auto 10px auto;
         color: #fff;

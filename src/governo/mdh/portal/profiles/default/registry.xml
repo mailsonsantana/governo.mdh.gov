@@ -14,6 +14,7 @@
       <element>brasil.quote</element>
       <element>brasil.services</element>
       <element>brasil.timeline</element>
+      <element>brasil.composicao</element>
     </value>
   </record>
   <record name="collective.cover.controlpanel.ICoverSettings.available_tiles">
@@ -30,6 +31,7 @@
       <element>brasil.quote</element>
       <element>brasil.services</element>
       <element>brasil.timeline</element>
+      <element>brasil.composicao</element>
     </value>
   </record>
   <!-- estilos do collective.cover -->
@@ -45,6 +47,7 @@
       <element>Linha destaque topo|linha-destaquetopo</element>
       <element>Linha discreta|linha-discreta</element>
       <element>Linha diferenciada|linha-diferenciada</element>
+      <element>Linha altura fixa|linha-altura-fixa</element>
       <element>Linha recuada|linha-recuada</element>
       <element>Lista Blocos|lista-blocos</element>
       <element>Lista Blocos Laranja|lista-blocos-laranja</element>

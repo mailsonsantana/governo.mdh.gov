@@ -8,26 +8,26 @@
       Please add up to <span i18n:name="limit_objects" tal:replace="view/limit"/> objects to the tile.
     </p>
 
-    <div class="brasil-carousel-tile tile-content"
+    <div class="brasil-composicao-tile tile-content"
          tal:condition="not:is_empty"
-         tal:attributes="id string:carousel-${view/id}">
+         tal:attributes="id string:composicao-${view/id}">
       <div class="tile-header" tal:condition="view/tile_title">
         <h2 tal:content="view/tile_title" />
         <p tal:content="view/tile_description" />
       </div>
-      <div class="switch-carousel" tal:attributes="data-text view/switch_text"></div>
-      <div class="swiper-container carousel-thumbs">
+      <div class="switch-composicao" tal:attributes="data-text view/switch_text"></div>
+      <div class="swiper-container composicao-thumbs">
         <div class="swiper-wrapper">
           <tal:pages repeat="page view/results">
             <div class="swiper-slide">
               <tal:items repeat="obj page">
-                <div class="carousel-item"
+                <div class="composicao-item"
                      tal:attributes="data-tile-id view/id;
                                      data-content-type obj/portal_type;
                                      data-content-uuid python:view.get_uuid(obj)">
-                  <tal:image define="thumbnail python:view.thumbnail(obj);"
+                  <tal:image define="thumbnail python:view.get_image(obj);"
                              condition="thumbnail">
-                  <div class="image-carousel">
+                  <div class="image-composicao">
                     <a tal:attributes="href python:view.get_url(obj)">
                       <img tal:attributes="src thumbnail/url|string:${item/absolute_url}/download;
                                            width thumbnail/width;
@@ -46,8 +46,8 @@
             </div>
           </tal:pages>
         </div>
-        <div class="swiper-button-next swiper-button-white"></div>
-        <div class="swiper-button-prev swiper-button-white"></div>
+        <div class="swiper-button-next swiper-button-black"></div>
+        <div class="swiper-button-prev swiper-button-black"></div>
         <div class="swiper-pagination"></div>
       </div>
       <div class="tile-footer" tal:condition="view/more_link">

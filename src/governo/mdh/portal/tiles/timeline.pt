@@ -54,7 +54,7 @@
                   </div>
                 </div>
                 <div class="month"
-                   tal:attributes="data-swiper-month python: view.get_month(obj)"></div>
+                       tal:attributes="data-swiper-month python: view.get_month(obj)"></div>
               </tal:items>
             </div>
           </tal:pages>

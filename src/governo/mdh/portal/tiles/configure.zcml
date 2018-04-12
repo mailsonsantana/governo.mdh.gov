@@ -162,4 +162,17 @@
       template="timeline.pt"
       />
 
+  <plone:tile
+      name="brasil.composicao"
+      for="*"
+      title="Composicao"
+      description="Display a composicao of items."
+      icon="++resource++collective.cover/img/tile-generic.png"
+      add_permission="cmf.ModifyPortalContent"
+      schema=".composicao.IComposicaoTile"
+      class=".composicao.ComposicaoTile"
+      permission="zope2.View"
+      template="composicao.pt"
+      />
+
 </configure>

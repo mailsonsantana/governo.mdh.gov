@@ -20,7 +20,7 @@ export default class TimeLineTile {
         el: `#${this.tile.id} .timeline-thumbs .swiper-pagination`,
         clickable: true,
         renderBullet: function (index, className) {
-          return '<span class="swiper-month ' + className + '">' + months[index] + '</span>';
+          return '<div class="swiper-month ' + className + '"><p>' + months[index] + '</p></div>';
         },
       },
     });
