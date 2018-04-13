@@ -25,9 +25,9 @@
 
         </div>
 
-        <div i18n:translate="label_minister" class="label-minister">Minister</div>
+        <!-- <div i18n:translate="label_minister" class="label-minister">Minister</div>
         <h2 id="parent-fieldname-minister"
-            tal:content="context/minister">Name</h2>
+            tal:content="context/minister">Name</h2> -->
 
         <div tal:replace="structure provider:plone.belowcontenttitle" />
 
@@ -51,6 +51,41 @@
 
         <div tal:replace="structure provider:plone.belowcontentbody" />
       </article>
+
+      <tal:agenda condition="view/has_agenda">
+        <div class="dados-agenda" data-url="http://165.227.47.203/acompanhe-planalto/agenda-do-presidente/agenda-do-presidente-michel-temer">
+        
+        <div class="daypicker-wrapper">
+          <ul class="daypicker"><li data-day="2018-04-09T03:00:00.000Z" class="day">
+          <div class="daypicker-day">9</div>
+          <div class="daypicker-weekday">Seg</div>
+        </li><li data-day="2018-04-10T03:00:00.000Z" class="day">
+          <div class="daypicker-day">10</div>
+          <div class="daypicker-weekday">Ter</div>
+        </li><li data-day="2018-04-11T03:00:00.000Z" class="day">
+          <div class="daypicker-day">11</div>
+          <div class="daypicker-weekday">Qua</div>
+        </li><li data-day="2018-04-12T03:00:00.000Z" class="day is-selected">
+          <div class="daypicker-day">12</div>
+          <div class="daypicker-weekday">Qui</div>
+        </li><li data-day="2018-04-13T03:00:00.000Z" class="day">
+          <div class="daypicker-day">13</div>
+          <div class="daypicker-weekday">Sex</div>
+        </li><li data-day="2018-04-14T03:00:00.000Z" class="day">
+          <div class="daypicker-day">14</div>
+          <div class="daypicker-weekday">Sáb</div>
+        </li><li data-day="2018-04-15T03:00:00.000Z" class="day">
+          <div class="daypicker-day">15</div>
+          <div class="daypicker-weekday">Dom</div>
+        </li></ul>
+        </div>
+        <div class="collectionevents-title-wrapper">
+          <div class="collectionevents-stroke"></div>
+          <div class="collectionevents-title">Compromissos do dia</div>
+          <div class="collectionevents-stroke"></div>
+        </div>
+      </div>
+      </tal:agenda>
      </metal:main>
   </body>
 </html>

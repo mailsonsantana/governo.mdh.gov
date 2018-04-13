@@ -8,18 +8,29 @@
 		color: #FFF !important;
 	}
 
-	#portal-breadcrumbs.inverter-white {
-		border-bottom: 1px solid hsla(0,0%,100%,.2);
-		color: #fff;
-		margin-bottom: 0;
+	#portal-breadcrumbs.inverter {
 		a, .breadcrumbSeparator {
-			color: #fff !important;
+			color: #FFF !important;
 		}
 		#breadcrumbs-home a:before {
-			@include sprite($casinha-branca);
+			background-position: 29px -161px !important;
 		}
 	}
-
+	.header-icons .ico-navegacao{
+		background-position: -198px -111px;
+	}
+	#portal-services a {
+		color: #FFF !important
+	}
+	.header-accessibility .link-contraste:before {
+		background-position:-118px -90px;
+	}
+	.header-accessibility .link-vlibras:before {
+		background-position:-13px -199px;	
+	}
+	#portal-searchbox .searchButton{
+		background-position: -52px -174px;
+	}
 	#content-core p {
 		width: 900px;
 		margin-left: auto;
