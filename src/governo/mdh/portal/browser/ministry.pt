@@ -53,39 +53,79 @@
       </article>
 
       <tal:agenda condition="view/has_agenda">
-        <div class="dados-agenda" data-url="http://165.227.47.203/acompanhe-planalto/agenda-do-presidente/agenda-do-presidente-michel-temer">
+      <div class="agenda-fundo">
+        <div class="dados-agenda">
+          <tal:daypicker>
+            <div class="daypicker-wrapper">
+              <ul class="daypicker"
+                  tal:condition="view/days">
+                <tal:event repeat="day view/days">
+                  <li tal:attributes="data-day day/iso;
+                                      class day/cssclass;">
+                    <div class="daypicker-day"
+                         tal:content="day/day" />
+                    <div class="daypicker-weekday"
+                         tal:content="day/weekday" />
+                  </li>
+                </tal:event>
+              </ul>
+            </div>
+          </tal:daypicker>
         
-        <div class="daypicker-wrapper">
-          <ul class="daypicker"><li data-day="2018-04-09T03:00:00.000Z" class="day">
-          <div class="daypicker-day">9</div>
-          <div class="daypicker-weekday">Seg</div>
-        </li><li data-day="2018-04-10T03:00:00.000Z" class="day">
-          <div class="daypicker-day">10</div>
-          <div class="daypicker-weekday">Ter</div>
-        </li><li data-day="2018-04-11T03:00:00.000Z" class="day">
-          <div class="daypicker-day">11</div>
-          <div class="daypicker-weekday">Qua</div>
-        </li><li data-day="2018-04-12T03:00:00.000Z" class="day is-selected">
-          <div class="daypicker-day">12</div>
-          <div class="daypicker-weekday">Qui</div>
-        </li><li data-day="2018-04-13T03:00:00.000Z" class="day">
-          <div class="daypicker-day">13</div>
-          <div class="daypicker-weekday">Sex</div>
-        </li><li data-day="2018-04-14T03:00:00.000Z" class="day">
-          <div class="daypicker-day">14</div>
-          <div class="daypicker-weekday">Sáb</div>
-        </li><li data-day="2018-04-15T03:00:00.000Z" class="day">
-          <div class="daypicker-day">15</div>
-          <div class="daypicker-weekday">Dom</div>
-        </li></ul>
         </div>
-        <div class="collectionevents-title-wrapper">
-          <div class="collectionevents-stroke"></div>
-          <div class="collectionevents-title">Compromissos do dia</div>
-          <div class="collectionevents-stroke"></div>
+        <tal:collection_events condition="view/collection_events">
+            <div class="collectionevents-wrapper">
+              <div class="collectionevents-title-wrapper">
+                <div class="collectionevents-stroke"></div>
+                <div class="collectionevents-title"
+                     i18n:translate="">
+                  Compromissos do dia
+                </div>
+                <div class="collectionevents-stroke"></div>
+              </div>
+              <div class="swiper-container collection-events">
+                <div class="swiper-wrapper">
+                  <tal:page repeat="page view/collection_events">
+                    <div class="swiper-slide">
+                      <tal:event repeat="event page">
+                        <div class="collection-events-item">
+                          <a class="title-item"
+                             href="${view/url_agenda}"
+                             tal:attributes="href view/url_agenda"
+                             tal:content="event/description">${event/description}</a>
+                          <div class="location-item">
+                            <span class="location" tal:content="event/location">${event/location}</span>
+                          </div>
+                          <div tal:attributes="class event/timestamp_class">
+                            <span class="timestamp" tal:content="event/time">${event/time}</span>
+                          </div>
+                        </div>
+                      </tal:event>
+                    </div>
+                  </tal:page>
+                  <div class="swiper-slide no-events"
+                       i18n:translate="label_agendadiaria_sem_compromissos"
+                       tal:condition="not:view/agenda_diaria">
+                    Sem compromissos oficiais.
+                  </div>
+                </div>
+                <div class="swiper-button-next swiper-button-black"></div>
+                <div class="swiper-button-prev swiper-button-black"></div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </tal:collection_events>
         </div>
-      </div>
       </tal:agenda>
+      <div class="column col-md-12 agenda-fundo" data-panel="">
+            <div class="tile tile-default">
+                <div class="outstanding-header tile-content">
+                    <a class="outstanding-link" 
+                       href="/#"
+                       tal:attributes="href view/url_agenda">AGENDA COMPLETA</a>
+                </div>
+            </div>
+          </div>
      </metal:main>
   </body>
 </html>

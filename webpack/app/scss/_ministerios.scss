@@ -1,130 +1,203 @@
 /* largura da area de texto */
 
 .template-view.portaltype-ministry {
-	#logo #portal-title, #logo h1, #portal-description ,#portal-breadcrumbs.inverter{
-		color:#FFF !important;
-	}
-	.link-contraste.inverter, .link-vlibras.inverter  {
-		color: #FFF !important;
-	}
+    #logo #portal-title, #logo h1, #portal-description ,#portal-breadcrumbs.inverter{
+        color:#FFF !important;
+    }
+    .link-contraste.inverter, .link-vlibras.inverter  {
+        color: #FFF !important;
+    }
 
-	#portal-breadcrumbs.inverter {
-		a, .breadcrumbSeparator {
-			color: #FFF !important;
-		}
-		#breadcrumbs-home a:before {
-			background-position: 29px -161px !important;
-		}
-	}
-	.header-icons .ico-navegacao{
-		background-position: -198px -111px;
-	}
-	#portal-services a {
-		color: #FFF !important
-	}
-	.header-accessibility .link-contraste:before {
-		background-position:-118px -90px;
-	}
-	.header-accessibility .link-vlibras:before {
-		background-position:-13px -199px;	
-	}
-	#portal-searchbox .searchButton{
-		background-position: -52px -174px;
-	}
-	#content-core p {
-		width: 900px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-	.image-right {
-		margin-right: 10vw;
-	}
-	.image-left {
-		margin-left: 10vw;
-	}
-	.image-inline {
-		max-width: 100%;
-		margin-left: auto;
-		margin-right: auto;
-		dd {
-		 	max-width: 100%;
-		}
-		img {
-		  max-width: 100%;
-		  height: auto;
-		}
-	}
-	.linha-destaquetopo {
-	    height: 400px;
-	    display: flex;
-	    flex-direction: column;
-	    justify-content: center;
-	    margin-bottom: 100px;
-	}
-	#parent-fieldname-lead_image img {
-		height: 680px;
-		width: 100%;
-		object-fit: cover;
-		position: absolute!important;
-		top: 0;
-		left: 0;
-		z-index: -2;
-	}
-	#parent-fieldname-lead_image:before {
-		background-color: transparent;
-	    background-image: -o-radial-gradient(transparent,#000);
-	    background-image: radial-gradient(transparent,#000);
-	    content: " ";
-	    white-space: nowrap;
-	    display: block;
-	    height: 680px;
-	    position: absolute;
-	    left: 0;
-	    top: 0;
-	    right: 0;
-	    opacity: .8;
-	    z-index: -1;
-	    text-indent: -3000px;
-	}
-	h1.documentFirstHeading, 
-	#content .documentDescription {
-		color: #fff;
-		text-align: left;
-		width: 600px;
-		max-width: 100%;
-		margin: 0px 0 15px 0;
-	}
-	#content .documentDescription {
-		width: 300px;
-	}
-	.label-minister {
-		color: #2969bd;
-		text-align: center;
-		font-size: 1.125rem;
-		font-weight: bold;
-		text-transform: uppercase;
-	}
-	h2#parent-fieldname-minister {
-		font-size: 3rem;
-		font-weight: 900;
-		color: #333333;
-		text-align: center;
-	}
-	.tile-header h2 {
-		font-size: 2.25rem;
-	}
-	.brasil-carousel-tile .carousel-thumbs {
+    #portal-breadcrumbs.inverter {
+        a, .breadcrumbSeparator {
+            color: #FFF !important;
+        }
+        #breadcrumbs-home a:before {
+            background-position: -198px -161px !important;
+        }
+    }
+    .header-icons .ico-navegacao{
+        background-position: -198px -137px;
+    }
+    #portal-services a {
+        color: #FFF !important
+    }
+    .header-accessibility .link-contraste:before {
+        background-position: -227px -54px;
+    }
+    .header-accessibility .link-vlibras:before {
+        background-position:-227px -83px;   
+    }
+    #portal-searchbox .searchButton{
+        background-position: -52px -174px;
+    }
+    #content-core p {
+        width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .image-right {
+        margin-right: 10vw;
+    }
+    .image-left {
+        margin-left: 10vw;
+    }
+    .image-inline {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        dd {
+            max-width: 100%;
+        }
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+    }
+    .linha-destaquetopo {
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 100px;
+    }
+    #parent-fieldname-lead_image img {
+        height: 680px;
+        width: 100%;
+        object-fit: cover;
+        position: absolute!important;
+        top: 0;
+        left: 0;
+        z-index: -2;
+    }
+    #parent-fieldname-lead_image:before {
+        background-color: transparent;
+        background-image: -o-radial-gradient(transparent,#000);
+        background-image: radial-gradient(transparent,#000);
+        content: " ";
+        white-space: nowrap;
+        display: block;
+        height: 680px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        opacity: .8;
+        z-index: -1;
+        text-indent: -3000px;
+    }
+    h1.documentFirstHeading, 
+    #content .documentDescription {
+        color: #fff;
+        text-align: left;
+        width: 600px;
+        max-width: 100%;
+        margin: 0px 0 15px 0;
+    }
+    #content .documentDescription {
+        width: 300px;
+    }
+    .label-minister {
+        color: #2969bd;
+        text-align: center;
+        font-size: 1.125rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    h2#parent-fieldname-minister {
+        font-size: 3rem;
+        font-weight: 900;
+        color: #333333;
+        text-align: center;
+    }
+    .tile-header h2 {
+        font-size: 2.25rem;
+    }
+    .brasil-carousel-tile .carousel-thumbs {
         width: 960px!important;
     }
 }
 .ministers-carousel a {
     text-align: left;
     p {
-	    color: #a3a3a3 !important;
-	    font-size: 14px;
-	    }
+        color: #a3a3a3 !important;
+        font-size: 14px;
+        }
     .ministers-carousel a h3 {
-	    margin: 10px 0;
-	    font-size: 26px;
+        margin: 10px 0;
+        font-size: 26px;
     }
 }
+/* Agenda */
+.collectionevents-wrapper{
+        .timestamp:before{
+            @include sprite($agenda-timestamp);
+            display: inline-block;
+            content: '';
+            background-position: -168px -153px!important;
+        }
+        .location:before{
+            @include sprite($agenda-location);
+            display: inline-block;
+            content: '';
+            background-position: -410px -84px!important;
+        }
+        .swiper-wrapper {
+            margin: 0 auto;
+            width: 960px !important;
+        }
+    }
+    .collection-events-item{
+        float:left;
+        width:24%;
+        background-color: #FFF;
+        flex-direction: column;
+        align-items: center;
+        list-style-type: none;
+        margin: 0;
+        margin: 10px;
+        height: 200px;
+        padding: 50px 30px 30px 30px;
+        .title-item {
+            height: 124px;
+            font-family: Raleway;
+            font-size: 24px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.29;
+            letter-spacing: normal;
+            text-align: left;
+            color: #222222 !important;
+        }
+        .location-item {
+            .location {
+                  font-size: 14px;
+                  font-weight: 500;
+                  font-style: normal;
+                  font-stretch: normal;
+                  line-height: 1.79;
+                  letter-spacing: normal;
+                  text-align: left;
+                  color: #222222
+            }
+        }
+        .timestamp-cell {
+            .timestamp {
+                  font-size: 14px;
+                  font-weight: 500;
+                  font-style: normal;
+                  font-stretch: normal;
+                  line-height: 1.79;
+                  letter-spacing: normal;
+                  text-align: left;
+                  color: #222222
+            }
+        }
+    }
+    .agenda-fundo {
+        background-color: #f9f9f9;
+    }
+#content .daypicker-wrapper .day.is-selected {
+        background-color:#ff6d26 !important;
+    }

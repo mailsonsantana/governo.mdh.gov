@@ -64,6 +64,20 @@ let createTheme = (theme) => {
         apiOptions: {
           cssImageRef: './img/sprite.png'
         }
+      }),
+
+      new SpritesmithPlugin({
+        src: {
+          cwd: `app/sprite`,
+          glob: '*.png'
+        },
+        target: {
+          image: `app/scss/img/sprite.png`,
+          css: `app/scss/_sprite.scss`
+        },
+        apiOptions: {
+          cssImageRef: './img/sprite.png'
+        }
       })
     ],
     devtool: 'source-map',
