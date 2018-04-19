@@ -4,7 +4,7 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       lang="en"
       metal:use-macro="context/main_template/macros/master"
-      i18n:domain="plone">
+      i18n:domain="governo.mdh.portal">
 
   <head>
     <metal:block fill-slot="top_slot"
@@ -16,17 +16,16 @@
   <body>
     <div id="content-core" metal:fill-slot="main">
       <h1 class="documentFirstHeading"
-          i18n:domain="governo.brasil.portal"
           i18n:translate="">
-        Centrais de conteúdo
+        Biblioteca
       </h1>
 
-      <form action="@@centrais-de-conteudo"
-            class="enableAutoFocus"
+      <form class="enableAutoFocus"
             tal:define="portal context/@@plone_portal_state/portal;
                         first_call not:request/advanced_search|nothing;
                         st python:request.get('SearchableText', '');
-                        DateTime python:modules['DateTime'].DateTime;">
+                        DateTime python:modules['DateTime'].DateTime;"
+            tal:attributes="action context/absolute_url">
 
         <fieldset i18n:domain="plone" class="noborder">
           <input class=""
@@ -53,14 +52,14 @@
               <div id="results-bar">
                 <dl>
                   <dt class="actionMenuHeader">
-                    <span id="filter-toggle">
+                    <span id="filter-toggle" class="closed">
                       Filtrar por
                     </span>
                   </dt>
-                  <dd class="actionMenuContent">
+                  <dd class="actionMenuContent closed">
                     <div id="filters">
                       <fieldset class="noborder">
-                        <legend i18n:translate="">Tipo de conteúdo</legend>
+                        <legend i18n:translate="">Content types</legend>
 
                         <div class="field"
                              tal:define="media view/media;">
@@ -86,8 +85,8 @@
                         </div>
                       </fieldset>
 
-                      <fieldset class="noborder" i18n:domain="governo.brasil.portal">
-                        <legend i18n:translate="">Período</legend>
+                      <fieldset class="noborder">
+                        <legend i18n:translate="">By period</legend>
                         <div class="field">
                           <div class="formHelp"></div>
                           <tal:datetime define="today python:DateTime().earliestTime();
@@ -102,7 +101,7 @@
                                 tal:attributes="value ever;
                                                 checked python:checked==ever and 'checked' or '';"
                                 />
-                            <label for="query-date-ever" i18n:translate="time_ever">Qualquer período</label>
+                            <label for="query-date-ever" i18n:translate="time_ever">any period</label>
                             <br />
                             <input type="radio"
                                    id="query-date-lastweek"
@@ -110,7 +109,7 @@
                                    tal:attributes="value lastweek;
                                                    checked python:checked==lastweek and 'checked' or '';"
                                    />
-                            <label for="query-date-lastweek" i18n:translate="time_last_week">Últimos 7 dias</label>
+                            <label for="query-date-lastweek" i18n:translate="time_last_week">last 7 days</label>
                             <br />
                             <input type="radio"
                                    id="query-date-lastmonth"
@@ -118,7 +117,7 @@
                                    tal:attributes="value lastmonth;
                                                    checked python:checked==lastmonth and 'checked' or '';"
                                    />
-                            <label for="query-date-lastmonth" i18n:translate="time_last_month">Últimos 30 dias</label>
+                            <label for="query-date-lastmonth" i18n:translate="time_last_month">last 30 days</label>
                             <br />
                             <input type="radio"
                                    id="query-date-lastyear"
@@ -126,13 +125,17 @@
                                    tal:attributes="value lastyear;
                                                    checked python:checked==lastyear and 'checked' or '';"
                                    />
-                            <label for="query-date-lastyear" i18n:translate="time_last_year">Últimos 12 meses</label>
+                            <label for="query-date-lastyear" i18n:translate="time_last_year">last 12 months</label>
                           </tal:datetime>
 
                           <input type="hidden" name="created.range:record" value="min" />
                         </div>
                         <div class="visualClear"><!-- --></div>
                       </fieldset>
+                      <input class="filter-button"
+                             type="submit"
+                             value="Aplicar filtro"
+                             i18n:attributes="value label_apply_filter;"/>
                     </div>
                   </dd>
                 </dl>

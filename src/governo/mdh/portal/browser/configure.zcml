@@ -73,6 +73,14 @@
       description="Aplica uma query customizada aos resultados da coleção."
       />
 
+  <browser:menuItem
+      for="plone.app.contenttypes.interfaces.ICollection"
+      menu="plone_displayviews"
+      title="Busca Biblioteca"
+      action="search-library"
+      description="Aplica uma query customizada aos resultados da coleção."
+      />
+
   <browser:page
       name="filter-results"
       for="plone.app.contenttypes.interfaces.ICollection"
@@ -81,6 +89,16 @@
       template="filterresults.pt"
       layer="governo.mdh.portal.interfaces.IBrowserLayer"
       />
+
+  <browser:page
+      name="search-library"
+      for="plone.app.contenttypes.interfaces.ICollection"
+      class=".searchlibrary.SearchLibraryView"
+      permission="zope2.View"
+      template="searchlibrary.pt"
+      layer="governo.mdh.portal.interfaces.IBrowserLayer"
+      />
+      
 
   <!-- view pagination tile search -->
   <browser:page

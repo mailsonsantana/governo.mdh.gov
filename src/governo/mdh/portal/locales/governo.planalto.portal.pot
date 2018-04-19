@@ -80,3 +80,8 @@ msgstr ""
 #: governo/planalto/portal/interfaces.py:18
 msgid "label_title"
 msgstr ""
+
+#. Default: "topic_by"
+#: governo/planalto/portal/interfaces.py:18
+msgid "label_title"
+msgstr ""
