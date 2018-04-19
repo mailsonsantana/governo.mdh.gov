@@ -41,7 +41,7 @@ dl.portlet a:visited {
 }
 #content a:hover,
 dl.portlet a:hover {
-    color: $link-color; 
+    color: $link-color !important; 
 }
 
 /* text styles */
