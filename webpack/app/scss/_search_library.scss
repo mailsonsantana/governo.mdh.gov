@@ -23,11 +23,19 @@
         border: none;
         font-size: 1rem !important;
         font-weight: 600;
-        margin-left: 15px;
+        margin-left: 32px;
     }
     #content-core input[type="text"] {
         width: 800px;
         line-height: 2.2em;
+        font-size: 14px !important;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #222222;
+        font-family: Raleway;
     }
     input[type="text"]:focus {
         background-color: transparent;
@@ -37,13 +45,7 @@
         text-indent: -5000px;
         background-color: transparent;
     }
-    .actionMenuHeader {
-        position: absolute;
-        top: -50px;
-        right: 40px;
-        border-left: 1px solid #ccc;
-        padding-left: 30px;
-    }
+    
     .cell.width-full.position-0 {
         margin-left: auto;
     }
@@ -80,7 +82,22 @@
     position: absolute;
     bottom: 20px;
     right: 20px;
-}
+    }
+    #results {
+        margin: 10px 15px;
+    }
+    .resultados-encontrados {
+        font-size: 18px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #a7a7a7;
+        padding: 10px 0px 10px 15px;
+        text-align:center;
+        border-bottom: solid 0.5px #cccccc;
+    }
 }
 #search-results-wrapper {
     position: initial;
@@ -276,4 +293,14 @@
 }
 #portal-sitemap li a {
     color: #222 !important;
+}
+
+.template-search-library {
+    .actionMenuHeader-filter{
+        position: absolute;
+        top: -35px;
+        right: 40px;
+        border-left: 1px solid #ccc;
+        padding-left: 30px;
+    }   
 }

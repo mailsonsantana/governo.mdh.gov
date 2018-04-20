@@ -117,5 +117,13 @@
       permission="governo.mdh.portal.Setup"
       />
 
+  <browser:page
+      name="document-classification-json-view"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".document_classification.DocumentClassificationJsonView"
+      permission="zope2.View"
+      layer="governo.mdh.portal.interfaces.IBrowserLayer"
+      />
+
 
 </configure>

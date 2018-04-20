@@ -57,6 +57,12 @@ class SearchLibraryView(BrowserView):
         vocabulary = getUtility(IVocabularyFactory, name)
         return vocabulary(None)
 
+    def documents_select(self):
+        types = self.request.form.get('document_type', '')
+        if types:
+            return ','.join(types)
+        else:
+            return ''
     def get_all_subjects(self):
         subjects = subjects_under_context()
         L = []
@@ -67,7 +73,7 @@ class SearchLibraryView(BrowserView):
                 D['name'] = subject
                 L.append(D)
         return L
-        
+
     def create_id(self,name):
         normalizer = getUtility(IIDNormalizer)
         id = normalizer.normalize(name)

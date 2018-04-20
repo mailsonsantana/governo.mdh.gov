@@ -51,8 +51,15 @@
                            batch python: view.results(b_start=b_start);">
 
               <div id="search-results-bar">
+                <script type="text/javascript">
+                  $(document).on('click', '#search-filter-toggle', function (e) {
+                      e.preventDefault();
+                      $(this).toggleClass('open');
+                      $('#search-filter').slideToggle();
+                    });
+                </script>
                 <dl>
-                  <dt class="actionMenuHeader">
+                  <dt class="actionMenuHeader-filter">
                     <span id="search-filter-toggle">
                       Filtrar por
                     </span>
@@ -111,6 +118,11 @@
               </div>
 
               <div class="visualClear"><!-- --></div>
+
+              <div class="resultados-encontrados">
+                <span tal:content="python:'Encontrados '+str(len(batch))+' resultados por'"> </span>
+                <b><span tal:content="python:'arquivos de ' + view.documents_select()"></span></b>
+              </div>
 
               <metal:searchresults define-macro="search_results">
                 <div id="results"

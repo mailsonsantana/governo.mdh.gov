@@ -263,6 +263,19 @@ header#main-header.busca-ativa {
   }
 }
 
+/********** Portal Services **********/
+
+#portal-services a {
+  font-family: Raleway;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #282828;
+}
 /********** Breadcrumb **********/
 #portal-breadcrumbs {
   @extend .ct-width;
