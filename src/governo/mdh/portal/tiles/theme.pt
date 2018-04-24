@@ -22,7 +22,7 @@
                 $(".inverter").addClass('inverter-white').removeClass('inverter');
                 $("#portal-title").css({'color':'#fff'});
                 $("#portal-description").css({'color':'#fff'});
-                $('.ico-navegacao').css({'background-position':'-198px -111px'});
+                $('.ico-navegacao').css({'background-position':'-198px -135px'});
                 $('.searchButton').css({'background-position':'-52px -174px'});
               });
             </script>

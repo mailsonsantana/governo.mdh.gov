@@ -53,8 +53,30 @@
       </article>
 
       <tal:agenda condition="view/has_agenda">
-      <div class="agenda-fundo">
-        <div class="dados-agenda">
+      <div class="tile-content agenda-tile"
+           tal:define="tile_id view/id;"
+           tal:attributes="id string:agenda-${tile_id};
+                           data-url view/agenda_url">
+      <div class="agenda-fundo agenda-wrapper dados-agenda">
+        <div>
+            <h5 tal:content="view/agenda_title | nothing"> Agenda da Ministra </h5>
+        </div>
+        <tal:monthpicker>
+            <div class="monthpicker-stroke-wrapper">
+              <div class="monthpicker-stroke"></div>
+              <div class="monthpicker-wrapper">
+                <div class="monthpicker"
+                     tal:define="month view/month"
+                     tal:attributes="data-month month/month;
+                                     data-year month/year;">
+                  <span class="month" tal:content="month/strmonth" />
+                  <span class="year" tal:content="month/year" />
+                  <input name="monthpicker" />
+                </div>
+              </div>
+              <div class="monthpicker-stroke"></div>
+            </div>
+          </tal:monthpicker>
           <tal:daypicker>
             <div class="daypicker-wrapper">
               <ul class="daypicker"
@@ -71,9 +93,7 @@
               </ul>
             </div>
           </tal:daypicker>
-        
-        </div>
-        <tal:collection_events condition="view/collection_events">
+        <tal:collection_events>
             <div class="collectionevents-wrapper">
               <div class="collectionevents-title-wrapper">
                 <div class="collectionevents-stroke"></div>
@@ -116,16 +136,17 @@
             </div>
           </tal:collection_events>
         </div>
+      </div>
       </tal:agenda>
       <div class="column col-md-12 agenda-fundo" data-panel="">
-            <div class="tile tile-default">
-                <div class="outstanding-header tile-content">
-                    <a class="outstanding-link" 
-                       href="/#"
-                       tal:attributes="href view/url_agenda">AGENDA COMPLETA</a>
-                </div>
-            </div>
+          <div class="tile tile-default">
+              <div class="outstanding-header tile-content">
+                  <a class="outstanding-link" 
+                     href="/#"
+                     tal:attributes="href view/url_agenda">AGENDA COMPLETA</a>
+              </div>
           </div>
+      </div>
      </metal:main>
   </body>
 </html>

@@ -116,6 +116,18 @@
     .brasil-carousel-tile .carousel-thumbs {
         width: 960px!important;
     }
+    /* Agenda */
+    .agenda-tile .title-item {
+        font-family: Raleway;
+        font-size: 24px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.29;
+        letter-spacing: normal;
+        text-align: left;
+        color: #222222;
+    }
 }
 .ministers-carousel a {
     text-align: left;
@@ -128,76 +140,31 @@
         font-size: 26px;
     }
 }
-/* Agenda */
-.collectionevents-wrapper{
-        .timestamp:before{
-            @include sprite($agenda-timestamp);
-            display: inline-block;
-            content: '';
-            background-position: -168px -153px!important;
-        }
-        .location:before{
-            @include sprite($agenda-location);
-            display: inline-block;
-            content: '';
-            background-position: -410px -84px!important;
-        }
-        .swiper-wrapper {
-            margin: 0 auto;
-            width: 960px !important;
-        }
+.agenda-fundo {
+    background-color: #f9f9f9;
+    padding-top:30px;
+    h5 {
+        font-size: 24px;
+        font-weight: 900;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #222222;
+        margin: 40px 0px 20px 0px;
     }
-    .collection-events-item{
-        float:left;
-        width:24%;
-        background-color: #FFF;
-        flex-direction: column;
-        align-items: center;
-        list-style-type: none;
-        margin: 0;
-        margin: 10px;
-        height: 200px;
-        padding: 50px 30px 30px 30px;
-        .title-item {
-            height: 124px;
-            font-family: Raleway;
-            font-size: 24px;
-            font-weight: bold;
-            font-style: normal;
-            font-stretch: normal;
-            line-height: 1.29;
-            letter-spacing: normal;
-            text-align: left;
-            color: #222222 !important;
-        }
-        .location-item {
-            .location {
-                  font-size: 14px;
-                  font-weight: 500;
-                  font-style: normal;
-                  font-stretch: normal;
-                  line-height: 1.79;
-                  letter-spacing: normal;
-                  text-align: left;
-                  color: #222222
-            }
-        }
-        .timestamp-cell {
-            .timestamp {
-                  font-size: 14px;
-                  font-weight: 500;
-                  font-style: normal;
-                  font-stretch: normal;
-                  line-height: 1.79;
-                  letter-spacing: normal;
-                  text-align: left;
-                  color: #222222
-            }
-        }
-    }
-    .agenda-fundo {
-        background-color: #f9f9f9;
-    }
+}
+
+/* Custom Agenda */
 #content .daypicker-wrapper .day.is-selected {
         background-color:#ff6d26 !important;
     }
+
+#content .ui-datepicker a.ui-state-highlight, body .ui-datepicker a.ui-state-highlight {
+    background-color: #ff6d26 !important;
+}
+
+.portaltype-agenda #content .now, .portaltype-agendadiaria #content .now {
+    background-color: #ff6d26 !important;
+}

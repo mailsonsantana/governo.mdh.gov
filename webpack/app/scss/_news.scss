@@ -1,0 +1,306 @@
+/* busca */
+.template-latest-news,
+.document-finder-tile {
+    form h1.documentFirstHeading {
+        display: none;
+        font-size: 2,25rem !important;
+    }
+    #content h1.documentFirstHeading {
+        margin-top: 20px;
+    }
+    #search-field {
+        border: 1px solid #ccc !important;
+        border-bottom: 0;
+        margin: 0 13px -16px 12px;
+        padding: 10px;
+        text-align: left;
+
+        legend {
+            display: none;
+        }
+    }
+    input.searchPage {
+        border: none;
+        font-size: 1rem !important;
+        font-weight: 600;
+        margin-left: 32px;
+    }
+    #content-core input[type="text"] {
+        width: 800px;
+        line-height: 2.2em;
+        font-size: 14px !important;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #222222;
+        font-family: Raleway;
+    }
+    input[type="text"]:focus {
+        background-color: transparent;
+    }
+    input.searchButton {
+        @include sprite($botao-busca-black);
+        text-indent: -5000px;
+        background-color: transparent;
+    }
+    
+    .cell.width-full.position-0 {
+        margin-left: auto;
+    }
+    .subtitle {
+        color: #ff6d26;
+    }
+
+    .date-content {
+        margin-bottom: 20px;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 2.14;
+        letter-spacing: normal;
+        text-align: left;
+        color: #b1b1b1;
+    }
+    .description {
+        margin-bottom: 0px !important;
+    }
+    .tileHeadline a:hover, .keywords a:hover {
+        color: #ff6d26 !important;
+    }
+    .filter-button {
+    height: 50px;
+    border-radius: 30px;
+    border: 0;
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    }
+    #results {
+        margin: 10px 15px;
+    }
+    .resultados-encontrados {
+        font-size: 18px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #a7a7a7;
+        padding: 10px 0px 10px 15px;
+        text-align:center;
+        border-bottom: solid 0.5px #cccccc;
+    }
+}
+#search-results-wrapper {
+    position: initial;
+}
+#search-results-bar {
+    border-top: 0;
+    border-bottom: 0;
+    padding: 1em;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    margin: -1px 0 30px 12px;
+
+    dl {
+        float: none;
+    }
+
+    dl.open {
+        border-top: 2px solid #ccc;
+    }
+
+    #searchResultsSort {
+        float: none;
+        display: none;
+    }
+    #filters .filter-button {
+        height: 50px;
+        border-radius: 30px;
+        border: 0;
+        padding: 10px 20px;
+        background: #333;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: bold;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+#search-results-bar.open {
+    border: 1px solid #ccc;
+    margin-bottom: 70px;
+}
+#search-results-bar>span:first-child {
+    position: absolute;
+    bottom: -10px;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #f1f1f1;
+    left: 0;
+}
+#search-results-bar.open>span:first-child {
+    bottom: -65px;
+}
+
+#search-filter {
+    background: transparent;
+    display: flex;
+    width: 100%;
+    margin-left: 30px;
+
+    .field {
+        background: transparent;
+        padding: 0 40px 0 0;
+    }
+    div {
+        float: none !important;
+    }
+    legend {
+        padding: 20px 40px 20px 0 !important;
+        text-transform: uppercase;
+        font-size: 0.83rem;
+    }
+    .optionsToggle {
+        background: transparent;
+        border: none;
+
+        label {
+            font-weight: bold;
+            font-size: 100%;
+        }
+    }
+    label {
+        font-size: 90% !important;
+    }
+    .anyPeriod {
+        font-weight: bold !important;
+    }
+}
+
+#search-results {
+    margin-top: 37px;
+    padding: 0;
+
+    dd {
+      margin-left: 0;
+      border-bottom: 1px solid #f1f1f1;
+      padding-bottom: 20px;
+    }
+    dt a {
+        color: #333 !important;
+        font-size: 1.375rem;
+    }
+    a.link-category, a.link-category:hover {
+        background: transparent;
+        border: 2px solid #222 !important;
+        padding: .1em .8em;
+        color: #222 !important;
+        border-radius: 1.2em;
+        text-transform: uppercase;
+        display: inline-block;
+        margin-bottom: 5px;
+        margin-right: 8px;
+    }
+    .documentPublished,
+    .documentModified {
+        font-size: 0.83rem;
+        color: #b1b1b1;
+    }
+
+    .documentModified:after {
+        content: " ";
+        display: block;
+    }
+    .list-category {
+        margin-top: 15px;
+    }
+    .nitfSubtitle {
+        color: #ff6d26;
+        font-size: 22px;
+        font-weight: 700;
+        text-align: left;
+        text-transform: none;
+        margin-bottom: 0;
+        font-size: 1em;
+    }
+}
+
+#search-filter-toggle {
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+#search-filter-toggle:after {
+    @include sprite($ico-filtrar-fechado);
+    content: " ";
+    white-space: nowrap;
+    float: right;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+#search-filter-toggle.open:after {
+    @include sprite($ico-filtrar);
+}
+
+#searchButtonBottom{
+    float: right;
+
+    .searchPage {
+        background: #000;
+        border-radius: 20px;
+        padding: 10px 22px;
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: .875rem !important;
+        color: #fff;
+    }
+}
+
+.template-sitemap #content h1.documentFirstHeading {
+    margin-top: 50px;
+}
+#portal-sitemap {
+    margin-bottom: 90px;
+}
+#portal-sitemap #portal-breadcrumbs {
+    display: none;
+}
+#portal-sitemap > li {
+    border: 0;
+}
+#portal-sitemap .navTreeLevel3 {
+    display: none;
+}
+#portal-sitemap .navTreeLevel2 li {
+    list-style-type: disc;
+    font-size: 14px;
+    line-height: 20px;
+}
+#portal-sitemap .navTreeLevel2 li a {
+    font-size: 16px;
+}
+#portal-sitemap li a {
+    color: #222 !important;
+}
+
+.template-latest-news {
+    .actionMenuHeader-filter{
+        position: absolute;
+        top: -35px;
+        right: 40px;
+        border-left: 1px solid #ccc;
+        padding-left: 30px;
+    }   
+}

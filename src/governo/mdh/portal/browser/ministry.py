@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+from Acquisition import aq_parent
+
+from brasil.gov.agenda.utils import AgendaMixin
+
 from datetime import datetime
 from datetime import timedelta
 from plone.app.uuid.utils import uuidToObject
@@ -10,8 +14,14 @@ from Products.Five import BrowserView
 
 import time
 
-class View(BrowserView):
+class View(BrowserView, AgendaMixin):
     """Default view for Ministry."""
+
+    def __init__(self, context, request):
+          self.context = context
+          self.request = request
+
+
 
     def has_agenda(self):
         """Verifica se possui agenda no contexto"""
@@ -57,7 +67,11 @@ class View(BrowserView):
 
     @property
     def agenda_url(self):
-        return self.data.get('agenda_url', None)
+        return self.agenda.absolute_url()
+
+    @property
+    def agenda_title(self):
+        return self.agenda.Title()
 
     def _collection_events(self, last_modified=None):
         agenda_diaria = self.agenda_diaria()
@@ -137,3 +151,6 @@ class View(BrowserView):
                 'cssclass': ' '.join(cssclass),
             })
         return weekdays
+
+    def id(self):
+        return self.agenda.UID()

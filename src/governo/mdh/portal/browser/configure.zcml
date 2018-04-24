@@ -81,6 +81,14 @@
       description="Aplica uma query customizada aos resultados da coleção."
       />
 
+  <browser:menuItem
+      for="plone.app.contenttypes.interfaces.ICollection"
+      menu="plone_displayviews"
+      title="Últimas notícias"
+      action="latest-news"
+      description="Aplica uma query customizada aos resultados da coleção."
+      />
+
   <browser:page
       name="filter-results"
       for="plone.app.contenttypes.interfaces.ICollection"
@@ -96,6 +104,15 @@
       class=".searchlibrary.SearchLibraryView"
       permission="zope2.View"
       template="searchlibrary.pt"
+      layer="governo.mdh.portal.interfaces.IBrowserLayer"
+      />
+
+  <browser:page
+      name="latest-news"
+      for="plone.app.contenttypes.interfaces.ICollection"
+      class=".news.NewsView"
+      permission="zope2.View"
+      template="news.pt"
       layer="governo.mdh.portal.interfaces.IBrowserLayer"
       />
       

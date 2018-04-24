@@ -1,0 +1,179 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="plone">
+
+  <head>
+    <metal:block fill-slot="top_slot"
+                 tal:define="dummy view/toogle_greenbar;
+                             disable_column_one python:request.set('disable_plone.leftcolumn',1);
+                             disable_column_two python:request.set('disable_plone.rightcolumn',1);" />
+  </head>
+
+  <body>
+    <div id="content-core" metal:fill-slot="main">
+      <h1 class="documentFirstHeading"
+          tal:content="context/Title">
+        Title
+      </h1>
+
+      <form action="@@filter-results"
+            class="enableAutoFocus"
+            tal:attributes="action request/URL"
+            tal:define="portal context/@@plone_portal_state/portal;
+                        first_call not: request/advanced_search|nothing;
+                        st python: request.get('SearchableText', '');
+                        DateTime python: modules['DateTime'].DateTime;">
+
+        <fieldset i18n:domain="plone" class="noborder" id="search-field">
+          <input class="searchPage"
+                 name="SearchableText"
+                 type="text"
+                 size="25"
+                 placeholder="Buscar em últimas notícias"
+                 i18n:attributes="title title_search_title;"
+                 tal:attributes="value st;"
+                 />
+          <input class="searchPage searchButton allowMultiSubmit"
+                 type="submit"
+                 value="Search"
+                 i18n:attributes="value label_search;"/>
+        </fieldset>
+
+        <div class="">
+          <div id="search-results-wrapper"
+               class="cell width-full position-0"
+               tal:define="b_start python: 0;
+                           b_start request/b_start | b_start;
+                           batch python: view.results(b_start=b_start);">
+
+              <div id="search-results-bar">
+                <script type="text/javascript">
+                  $(document).on('click', '#search-filter-toggle', function (e) {
+                      e.preventDefault();
+                      $(this).toggleClass('open');
+                      $('#search-filter').slideToggle();
+                    });
+                </script>
+                <dl>
+                  <dt class="actionMenuHeader-filter">
+                    <span id="search-filter-toggle">
+                      Filtrar por
+                    </span>
+                  </dt>
+                  <dd class="actionMenuContent">
+                    <div id="search-filter">
+                      <fieldset class="noborder">
+                        <legend i18n:translate="theme_by">Por tema</legend>
+
+                        <div class="field" tal:define="subjects view/get_all_subjects"
+                                           tal:condition="subjects">
+                          <div class="formHelp"></div>
+                          <tal:tags repeat="subject subjects">
+                            <input type="checkbox"
+                                id="theme"
+                                name="themes:list"
+                                value="theme"
+                                tal:attributes="id subject/id;
+                                                value subject/name;"
+                                />
+                            <label for="igualdade-social"
+                                   i18n:translate=""
+                                   tal:attributes="for subject/id"
+                                   tal:content="subject/name">Igualdade Social</label>
+                            <br />
+                          </tal:tags>
+                        </div>
+                      </fieldset>
+                      <button class="filter-button">Aplicar filtro</button>
+                    </div>
+                  </dd>
+                </dl>
+              </div>
+
+              <div class="visualClear"><!-- --></div>
+
+              <metal:searchresults define-macro="search_results">
+                <div id="results"
+                     tal:define="navigation_root_url context/@@plone_portal_state/navigation_root_url;">
+
+                  <metal:noresults tal:condition="not: batch">
+                    <p i18n:domain="plone"><strong i18n:translate="description_no_results_found">No results were found.</strong></p>
+                  </metal:noresults>
+
+                  <metal:results tal:condition="batch"
+                                 tal:define="isAnon context/@@plone_portal_state/anonymous;
+                                             toLocalizedTime nocall: context/@@plone/toLocalizedTime;
+                                             site_properties context/portal_properties/site_properties;
+                                             use_view_action site_properties/typesUseViewActionInListings|python:();
+                                             allowAnonymousViewAbout site_properties/allowAnonymousViewAbout;
+                                             show_about python: not isAnon or allowAnonymousViewAbout;">
+                    <div class="">
+                      <tal:results repeat="item batch">
+                        <article class=""
+                            tal:define="obj item/getObject;
+                                        thumbnail obj/@@images/image/thumb|nothing;
+                                        noimage python: 'no-image' if thumbnail is None else ''"
+                            tal:attributes="class string: ${item/ContentTypeClass} ${noimage}">
+                          <div class="tileContent">
+                            <div class="tileImage">
+                              <img tal:replace="structure thumbnail">
+                            </div>
+                            <!-- <span tal:content="item/subtitle" class="subtitle">
+                              Subtitle
+                            </span> -->
+                            <h2 class="tileHeadline">
+                              <a href="#"
+                                 tal:attributes="href item/getURL;
+                                                 class string:state-${item/review_state}"
+                                 tal:content="item/Title" />
+                            </h2>
+                            <p tal:content="item/CroppedDescription" class="description">
+                              Cropped description
+                            </p>
+                            <div i18n:domain="plone"
+                              tal:condition="show_about"
+                              tal:define="portal_settings context/@@portal_settings;
+                                          mostra_data not: portal_settings/get_esconde_data;
+                                          mostra_autor not: portal_settings/get_esconde_autor;">
+
+
+                            <div class="date-content">
+                                <span tal:content="python: item.modified.strftime('%d/%m/%Y')"> 15/04/1988</span>
+                            </div>
+
+                              <div tal:define="categories item/Subject|nothing;
+                                                std modules/Products.PythonScripts.standard;
+                                                url_quote nocall: std/url_quote;"
+                                    tal:condition="categories"
+                                    class="keywords">
+                                <span tal:repeat="category categories">
+                                  <a href=""
+                                     class="link-category"
+                                     rel="tag"
+                                     tal:content="category"
+                                     tal:define="category_quote python: url_quote(category)"
+                                     tal:attributes="href string:$navigation_root_url/@@busca?Subject%3Alist=${category_quote}">
+                                    Category
+                                  </a>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </article>
+                      </tal:results>
+                    </div>
+                    <div metal:use-macro="context/batch_macros/macros/navigation" />
+                  </metal:results>
+                </div>
+              </metal:searchresults>
+          </div>
+        </div>
+        <div class="visualClear"><!-- --></div>
+      </form>
+    </div>
+  </body>
+</html>

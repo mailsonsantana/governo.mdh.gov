@@ -57,7 +57,13 @@
 /* Inverter theme for top white */
 	header.inverter-white {
 		background-color: transparent !important;
-		margin-bottom: 0 !important
+		margin-bottom: 0 !important;
+		.link-contraste:before {
+			background-position: -227px -54px;
+		}
+		.link-vlibras:before {
+			background-position: -227px -82px;
+		}
 	}
 
 	#portal-title.inverter-white {
@@ -70,6 +76,7 @@
 
 	a.link-contraste.inverter-white, a.link-vlibras.inverter-white{
   	color:#fff !important;
+
  }
 
 #portal-breadcrumbs.inverter-white {
@@ -80,6 +87,6 @@
 			color: #fff !important;
 		}
 		#breadcrumbs-home a:before {
-			@include sprite($casinha-branca);
+			background-position: -198px -162px;
 		}
 	}

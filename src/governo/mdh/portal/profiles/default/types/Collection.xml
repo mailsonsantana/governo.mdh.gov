@@ -23,6 +23,7 @@
   <element value="event_listing"/>
   <element value="filter-results"/>
   <element value="search-library"/>
+  <element value="latest-news"/>
  </property>
  <property name="default_view_fallback">False</property>
  <property
