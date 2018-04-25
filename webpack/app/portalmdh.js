@@ -41,7 +41,7 @@ $(() => {
   if ($('.ministers-carousel').length > 0) {
     new Ministers();
   }
-  if ($('.section-pagina-inicial').length > 0) {
+  if ($('.site-mdh').length > 0) {
     for (let tile of $('.cover-richtext-tile')) {
       if ($(tile).parent().hasClass('tile-default')) {
         continue;
@@ -50,6 +50,9 @@ $(() => {
     }
     for (let tile of $('.nitf-basic-tile')) {
       new SocialLike(tile);
+    }
+    for (let relatedItem of $('.contenttype-collective-nitf-content')) {
+      new SocialLike(relatedItem);
     }
   }
 });
