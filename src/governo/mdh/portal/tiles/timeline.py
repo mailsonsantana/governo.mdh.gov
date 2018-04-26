@@ -149,7 +149,7 @@ class TimelineTile(ListTile):
         if item:
             image = item.image_timeline
             scales = item.restrictedTraverse('@@images')
-            scale = scales.scale('image_timeline', scale='tile_album_view')
+            scale = scales.scale('image_timeline', scale='timeline_view')
             return scale
             
 

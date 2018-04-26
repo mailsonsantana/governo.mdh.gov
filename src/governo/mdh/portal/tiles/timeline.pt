@@ -31,7 +31,7 @@
                         <a title=""
                            href=""
                            data-mce-href=""
-                           class="internal-link"
+                           id="timeline-link"
                            target="_self"
                            tal:attributes="href python:view.get_url(obj)"
                            tal:content="python: view.get_more_link_text(obj)">Mais Informações</a>

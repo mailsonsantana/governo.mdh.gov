@@ -4,6 +4,7 @@
     <property name="allowed_sizes" type="lines" purge="False">
       <element value="composicao_foto_view 370:370"/>
       <element value="theme_topo 3840:230"/>
+      <element value="timeline_view 420:420"/>
     </property>
   </object>
 </object>
