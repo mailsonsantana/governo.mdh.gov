@@ -50,6 +50,7 @@
     .image-timeline img{
       float: none !important;
       padding: 20px;
+      margin: 0 auto;
     }
 
   }
@@ -130,7 +131,7 @@
     height:15px;
   }
   .swiper-pagination {
-    height: 65px;
+    height: auto;
     .swiper-month p {
       margin-left: -10px;
       margin-top:10px;
@@ -151,7 +152,7 @@
   .line-timeline {
     width: 80%;
     border-top: solid 2px #222222;
-    margin:-70px auto;
+    margin:-43px auto;
     .info-left {
           float:left;
           opacity: 0.5;
