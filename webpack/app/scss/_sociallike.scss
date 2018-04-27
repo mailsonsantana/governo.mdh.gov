@@ -3,7 +3,7 @@
 #relatedItemBox .contenttype-collective-nitf-content,
 #content .nitf-basic-tile {
   .likes {
-    position: absolute;
+    position: relative;
     right: 0;
     bottom: 0;
 
@@ -28,7 +28,7 @@
     white-space: nowrap;
     text-indent: -3000px;
 
-    filter: invert(100%);
+    filter: none;
   }
   .likes-open,
   .likes-open > a,
@@ -62,7 +62,7 @@
   .likes-more > a:link,
   .likes-more > a:visited,
   .likes-more > a:hover {
-    color: #FFF !important;
+    color: #000 !important;
   }
   .likes-more.likes-open > a {
     font-size: 14px;
@@ -89,4 +89,8 @@
   .likes {
     filter: invert(100%);
   }
+}
+/* Não mostrar no tile box coolorido */
+#content .box-colorido .likes {
+  display:none;
 }

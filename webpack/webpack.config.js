@@ -72,7 +72,7 @@ let createTheme = (theme) => {
           glob: '*.png'
         },
         target: {
-          image: `app/scss/img/sprite.png`,
+          image: `app/img/sprite.png`,
           css: `app/scss/_sprite.scss`
         },
         apiOptions: {
