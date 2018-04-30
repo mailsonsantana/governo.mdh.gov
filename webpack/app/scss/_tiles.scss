@@ -312,7 +312,7 @@ p.tile-description {
 }
 
 /* tile box cinza */
-.tile.box-cinza {
+.tile.box-cinza, .tile.box-cinza-sem-redes-sociais {
         background: #f6f6f6;
         h1, h2, {
             color: #000;
@@ -323,7 +323,9 @@ p.tile-description {
             line-height: 3.063rem;
             letter-spacing: -0.0625rem;
         }
-
+        img {
+            margin-top:10px;
+        }
         a {
             color: #000 !important;
             background: #f8f8f8;
@@ -879,24 +881,24 @@ header.inverter .search-wrapper {
 
 /* geleria */
 .brasil-gallery-tile .gallery-title {
-    color: #333 !important;
+    color: #FFF !important;
 }
 .brasil-gallery-tile .gallery-global-information .gallery-description {
     border-bottom: 1px solid #f7f7f7;
-    color: #333 !important;
+    color: #FFF !important;
 }
 .brasil-gallery-tile .gallery-subtitle {
-    color: #333 !important;
+    color: #FFF !important;
 }
 .brasil-gallery-tile .gallery-information {
-    color: #333 !important;
+    color: #FFF !important;
 }
 .brasil-gallery-tile .thumb-title {
-    color: #333 !important;
+    color: #FFF !important;
 }
 .brasil-gallery-tile .gallery-more {
-    background: #2969bd !important;
-    color: #fff !important;
+    background: #FFF !important;
+    color: #000;
 }
 
 /* tile de faq */
@@ -942,3 +944,10 @@ header.inverter .search-wrapper {
     }
     
 }
+
+/* tile box cinza sem redes sociais */
+.tile.box-cinza-sem-redes-sociais{
+        .likes {
+          display:none !important;
+        }
+    }

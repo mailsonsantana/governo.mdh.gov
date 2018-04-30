@@ -25,7 +25,7 @@
                 <span tal:attributes="class item_type_class">
                     <tal:image condition="python: item_type == 'collective.nitf.content' and item.getObject().image()"
                                define="scales python: item.getObject().restrictedTraverse('@@images');
-                                       thumbnail python:scales.scale('image', scale=None)">
+                                       thumbnail python:scales.scale('image',width=200,height=200)">
                         <img tal:replace="structure thumbnail/tag" />
                     </tal:image>
                     <p tal:content="desc| nothing"></p>
