@@ -6,11 +6,24 @@ from collective.cover.tiles.base import PersistentCoverTile
 from plone import api
 from plone.dexterity.interfaces import IDexterityContent
 from zope.interface import implementer
+from zope import schema
 
 
 class INavigationTile(IPersistentCoverTile):
     """Displays a list of featured mobile apps."""
+    facebook_url = schema.TextLine(
+        title=_(u'URL Facebook'),
+        required=False,
+        description=_(u'Insira a url da página do facebook'),
+        default=u'http://',
+    )
 
+    twitter_url = schema.TextLine(
+        title=_(u'URL Twitter'),
+        required=False,
+        description=_(u'Insira a url da página do Twitter'),
+        default=u'http://',
+    )
 
 @implementer(INavigationTile)
 class NavigationTile(PersistentCoverTile):
@@ -18,7 +31,7 @@ class NavigationTile(PersistentCoverTile):
 
     is_configurable = False
     is_droppable = False
-    is_editable = False
+    is_editable = True
     short_name = _(u'msg_short_name_navigation', default=u'Navigation')
 
     def __init__(self, context, request):
@@ -58,6 +71,12 @@ class NavigationTile(PersistentCoverTile):
 
     def first_items(self):
         return self.menu_items[:3]
+
+    def get_redes_sociais(self):
+        facebook = self.data['facebook_url']
+        twitter = self.data['twitter_url']
+        return dict(facebook_url=facebook,
+                    twitter_url=twitter)
 
     def more_items(self):
         return self.menu_items[3:]
