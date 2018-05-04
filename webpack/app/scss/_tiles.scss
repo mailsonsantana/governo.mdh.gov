@@ -976,6 +976,7 @@ header.inverter .search-wrapper {
         @include sprite($vlibras);
     }
     #portal-searchbox .searchButton {
-        @include sprite($busca-escuro);   
+        @include sprite($busca-escuro);
+        background-color: transparent;  
     }
 }

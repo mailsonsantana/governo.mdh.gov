@@ -20,10 +20,6 @@
             <script type="text/javascript">
               $(document).ready(function() {
                 $(".inverter").addClass('inverter-white').removeClass('inverter');
-                $("#portal-title").css({'color':'#fff'});
-                $("#portal-description").css({'color':'#fff'});
-                $('.ico-navegacao').css({'background-position':'3px 27px'});
-                $('.searchButton').css({'background-position':'-80px -174px'});
               });
             </script>
         </tal:condition>

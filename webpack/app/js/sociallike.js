@@ -118,4 +118,3 @@ export default class SocialLike {
     this.moreToggle(this.$('.likes-item:not(.likes-pinned)'));
   }
 }
-

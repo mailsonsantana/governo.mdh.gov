@@ -58,15 +58,22 @@
 		background-color: transparent !important;
 		margin-bottom: 0 !important;
 		.link-contraste:before {
-			background-position: -227px -54px;
+			@include sprite($contraste);
+		}
+		#portal-searchbox .searchButton {
+			@include sprite($busca-escuro);
+			background-color: transparent;
 		}
 		.link-vlibras:before {
-			background-position: -227px -69px;
+			@include sprite($vlibras);
+		}
+		.ico-navegacao {
+			@include sprite($nav-claro);
 		}
 	}
 
-	#portal-title.inverter-white {
-		color: #fff;
+	.inverter-white #portal-title, .inverter-white #portal-description {
+		color: #fff !important;
 	}
 
 	.links-destaque.inverter-white a{
@@ -86,6 +93,6 @@
 			color: #fff !important;
 		}
 		#breadcrumbs-home a:before {
-			background-position: -125px -173px;
+			 filter:invert(100%);
 		}
 	}

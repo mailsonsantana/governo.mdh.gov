@@ -51,7 +51,7 @@ $(() => {
     for (let tile of $('.nitf-basic-tile')) {
       new SocialLike(tile);
     }
-    for (let relatedItem of $('.contenttype-collective-nitf-content')) {
+    for (let relatedItem of $('#relatedItemBox .contenttype-collective-nitf-content')) {
       new SocialLike(relatedItem);
     }
   }

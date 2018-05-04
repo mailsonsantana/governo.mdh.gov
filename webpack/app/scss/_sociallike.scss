@@ -94,3 +94,17 @@
 #content .box-colorido .likes {
   display:none;
 }
+
+.linha-destaquetopo {
+  .likes {
+    position: absolute !important;
+    right: 0; 
+    bottom: 0;
+    display: flex;
+    height: 29px;
+    margin: 0 10px 0 0;
+    list-style: none;
+    filter: invert(100%);
+  }
+}
+
