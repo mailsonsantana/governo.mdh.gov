@@ -42,16 +42,16 @@ $(() => {
     new Ministers();
   }
   if ($('.site-mdh').length > 0) {
-    for (let tile of $('.cover-richtext-tile')) {
-      if ($(tile).parent().hasClass('tile-default')) {
-        continue;
-      }
-      new SocialLike(tile);
-    }
+    // for (let tile of $('.cover-richtext-tile')) {
+    //   if ($(tile).parent().hasClass('tile-default')) {
+    //     continue;
+    //   }
+    //   new SocialLike(tile);
+    // }
     for (let tile of $('.nitf-basic-tile')) {
       new SocialLike(tile);
     }
-    for (let relatedItem of $('.contenttype-collective-nitf-content')) {
+    for (let relatedItem of $('#relatedItemBox .contenttype-collective-nitf-content')) {
       new SocialLike(relatedItem);
     }
   }

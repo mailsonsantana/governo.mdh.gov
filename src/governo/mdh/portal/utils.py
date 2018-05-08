@@ -39,7 +39,7 @@ def validate_url(value):
     return True
 
 
-def subjects_under_context(indexname='Subject'):
+def subjects_under_context(path=None,indexname='Subject'):
         """valid subjects under the given context
         """
         pcat = api.portal.get_tool('portal_catalog')
@@ -48,9 +48,15 @@ def subjects_under_context(indexname='Subject'):
         tags_idx = cat.indexes[indexname]
         result = []
         # query all oids of path - low level
+        portal = api.portal.getSite()
+        if getattr(portal,'mdh',None):
+            temas = getattr(portal,'navegue-por-temas',None)
+            path = temas
+        else:
+            path = portal
         pquery = {
             'path': {
-                'query': '/'.join(api.portal.getSite().getPhysicalPath()),
+                'query': '/'.join(path.getPhysicalPath()),
                 'depth': -1,
             }
         }

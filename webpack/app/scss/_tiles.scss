@@ -185,7 +185,7 @@ p.tile-description {
 /* tile linha-altura-fixa */
 
 .linha-altura-fixa {
-    height:550px !important;
+    height:440px !important;
 }
 
 /* tile de lista */
@@ -410,9 +410,16 @@ p.tile-description {
         text-transform: uppercase;
         padding: 0 100px 10px 20px;
     }
+    .tile-description,.tile-subtitle,.tile-section{
+        padding-left:20px;
+    }
+    .likes {
+        float:right;
+        position:absolute !important;
+        filter: invert(100%);
+    }
 }
 #content .tile.foto-sobreposta p {
-    padding: 0px 0px;
     color: #fff;
     line-height: 1.563rem !important;
 }
@@ -459,7 +466,6 @@ p.tile-description {
     }
 }
 #content .tile.foto-sobreposta p {
-    padding: 0px 0px;
     color: #fff;
     line-height: 1.563rem !important;
 }
@@ -507,7 +513,6 @@ p.tile-description {
     }
 }
 #content .tile.foto-sobreposta p {
-    padding: 0px 0px;
     color: #fff;
     line-height: 1.563rem !important;
 }
@@ -776,7 +781,6 @@ p.tile-description {
 .template-compose div.row.linha-destaquetopo {
   position: relative !important;
 }
-
 header.inverter .search-wrapper {
   border-bottom: 1px solid hsla(0,0%,100%,.2);
 }
@@ -951,3 +955,29 @@ header.inverter .search-wrapper {
           display:none !important;
         }
     }
+
+/* Conselho */
+
+.portaltype-collective-cover-content.section-conselho {
+    #portal-description, #portal-title, .link-contraste, .link-vlibras,
+    #portal-services a, #portal-breadcrumbs.inverter, #portal-breadcrumbs .breadcrumbSeparator {
+        color: #FFF !important;
+    }
+    #portal-breadcrumbs #breadcrumbs-home a:before {
+          @include sprite($casinha-branca);
+          }
+
+    .ico-navegacao{
+        @include sprite($nav-claro);
+    }
+    .link-contraste:before{
+        @include sprite($contraste);   
+    }
+    .link-vlibras:before {
+        @include sprite($vlibras);
+    }
+    #portal-searchbox .searchButton {
+        @include sprite($busca-escuro);
+        background-color: transparent;  
+    }
+}

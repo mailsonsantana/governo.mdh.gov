@@ -91,4 +91,24 @@
 
     color: #000 !important;
   }
+  #portal-redes-navigation {
+    float:right;
+    height: 25px;
+    border-left: solid 1px #B2B2B2;
+    margin-top: 20px;
+      li{
+      display: inline-block;
+        a {
+          text-indent: -3000px;
+          overflow: hidden;
+          display: inline-block;
+          width: 23px;
+          height: 23px;
+        }
+    }
+    
+    #portalredes-facebook,#portalredes-twitter{
+      margin-left: 10px;
+    }
+  }
 }
