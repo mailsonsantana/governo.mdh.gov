@@ -21,15 +21,9 @@ colors = SimpleVocabulary([
 class IThemeTile(IPersistentCoverTile):
     """Displays a list of featured mobile apps."""
 
-    title = TextLine(
-        title=_(u'Title'),
-        required=True,
-        default=u'',
-    )
-
     image = field.NamedBlobImage(
         title=_(u'label_theme_top_image'),
-        required=True,
+        required=False,
     )
 
     color_top = Choice(
@@ -57,7 +51,6 @@ class ThemeTile(PersistentCoverTile):
         obj = aq_base(obj)
         img = obj.theme_top_image.data
         color_top = obj.color_top
-        title = obj.Title()
         if img:
             data = obj.theme_top_image.data
             image = NamedBlobImage(data)
@@ -68,7 +61,6 @@ class ThemeTile(PersistentCoverTile):
         data_mgr.set({
             'image': image,
             'color_top':color_top,
-            'title':title,
         })
 
     @property

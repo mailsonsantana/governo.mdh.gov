@@ -98,14 +98,17 @@
     margin-top: 20px;
       li{
       display: inline-block;
+        a {
+          text-indent: -3000px;
+          overflow: hidden;
+          display: inline-block;
+          width: 23px;
+          height: 23px;
+        }
     }
-    a {
-      text-indent: -3000px;
-      display: inline-block;
-    }
+    
     #portalredes-facebook,#portalredes-twitter{
       margin-left: 10px;
-      height:23px;
     }
   }
 }
