@@ -175,4 +175,17 @@
       template="composicao.pt"
       />
 
+  <plone:tile
+      name="brasil.carouselvideos"
+      for="*"
+      title="Carousel Videos"
+      description="Display a carousel of videos."
+      icon="++resource++collective.cover/img/tile-generic.png"
+      add_permission="cmf.ModifyPortalContent"
+      schema=".carouselvideos.ICarouselVideosTile"
+      class=".carouselvideos.CarouselVideosTile"
+      permission="zope2.View"
+      template="carouselvideos.pt"
+      />
+
 </configure>

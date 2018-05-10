@@ -3,6 +3,7 @@ import Ministers from './js/ministerios.js'
 import SocialLike from './js/sociallike.js';
 
 import CarouselTile from './js/tiles/carousel.js';
+import CarouselVideosTile from './js/tiles/carouselvideos.js';
 import GalleryTile from './js/tiles/gallery.js';
 import NavigationTile from './js/tiles/navigation.js';
 import PhotoDayTile from './js/tiles/photoday.js';
@@ -12,6 +13,7 @@ import ComposicaoTile from './js/tiles/composicao.js';
 
 import Contraste from './js/contrast.js';
 import GaleriaDeFotos from './js/albuns.js';
+import Youtube from './js/youtube.js';
 
 
 // https://hacks.mozilla.org/2015/04/es6-in-depth-iterators-and-the-for-of-loop/
@@ -23,8 +25,12 @@ $(() => {
   for (let carousel of $('.brasil-carousel-tile')) {
     new CarouselTile(carousel);
   }
-  for (let carousel of $('.brasil-composicao-tile')) {
-    new ComposicaoTile(carousel);
+  for (let carouselvideos of $('.brasil-carouselvideos-tile')) {
+    new CarouselVideosTile(carouselvideos);
+    new Youtube(carouselvideos);
+  }
+  for (let carousel of $('.brasil-carousel-tile')) {
+    new CarouselTile(carousel);
   }
   for (let tile of $('.brasil-photoday-tile')) {
     new PhotoDayTile();
@@ -78,10 +84,12 @@ $(document).ready(function(){
 
 export default {
   CarouselTile,
+  CarouselVideosTile,
   ComposicaoTile,
   PhotoDayTile,
   PhotoGalleryTile,
   TimeLineTile,
   Ministers,
   SocialLike,
+  Youtube,
 };
