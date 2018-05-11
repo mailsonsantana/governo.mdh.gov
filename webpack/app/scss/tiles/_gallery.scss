@@ -24,6 +24,11 @@
   .gallery-thumbs {
     width: 963px !important;
     box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+  }
+  .swiper-wrapper {
+    width: auto;
   }
   .gallery-thumbs .swiper-slide {
     width: 170px !important;
@@ -32,8 +37,11 @@
     overflow: hidden;
     cursor: pointer;
   }
+  .gallery-thumbs .swiper-slide:last-child {
+    margin-right: 0;
+  }
   .gallery-thumbs .swiper-slide.swiper-slide-active {
-    width: 158px !important;
+    width: 154px !important;
     height: 118px;
     border: 6px solid #fff;
   }
@@ -83,7 +91,7 @@
   .gallery-title {
     margin: 5px 0;
     padding: 0;
-    font-size: 1,75rem;
+    font-size: 1.75rem;
     font-weight: 900;
     color: #fff !important;
     line-height: 2.4rem;

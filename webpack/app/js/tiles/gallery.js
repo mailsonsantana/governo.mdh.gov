@@ -14,7 +14,6 @@ export default class GalleryTile {
         nextEl: `#${this.tile.id} .gallery-thumbs-container .swiper-button-next`,
         prevEl: `#${this.tile.id} .gallery-thumbs-container .swiper-button-prev`,
       },
-      spaceBetween: 30,
       centeredSlides: true,
       slidesPerView: 'auto',
       touchRatio: 0.2,
@@ -42,8 +41,16 @@ export default class GalleryTile {
     }
   }
   slideChange() {
-    let slideSize = 200;
-    let currentSlidePosition = slideSize * this.activeIndex;
-    this.$wrapperEl.transform(`translate(-${currentSlidePosition}px)`);
+    let thumbsLeft = this.$el.offset().left -5;
+    let thumbsRight = thumbsLeft + this.$el.outerWidth() + 10;
+
+    let $currentSlide = $(this.slides[this.activeIndex]);
+    let currentSlideLeft = $currentSlide.offset().left;
+    let currentSlideRight = currentSlideLeft + $currentSlide.outerWidth();
+
+    if (currentSlideLeft < thumbsLeft || currentSlideRight > thumbsRight) {
+      let wrapperLeft = this.$wrapperEl.offset().left;
+      this.$wrapperEl.transform(`translate(${thumbsLeft - currentSlideLeft + wrapperLeft}px)`);
+    }
   }
 }

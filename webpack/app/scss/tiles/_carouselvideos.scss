@@ -4,13 +4,19 @@
 
   .swiper-video {
     width: 28%;
-    padding-top: 30px;
-        .imag {
-            display: flex;
-            img {
-                margin-bottom:20px;
+    padding-top: 10px;
+        h4 {  
+              position: relative;
+              top: -10%;
+              font-size: 22px;
+              font-weight: bold;
+              font-style: normal;
+              font-stretch: normal;
+              line-height: 1.32;
+              letter-spacing: normal;
+              text-align: left;
+              color: #222222;
             }
-        }
         .imag:after {
             content: "\25B6";
             background-color: #222222;

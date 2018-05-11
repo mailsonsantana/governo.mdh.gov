@@ -52,6 +52,11 @@
     .subtitle {
         color: #ff6d26;
     }
+    .column-tema {
+        float:left !important;
+        margin-left: 20px;
+
+    }
 
     .date-content {
         margin-bottom: 20px;
@@ -164,7 +169,7 @@
         padding: 0 40px 0 0;
     }
     div {
-        float: none !important;
+        float: none;
     }
     legend {
         padding: 20px 40px 20px 0 !important;

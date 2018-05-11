@@ -38,6 +38,9 @@ $(() => {
   for (let tile of $('.brasil-photogallery-tile')) {
     new PhotoGalleryTile(tile);
   }
+  for (let gallery of $('.brasil-gallery-tile')) {
+    new GalleryTile(gallery);
+  }
   for (let timeline of $('.brasil-timeline-tile')) {
     new TimeLineTile(timeline);
   }

@@ -72,7 +72,8 @@
                         <div class="field" tal:define="subjects view/get_all_subjects"
                                            tal:condition="subjects">
                           <div class="formHelp"></div>
-                          <tal:tags repeat="subject subjects">
+                          <div class="column-tema">
+                            <tal:tags repeat="subject python:subjects[0:5]">
                             <input type="checkbox"
                                 id="theme"
                                 name="themes:list"
@@ -85,8 +86,58 @@
                                    tal:attributes="for subject/id"
                                    tal:content="subject/name">Igualdade Social</label>
                             <br />
-                          </tal:tags>
+                            </tal:tags>
+                          </div>
+                          <div class="column-tema">
+                            <tal:tags repeat="subject python:subjects[5:10]">
+                            <input type="checkbox"
+                                id="theme"
+                                name="themes:list"
+                                value="theme"
+                                tal:attributes="id subject/id;
+                                                value subject/name;"
+                                />
+                            <label for="igualdade-social"
+                                   i18n:translate=""
+                                   tal:attributes="for subject/id"
+                                   tal:content="subject/name">Igualdade Social</label>
+                            <br />
+                            </tal:tags>
+                          </div>
+                          <div class="column-tema">
+                            <tal:tags repeat="subject python:subjects[10:15]">
+                            <input type="checkbox"
+                                id="theme"
+                                name="themes:list"
+                                value="theme"
+                                tal:attributes="id subject/id;
+                                                value subject/name;"
+                                />
+                            <label for="igualdade-social"
+                                   i18n:translate=""
+                                   tal:attributes="for subject/id"
+                                   tal:content="subject/name">Igualdade Social</label>
+                            <br />
+                            </tal:tags>
+                          </div>
+                          <div class="column-tema">
+                            <tal:tags repeat="subject python:subjects[15:]">
+                            <input type="checkbox"
+                                id="theme"
+                                name="themes:list"
+                                value="theme"
+                                tal:attributes="id subject/id;
+                                                value subject/name;"
+                                />
+                            <label for="igualdade-social"
+                                   i18n:translate=""
+                                   tal:attributes="for subject/id"
+                                   tal:content="subject/name">Igualdade Social</label>
+                            <br />
+                            </tal:tags>
+                          </div>
                         </div>
+
                       </fieldset>
                       <button class="filter-button">Aplicar filtro</button>
                     </div>

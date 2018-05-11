@@ -26,8 +26,7 @@
                        tal:attributes="href python:view.get_url(obj);
                                        data-url python:view.get_url(obj)">
                         <tal:image define="thumbnail python:view.thumbnail(obj);">
-                          <img  class="imag"
-                                tal:condition="thumbnail"
+                          <img  tal:condition="thumbnail"
                                 tal:attributes="src thumbnail/url;
                                                 width thumbnail/width;
                                                 height thumbnail/height;
