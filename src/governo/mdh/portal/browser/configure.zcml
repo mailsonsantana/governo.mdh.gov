@@ -142,5 +142,23 @@
       layer="governo.mdh.portal.interfaces.IBrowserLayer"
       />
 
+  <browser:viewlet
+      name="sc.social.likes"
+      manager="plone.app.layout.viewlets.interfaces.IAboveContentBody"
+      class="sc.social.like.browser.viewlets.SocialLikesViewlet"
+      layer="sc.social.like.interfaces.ISocialLikeLayer"
+      permission="zope.Public"
+      />
+
+  <configure package="collective.texttospeech.browser">
+    <browser:viewlet
+        name="collective.texttospeech"
+        class="collective.texttospeech.browser.viewlets.TextToSpeechViewlet"
+        manager="plone.app.layout.viewlets.interfaces.IAboveContentBody"
+        template="templates/texttospeech.pt"
+        layer="collective.texttospeech.interfaces.IBrowserLayer"
+        permission="zope2.View"
+        />
+    </configure>
 
 </configure>

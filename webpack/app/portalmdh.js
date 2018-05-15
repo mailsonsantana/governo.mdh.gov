@@ -1,4 +1,5 @@
 import ContentCentral from './js/contentcentral.js';
+import ResizeFont from './js/accessibility.js';
 import Ministers from './js/ministerios.js'
 import SocialLike from './js/sociallike.js';
 
@@ -28,6 +29,9 @@ $(() => {
   for (let carouselvideos of $('.brasil-carouselvideos-tile')) {
     new CarouselVideosTile(carouselvideos);
     new Youtube(carouselvideos);
+  }
+  if ($('#texttospeech-button').length > 0) {
+    new ResizeFont();
   }
   for (let carousel of $('.brasil-carousel-tile')) {
     new CarouselTile(carousel);
@@ -91,6 +95,7 @@ export default {
   ComposicaoTile,
   PhotoDayTile,
   PhotoGalleryTile,
+  ResizeFont,
   TimeLineTile,
   Ministers,
   SocialLike,

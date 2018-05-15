@@ -22,7 +22,7 @@ class NewsView(BrowserView):
 
     def results(self, b_size=5, b_start=0):
         """Apply a custom query over the collection results."""
-        #custom_query = {}
+        custom_query = {}
         b_start = int(b_start)
 
         text = self.request.form.get('SearchableText', '')

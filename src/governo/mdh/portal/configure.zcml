@@ -33,6 +33,7 @@
 
   <include package="brasil.gov.portal" />
   <include package="z3c.jbot" />
+  <include package="collective.texttospeech" />
 
   <include file="themes.zcml" />
 
