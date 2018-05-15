@@ -13,7 +13,6 @@ from Testing.makerequest import makerequest
 from zope.component.hooks import setSite
 from AccessControl.SecurityManagement import newSecurityManager
 
-import pdb;pdb.set_trace()
 # Configuracoes
 portal_id = 'mdh'
 user_id = 'admin'
