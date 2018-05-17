@@ -356,24 +356,28 @@ dd.image-caption {
   }
   .sociallike-network-facebook::before {
     @include sprite($rede-facebook-topo);
+    filter: none;
   }
   .sociallike-network-facebook:hover {
     background: #3b5999;
   }
   .sociallike-network-twitter::before {
     @include sprite($rede-twitter-topo);
+    filter: none;
   }
   .sociallike-network-twitter:hover {
     background: #55acee;
   }
   .sociallike-network-gplus::before {
     @include sprite($rede-googleplus-topo);
+    filter: none;
   }
   .sociallike-network-gplus:hover {
     background: #dd4b39;
   }
   .sociallike-network-linkedin::before {
     @include sprite($rede-linkedin);
+    filter: none;
   }
   .sociallike-network-linkedin:hover {
     background: #0077b5;
