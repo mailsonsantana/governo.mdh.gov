@@ -4,7 +4,7 @@
     expression="" id="++resource++portalmdh/swiper.min.css"
     media="screen" rel="stylesheet" rendering="link"
     insert-before="*" />
-  <stylesheet
+  <!-- <stylesheet
       cacheable="True"
       compression="none"
       cookable="True"
@@ -16,5 +16,5 @@
       rel="stylesheet"
       rendering="link"
       title=""
-      />
+      /> -->
 </object>

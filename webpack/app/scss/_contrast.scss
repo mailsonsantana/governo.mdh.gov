@@ -108,6 +108,8 @@ body.folder_contraste {
   &.portaltype-collection .keywords a, .template-filter-results .keywords a,
   .tile.foto-sobreposta h2 a,
   #texttospeech-button,
+  .navigation-items>li:hover a,
+  .info-left,.info-right,
   ul.paginacao li a {
     color: yellow !important;
     text-decoration: underline !important;
@@ -220,6 +222,9 @@ body.folder_contraste {
 /* Contraste Compartilhamento */
 body.contraste,
 body.folder_contraste {
+  .swiper-button-black{
+    filter: invert(100%);
+  }
   .tile.tile-default {
     .nitf-basic-tile .likes li a {
       filter: invert(100%) !important;
@@ -238,4 +243,13 @@ body.contraste {
       @include sprite($busca);
       background-color: transparent;
     }
+}
+
+/* Tiles */
+body.contraste,
+body.folder_contraste {
+  .tile.box-colorido>div {
+    background: #000;
+    border-color: #fff;
+  }
 }
