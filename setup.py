@@ -2,7 +2,7 @@
 from setuptools import find_packages
 from setuptools import setup
 
-version = '1.0a1'
+version = '1.0'
 description = 'Portal Ministério dos Direitos Humanos'
 long_description = (
     open('README.rst').read() + '\n' +
@@ -28,9 +28,9 @@ setup(
         'Topic :: Software Development :: Libraries :: Python Modules',
     ],
     keywords='brasil plone gov',
-    author='forContent',
-    author_email='suporte@forcontent.com.br',
-    url='https://bitbucket.org/forcontent/governo.mdh.portal.git',
+    author='Jefferson Almeida',
+    author_email='jralmeida88@gmail.com',
+    url='https://bitbucket.org/jefferson.ramal/governo.mdh.portal.git',
     packages=find_packages('src'),
     package_dir={'': 'src'},
     namespace_packages=['governo', 'governo.mdh'],
