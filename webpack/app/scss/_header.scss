@@ -228,6 +228,7 @@ ul.submenu {
     border: none;
     text-indent: -3000px;
   @include sprite($botao-busca);
+  background-color:transparent;
   }
 }
 
