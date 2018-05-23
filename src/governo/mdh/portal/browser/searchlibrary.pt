@@ -204,7 +204,7 @@
 
 
                             <div class="date-content">
-                                <span tal:content="python: item.modified.strftime('%d/%m/%Y')"> 15/04/1988</span>
+                                <span tal:content="python: item.created.strftime('%d/%m/%Y')"> 15/04/1988</span>
                             </div>
 
                               <div tal:define="categories item/Subject|nothing;

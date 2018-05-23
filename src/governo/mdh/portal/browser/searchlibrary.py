@@ -33,21 +33,25 @@ class SearchLibraryView(BrowserView):
         if self.valid_period(created):
             custom_query['created'] = created
 
-        sort_on = self.request.form.get('sort_on', '')
-        if sort_on not in ('', 'Date', 'sortable_title'):
-            sort_on = ''
-        #import pdb;pdb.set_trace()
+        types = self.request.form.get('document_type',{})
+        if types:
+            custom_query['document_type'] = types
+
+        # TODO:Esta impedindo de ordenar a coleção por ordem de criação 
+        # sort_on = self.request.form.get('sort_on', '')
+        # if sort_on not in ('', 'Date', 'sortable_title'):
+        #     sort_on = ''
         tags = self.request.form.get('themes',{})
         if tags:
             custom_query['Subject'] = tags
-        sort_order = 'reverse' if sort_on == 'Date' else 'ascending'
-        custom_query['sort_order'] = sort_order
+        # sort_order = 'reverse' if sort_on == 'Date' else 'ascending'
+        # custom_query['sort_order'] = sort_order
 
         results = self.context.results(
             b_start=b_start,
             b_size=b_size,
             custom_query=custom_query,
-            sort_on=sort_on,
+            # sort_on=sort_on,
         )
         return results
 
