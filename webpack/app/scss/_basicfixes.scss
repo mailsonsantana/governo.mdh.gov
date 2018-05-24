@@ -1,0 +1,7 @@
+/* corrige problemas responsivo no destaque */
+
+@media (max-width: 767px) {
+  .linha-destaquetopo #parent-fieldname-theme_top_image img {
+      height: 200px;
+  }
+}

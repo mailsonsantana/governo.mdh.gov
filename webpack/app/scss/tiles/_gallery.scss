@@ -1,4 +1,17 @@
 /* tile de galleria */
+.linha-recuada .brasil-gallery-tile {
+  .gallery-thumbs-container {
+    transform: translateY(-65px);
+  }
+  .gallery-global-information .gallery-title {
+    margin: 40px 0 15px 0;
+  }
+  .gallery-global-information .gallery-description {
+    border-bottom: 1px solid #fff;
+    margin: 20px auto;
+    padding: 20px 0 45px 0;
+  }
+}
 .brasil-gallery-tile {
   width: 100%;
   .swiper-container {

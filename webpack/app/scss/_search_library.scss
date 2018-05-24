@@ -11,7 +11,7 @@
     #search-field {
         border: 1px solid #ccc !important;
         border-bottom: 0;
-        margin: 0 13px -16px 12px;
+        margin: 0px 13px 0px 12px;
         padding: 10px;
         text-align: left;
 
@@ -23,72 +23,37 @@
         border: none;
         font-size: 1rem !important;
         font-weight: 600;
-        margin-left: 32px;
+        margin-left: 15px;
     }
-    #content-core input[type="text"] {
+    input[type="text"] {
+        height: 30px;
+        margin: 5px 0 0 14px;
+        border: none;
         width: 800px;
-        line-height: 2.2em;
-        font-size: 14px !important;
-        font-weight: 500;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        color: #222222;
-        font-family: Raleway;
     }
-    input[type="text"]:focus {
+    input[type="submit"] {
+        @include sprite($filtro-busca);
+        border: none;
         background-color: transparent;
+        text-indent: -3000px;
     }
-    input.searchButton {
-        @include sprite($botao-busca-black);
-        text-indent: -5000px;
-        background-color: transparent;
+    form .actionMenuHeader {
+        position: absolute;
+        top: -40px;
+        right: 40px;
+        border-left: 1px solid #ccc;
+        padding-left: 30px;
     }
-    
     .cell.width-full.position-0 {
-        margin-left: auto;
-    }
-    .subtitle {
-        color: #ff6d26;
-    }
-    .column-tema {
-        float:left !important;
-        margin-left: 20px;
-
-    }
-    .date-content {
-        margin-bottom: 20px;
-        font-size: 14px;
-        font-weight: 500;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: 2.14;
-        letter-spacing: normal;
-        text-align: left;
-        color: #b1b1b1;
-    }
-    .description {
-        margin-bottom: 0px !important;
-    }
-    .tileHeadline a:hover, .keywords a:hover {
-        color: #ff6d26 !important;
-    }
-    .filter-button {
-    height: 50px;
-    border-radius: 30px;
-    border: 0;
-    padding: 10px 20px;
-    background: #333;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: 700;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
+        
     }
     #results {
-        margin: 10px 15px;
+        width: 100%;
+        margin-left: 12px;
+        ul {
+            list-style-type:none;
+            margin:20px 0px 0px 0px;
+        }
     }
     .resultados-encontrados {
         font-size: 18px;
@@ -102,6 +67,11 @@
         text-align:center;
         border-bottom: solid 0.5px #cccccc;
     }
+    .column-tema {
+        float:left !important;
+        margin-left: 20px;
+
+    }    
 }
 #search-results-wrapper {
     position: initial;
@@ -126,8 +96,9 @@
         float: none;
         display: none;
     }
-    #filters .filter-button {
-        height: 50px;
+    #filters .filter-button,
+    #search-filter .filter-button {
+        height: 40px;
         border-radius: 30px;
         border: 0;
         padding: 10px 20px;
@@ -306,5 +277,93 @@
         right: 40px;
         border-left: 1px solid #ccc;
         padding-left: 30px;
-    }   
+    } 
+
+/*Results bar */ 
+#results-bar {
+    border: 1px solid #ccc;
+    border-top: 0;
+    margin-bottom: 40px;
+    padding: 10px 0;
+
+    fieldset {
+        border: 0 !important;   
+    }
+
+    label[for="Image"] {
+        @include sprite($filtro-imagem);
+        padding-left: 25px;
+    }
+    label[for="Audio"] {
+        @include sprite($filtro-audio);
+        padding-left: 25px;
+    }
+    label[for="sc.embedder"] {
+        @include sprite($filtro-video);
+        padding-left: 25px;
+    }
+    label[for="Infographic"] {
+        @include sprite($filtro-infografico);
+        padding-left: 25px;
+    }
+    dl {
+        margin-bottom: 0;
+    }
+    dd {
+        margin: 0;
+    }
+    #filters {
+      display: flex;
+      padding-top: 30px;
+
+        fieldset {
+            padding: 0;
+            margin-left: 30px;
+        }
+        legend {
+            padding: 0;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        label {
+            font-weight: normal;
+        }
+        .filter-button {
+            height: 50px;
+            border-radius: 30px;
+            border: 0;
+            padding: 10px 20px;
+            background: #333;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-top: 81px;
+        }
+    }
+    .actionMenuHeader {
+        width: 180px;
+        float: right;
+        border-left: 1px solid #ccc;
+        text-align: right;
+        text-transform: uppercase;
+        font-size: 1rem;
+        cursor: pointer;
+    }
+    .actionMenuContent.closed {
+      display: block;
+    }
+    .actionMenuContent.closed {
+      display: none;
+    }
+    #filter-toggle:after {
+        content: " ";
+        display: inline-block;
+        margin: -4px 8px;
+        @include sprite($ico-filtrar);
+    }
+    #filter-toggle.closed:after {
+        transform: rotate(180deg);
+    }
+}
+
 }
