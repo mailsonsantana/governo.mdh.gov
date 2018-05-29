@@ -2,13 +2,16 @@ export default class SocialLike {
   constructor(tile) {
     this.$tile = $(tile);
     for (let link of this.$('a')) {
+
       if (link.host !== location.host) {
         continue;
       }
       if (this.$('.likes').lenght > 0) {
         continue;
       }
-      this.$tile.append(this.template(link.href, link.innerText.trim()));
+      if (link.className !== 'imag'){
+        this.$tile.append(this.template(link.href, link.innerText.trim()));
+      }
     }
     this.$('.likes-more').on('click', this.moreClick.bind(this));
   }
