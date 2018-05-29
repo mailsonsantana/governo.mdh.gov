@@ -44,3 +44,26 @@
       filter: invert(100%);
     }
 }
+
+/* ajustes no contraste */
+.contraste {
+  #content .agenda-tile .collection-events-item {
+    background-color: #000;
+    color: #000;
+  }
+  #content .agenda-tile .location, #content .agenda-tile .timestamp {
+    color: #fff;
+  }
+  #content .agenda-tile .location-item:before {
+    @include sprite($agenda-location);
+    display: inline-block;
+    content: '';
+    margin: 0 .3rem;
+  }
+  #content .agenda-tile .timestamp-cell:before {
+    @include sprite($agenda-timestamp);
+    display: inline-block;
+    content: '';
+    margin: 0 .3rem;
+  }
+}
