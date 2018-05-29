@@ -44,28 +44,28 @@
         </fieldset>
 
         <div class="">
-          <div id="search-results-wrapper"
+          <div id="results-wrapper"
                class="cell width-full position-0"
                tal:define="b_start python: 0;
                            b_start request/b_start | b_start;
                            batch python: view.results(b_start=b_start);">
 
-              <div id="search-results-bar">
+              <div id="results-bar">
                 <script type="text/javascript">
-                  $(document).on('click', '#search-filter-toggle', function (e) {
+                  $(document).on('click', '#filter-toggle', function (e) {
                       e.preventDefault();
                       $(this).toggleClass('open');
-                      $('#search-filter').slideToggle();
+                      $('.actionMenuContentFilter').slideToggle();
                     });
                 </script>
                 <dl>
-                  <dt class="actionMenuHeader-filter">
-                    <span id="search-filter-toggle">
+                  <dt class="actionMenuHeader">
+                    <span id="filter-toggle" class="closed">
                       Filtrar por
                     </span>
                   </dt>
-                  <dd class="actionMenuContent">
-                    <div id="search-filter">
+                  <dd class="actionMenuContentFilter">
+                    <div id="filters">
                       <fieldset class="noborder">
                         <legend i18n:translate="theme_by">Por tema</legend>
 
@@ -73,7 +73,7 @@
                                            tal:condition="subjects">
                           <div class="formHelp"></div>
                           <div class="column-tema">
-                            <tal:tags repeat="subject python:subjects[0:5]">
+                            <tal:tags repeat="subject python:subjects[0:10]">
                             <input type="checkbox"
                                 id="theme"
                                 name="themes:list"
@@ -89,39 +89,7 @@
                             </tal:tags>
                           </div>
                           <div class="column-tema">
-                            <tal:tags repeat="subject python:subjects[5:10]">
-                            <input type="checkbox"
-                                id="theme"
-                                name="themes:list"
-                                value="theme"
-                                tal:attributes="id subject/id;
-                                                value subject/name;"
-                                />
-                            <label for="igualdade-social"
-                                   i18n:translate=""
-                                   tal:attributes="for subject/id"
-                                   tal:content="subject/name">Igualdade Social</label>
-                            <br />
-                            </tal:tags>
-                          </div>
-                          <div class="column-tema">
-                            <tal:tags repeat="subject python:subjects[10:15]">
-                            <input type="checkbox"
-                                id="theme"
-                                name="themes:list"
-                                value="theme"
-                                tal:attributes="id subject/id;
-                                                value subject/name;"
-                                />
-                            <label for="igualdade-social"
-                                   i18n:translate=""
-                                   tal:attributes="for subject/id"
-                                   tal:content="subject/name">Igualdade Social</label>
-                            <br />
-                            </tal:tags>
-                          </div>
-                          <div class="column-tema">
-                            <tal:tags repeat="subject python:subjects[15:]">
+                            <tal:tags repeat="subject python:subjects[10:]">
                             <input type="checkbox"
                                 id="theme"
                                 name="themes:list"
@@ -137,7 +105,6 @@
                             </tal:tags>
                           </div>
                         </div>
-
                       </fieldset>
                       <button class="filter-button">Aplicar filtro</button>
                     </div>
@@ -162,9 +129,9 @@
                                              use_view_action site_properties/typesUseViewActionInListings|python:();
                                              allowAnonymousViewAbout site_properties/allowAnonymousViewAbout;
                                              show_about python: not isAnon or allowAnonymousViewAbout;">
-                    <div class="">
+                    <ul class="">
                       <tal:results repeat="item batch">
-                        <article class=""
+                        <li class=""
                             tal:define="obj item/getObject;
                                         thumbnail obj/@@images/image/thumb|nothing;
                                         noimage python: 'no-image' if thumbnail is None else ''"
@@ -214,9 +181,9 @@
                               </div>
                             </div>
                           </div>
-                        </article>
+                        </li>
                       </tal:results>
-                    </div>
+                    </ul>
                     <div metal:use-macro="context/batch_macros/macros/navigation" />
                   </metal:results>
                 </div>

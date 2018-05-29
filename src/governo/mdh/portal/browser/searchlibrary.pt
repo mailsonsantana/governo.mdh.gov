@@ -37,7 +37,8 @@
                  i18n:attributes="title title_search_title;"
                  tal:attributes="value st;"
                  />
-          <input type="submit"
+          <input class="searchPage searchButton allowMultiSubmit"
+                 type="submit"
                  value="Search"
                  i18n:attributes="value label_search;"/>
         </fieldset>
@@ -54,7 +55,7 @@
                   $(document).on('click', '#filter-toggle', function (e) {
                       e.preventDefault();
                       $(this).toggleClass('open');
-                      $('.actionMenuContent').slideToggle();
+                      $('.actionMenuContentFilter').slideToggle();
                     });
                 </script>
                 <dl>
@@ -63,7 +64,7 @@
                       Filtrar por
                     </span>
                   </dt>
-                  <dd class="actionMenuContent">
+                  <dd class="actionMenuContentFilter">
                     <div id="filters">
                       <fieldset class="noborder" i18n:domain="governo.mdh.portal">
                         <legend i18n:translate="">Por Tipo de conteúdo</legend>

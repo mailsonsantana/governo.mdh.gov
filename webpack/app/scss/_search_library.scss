@@ -23,7 +23,7 @@
         border: none;
         font-size: 1rem !important;
         font-weight: 600;
-        margin-left: 15px;
+        margin-left: 45px;
     }
     input[type="text"] {
         height: 30px;
@@ -317,7 +317,7 @@
       padding-top: 30px;
 
         fieldset {
-            padding: 0;
+            padding-right: 60px;
             margin-left: 30px;
         }
         legend {
@@ -363,7 +363,7 @@
     }
     #filter-toggle.closed:after {
         transform: rotate(180deg);
+        }
     }
-}
 
 }
