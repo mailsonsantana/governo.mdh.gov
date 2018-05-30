@@ -6,6 +6,7 @@ import SocialLike from './js/sociallike.js';
 import CarouselTile from './js/tiles/carousel.js';
 import CarouselVideosTile from './js/tiles/carouselvideos.js';
 import GalleryTile from './js/tiles/gallery.js';
+import GallerySwiperVideosTile from './js/tiles/galleryswipervideos.js'
 import NavigationTile from './js/tiles/navigation.js';
 import PhotoDayTile from './js/tiles/photoday.js';
 import PhotoGalleryTile from './js/tiles/photogallery.js';
@@ -44,6 +45,10 @@ $(() => {
   }
   for (let gallery of $('.brasil-gallery-tile')) {
     new GalleryTile(gallery);
+  }
+  for (let galleryswiper of $('.galleryswipervideos')) {
+    new GallerySwiperVideosTile(galleryswiper);
+    new Youtube(galleryswiper);
   }
   for (let timeline of $('.brasil-timeline-tile')) {
     new TimeLineTile(timeline);
@@ -100,4 +105,5 @@ export default {
   Ministers,
   SocialLike,
   Youtube,
+  GallerySwiperVideosTile,
 };

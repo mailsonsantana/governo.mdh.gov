@@ -188,4 +188,17 @@
       template="carouselvideos.pt"
       />
 
+  <plone:tile
+      name="tile.galleryswipervideos"
+      for="*"
+      title="Gallery Swiper Videos"
+      description="Display a gallery of videos."
+      icon="++resource++collective.cover/img/tile-generic.png"
+      add_permission="cmf.ModifyPortalContent"
+      schema=".galleryswipervideos.IGallerySwiperVideosTile"
+      class=".galleryswipervideos.GallerySwiperVideosTile"
+      permission="zope2.View"
+      template="galleryswipervideos.pt"
+      />
+
 </configure>

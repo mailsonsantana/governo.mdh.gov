@@ -16,6 +16,7 @@
       <element>brasil.timeline</element>
       <element>brasil.composicao</element>
       <element>brasil.carouselvideos</element>
+      <element>tile.galleryswipervideos</element>
     </value>
   </record>
   <record name="collective.cover.controlpanel.ICoverSettings.available_tiles">
@@ -34,6 +35,7 @@
       <element>brasil.timeline</element>
       <element>brasil.composicao</element>
       <element>brasil.carouselvideos</element>
+      <element>tile.galleryswipervideos</element>
     </value>
   </record>
   <!-- estilos do collective.cover -->
