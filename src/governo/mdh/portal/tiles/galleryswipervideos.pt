@@ -7,7 +7,7 @@
     <div class="brasil-gallery-tile galleryswipervideos tile-content"
          tal:attributes="id string:gallery-${view/id}">
       <div class="swiper-container gallery-top">
-        <div class="gallery-global-information">
+        <div class="gallery-global-information" tal:condition="view/tile_title">
           <div class="gallery-title" tal:content="view/tile_title" />
           <div class="gallery-description" tal:content="view/tile_description" />
         </div>

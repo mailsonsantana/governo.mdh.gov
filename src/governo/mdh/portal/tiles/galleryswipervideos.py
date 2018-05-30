@@ -46,6 +46,17 @@ class GallerySwiperVideosTile(ListTile):
     def switch_text(self):
         return self.data['switch_text']
 
+    def results(self):
+    	page = []
+
+        for i, item in enumerate(super(GallerySwiperVideosTile, self).results()):
+            page.append(item)
+            if (i + 1) % 4 == 0:
+                return page
+                page = []
+        if page:
+            return page
+
 
     def get_title(self, item):
         """Get the title of the item, or the custom title if set.
