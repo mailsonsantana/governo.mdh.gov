@@ -64,6 +64,10 @@
     <value>bootstrap3</value>
   </record>
 
+  <record name="sc.social.like.interfaces.ISocialLikeSettings.typebutton">
+    <value>vertical</value>
+  </record>
+
   <records interface="governo.mdh.portal.browser.controlpanel.IMdhSettings" />
 
 </registry>

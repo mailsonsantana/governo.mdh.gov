@@ -116,8 +116,12 @@
     color: #222;
     opacity: 1;
   }
+  .swiper-button-next, .swiper-button-prev {
+    background-size: 10px 20px;
+  }
   .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
     opacity: .35 !important;
+
   }
   .swiper-pagination-bullet {
     width:10px;

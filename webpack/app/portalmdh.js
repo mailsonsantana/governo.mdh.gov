@@ -16,6 +16,7 @@ import ComposicaoTile from './js/tiles/composicao.js';
 import Contraste from './js/contrast.js';
 import GaleriaDeFotos from './js/albuns.js';
 import Youtube from './js/youtube.js';
+import DestaqueTopo from './js/destaquetopo.js';
 
 
 // https://hacks.mozilla.org/2015/04/es6-in-depth-iterators-and-the-for-of-loop/
@@ -66,6 +67,9 @@ $(() => {
     //   }
     //   new SocialLike(tile);
     // }
+    for (let destaque of $('.linha-destaquetopo')){
+      new DestaqueTopo(destaque);
+    } 
     for (let tile of $('.nitf-basic-tile')) {
       new SocialLike(tile);
     }
@@ -98,6 +102,7 @@ export default {
   CarouselTile,
   CarouselVideosTile,
   ComposicaoTile,
+  DestaqueTopo,
   PhotoDayTile,
   PhotoGalleryTile,
   ResizeFont,

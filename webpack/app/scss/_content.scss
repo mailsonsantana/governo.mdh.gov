@@ -1,9 +1,7 @@
 /* largura da area de texto de alguns tipos de conteúdo */
 .portaltype-document,
 .portaltype-collective-nitf-content {
-  #main {
-    width: 100% !important;
-  }
+  
   h1.documentFirstHeading,
   #viewlet-below-content-title,
   .documentDescription,
@@ -102,8 +100,9 @@ p.nitfSubtitle {
 }
 
 .documentByLine {
-  padding: 25px 0;
-  margin: 0 0 2rem 0;
+  padding: 0px 0 30px;
+  margin: 10px;
+  height: 70px;
   color: $byline-color;
   font-family: $main-font !important;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -113,7 +112,6 @@ p.nitfSubtitle {
 #viewlet-social-like.vertical {
   float: left;
   position: absolute;
-  margin-top: 110px;
 }
 #media {
     width: 1140px;
@@ -210,11 +208,20 @@ dd.image-caption {
 }
 
 .voltar-topo {
-    width: 20%;
-    float: right;
+    -ms-flex-wrap: wrap;
+    display: -webkit-box!important;
+    display: -ms-flexbox!important;
+    display: flex!important;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: flex-end;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    float: none;
+    margin: 5px -5px;
+    width: inherit!important;
     text-align: right;
-    margin-top:7px;
-
+    
     a {
       color: #222;
       text-transform: uppercase;
@@ -297,18 +304,16 @@ dd.image-caption {
 /* social like */
 #viewlet-social-like {
   position: absolute;
-
   display: block;
   float: none;
-  margin: 0px 0px 0px 80px;
-
+  margin: 0;
   width: 100px;
 
   &.vertical {
     min-height: 7em !important;
     width: 73px;
     float: left;
-    transform: translateX(-80px);
+    transform: translateX(0px);
   }
   dl.image-right {
     margin-right: -10%;
