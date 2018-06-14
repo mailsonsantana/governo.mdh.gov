@@ -87,7 +87,7 @@ class CarouselVideosTile(ListTile):
         :rtype: unicode
         """
         # First we get the url for the item itself
-        description = item.Description()
+        description = ''
         uuid = self.get_uuid(item)
         data_mgr = ITileDataManager(self)
         data = data_mgr.get()
@@ -108,8 +108,27 @@ class CarouselVideosTile(ListTile):
         """
         # First we get the url for the item itself
         url = getattr(item, 'url', item.absolute_url())
-        if item.portal_type in get_types_use_view_action_in_listings():
-            url += '/view'
+        # uuid = self.get_uuid(item)
+        # data_mgr = ITileDataManager(self)
+        # data = data_mgr.get()
+        # uuids = data['uuids']
+        # if uuid in uuids:
+        #     if uuids[uuid].get('custom_url', u''):
+        #         # If we had a custom url set, then get that
+        #         url = uuids[uuid].get('custom_url')
+        return url
+
+    def get_custom_url(self, item):
+        """Get the URL of the item, or the custom URL if set.
+
+        :param item: [required] The item for which we want the URL
+        :type item: Content object
+        :returns: the item URL
+        :rtype: str
+        """
+        # First we get the url for the item itself
+        #import pdb;pdb.set_trace()
+        url = getattr(item, 'url', item.absolute_url())
         uuid = self.get_uuid(item)
         data_mgr = ITileDataManager(self)
         data = data_mgr.get()

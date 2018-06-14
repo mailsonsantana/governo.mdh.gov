@@ -37,7 +37,7 @@
                     </a>           
                     <h4>
                         <a tal:content="python:view.get_title(obj)"
-                           tal:attributes="href python:view.get_url(obj)">O Touro Ferdinando | Trailer Oficial | Dublado HD</a>
+                           tal:attributes="href python:view.get_custom_url(obj)">O Touro Ferdinando | Trailer Oficial | Dublado HD</a>
                     </h4> 
                     <p tal:content="python:view.get_description(obj)">Vivamus lacinia turpis eros, in pellentesque neque tristique ac. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
                 </div>

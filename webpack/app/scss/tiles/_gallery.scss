@@ -177,6 +177,10 @@
     text-transform: uppercase;
     text-align: center;
   }
+  .swiper-button-next, .swiper-button-prev{
+    width: 30px;
+    height: 20px;
+  }
 }
 .template-compose #content .brasil-gallery-tile {
   .gallery-thumbs .crop-warning {
