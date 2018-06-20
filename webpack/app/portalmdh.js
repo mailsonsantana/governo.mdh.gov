@@ -82,7 +82,12 @@ $(() => {
 $(document).ready(function(){
   $(".ico-navegacao").click(function(){
     $(".navigation-wrapper").toggleClass("ativo");
+    $(".ico-navegacao").toggleClass("ico-close");
+    if ($(".inverter-white").length > 0){
+      $(".ico-navegacao").removeClass("ico-navegacao").addClass('ico-close-white');
+    }
   });
+
   $(".ico-busca").click(function(){
     $("#main-header").toggleClass("busca-ativa");
     $("#portal-searchbox").toggleClass("ativo");

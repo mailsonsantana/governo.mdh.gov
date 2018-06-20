@@ -69,6 +69,9 @@ header#main-header {
   display: flex;
   .list-navigation {
     display: flex;
+    .plain a, .selected a {
+      color: #333333 !important;
+    }
     li {
       font-weight: 900;
       border-right: 1px solid #c9c9c9;
@@ -78,9 +81,8 @@ header#main-header {
     }
   }
   a:link,
-  a:hover,
   a:visited {
-    color: #333 !important;
+    color: #6b6b6b !important;
   }
   .submenu {
     li {
@@ -88,6 +90,10 @@ header#main-header {
       font-weight: normal;
       margin-right: 0;
       font-size: 0.875rem;
+    }
+    a:link,
+    a:visited {
+      color: #6b6b6b !important;
     }
   }
 }
@@ -107,6 +113,20 @@ ul.submenu {
     margin-right: 10px;
     text-indent: -3000px;
     @include sprite($nav);
+  }
+  .ico-close {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+    text-indent: -3000px;
+    @include sprite($close-button-orange); 
+  }
+  .ico-close-white {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+    text-indent: -3000px;
+    @include sprite($close-button-white); 
   }
   .ico-busca {
     display: inline-block;
@@ -135,7 +155,7 @@ ul.submenu {
     position: absolute;
     top: 3px;
     left: 0;
-    @include sprite($contraste-escuro);
+    @include sprite($contraste-escuro-novo);
   }
   .link-vlibras {
     display: inline-block;
@@ -254,7 +274,7 @@ header#main-header.busca-ativa {
     @include sprite($busca-escuro);
   }
   .link-contraste:before {
-    @include sprite($contraste-escuro);
+    @include sprite($contraste-escuro-novo);
   }
   .link-vlibras:before {
     @include sprite($vlibras-escuro);
