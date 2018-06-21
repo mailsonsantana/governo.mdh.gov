@@ -382,7 +382,7 @@ p.tile-description {
     img {
         object-fit: cover;
         height: 270px;
-        width:100%;
+        width:270px;
         position: absolute;
         top: 0;
         z-index: -2;
@@ -471,6 +471,11 @@ p.tile-description {
 }
 
 /* tile de foto sobreposta fonte branca */
+.foto-sobreposta-fonte-branca {
+   .tile-content h2 a:hover, h1 a:hover, h3 a:hover {
+        color: #FFF !important;
+    } 
+}
 .tile.foto-sobreposta-fonte-branca {
     position: relative;
     height: 270px;
@@ -482,7 +487,7 @@ p.tile-description {
     img {
         object-fit: cover;
         height: 270px;
-        width:100%;
+        width:270px;
         position: absolute;
         top: 0;
         z-index: -2;
@@ -490,7 +495,7 @@ p.tile-description {
     h1,
     h2,
     h3 {
-        padding: 0 100px 20px 20px;
+        padding: 0 55px 20px 20px;
         margin: 0 !important;
         color: #FFF !important;
 
@@ -657,7 +662,6 @@ p.tile-description {
         }
 
     .tile {
-        padding:10px 20px;
         box-sizing:border-box;
         display: flex;
         align-items: flex-end;
