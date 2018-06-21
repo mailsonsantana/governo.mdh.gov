@@ -67,6 +67,12 @@ $(() => {
     //   }
     //   new SocialLike(tile);
     // }
+    var path = window.location.pathname
+    if (path == '/' || path == '/mdh'){
+      $('#portal-breadcrumbs').hide()
+    }
+
+
     for (let destaque of $('.linha-destaquetopo')){
       new DestaqueTopo(destaque);
     } 

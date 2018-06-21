@@ -34,6 +34,14 @@
     <copy css:content="#portal-redes" css:theme=".navigation-redes ul" />
     <replace css:content="#portal-services" css:theme=".links-destaque ul" />
 
+    <replace css:content="#nolivesearchGadget">
+        <xsl:copy>
+          <xsl:copy-of select="@*" />
+          <xsl:apply-templates />
+          <xsl:attribute name="placeholder">O que você procura ?</xsl:attribute>
+        </xsl:copy>
+    </replace>
+
     <drop css:content="#portal-title-1" />
 
 
