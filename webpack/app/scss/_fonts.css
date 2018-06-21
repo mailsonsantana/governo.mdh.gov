@@ -42,3 +42,31 @@
 		url("../fonts/Raleway-Black.ttf") format("truetype"),
 		url("../fonts/Raleway-Black.svg") format("svg");
 }
+
+/* === MuseoSans - 500 */
+@font-face {
+	font-family: 'MuseoSans';
+	font-style: normal;
+	font-weight: 500;
+	src: url("../fonts/museosans_500-webfont.eot");
+	src: local("MuseoSans"),
+		local("MuseoSans"),
+		url("../fonts/museosans_500-webfont.eot") format("embedded-opentype"),
+		url("../fonts/museosans_500-webfont.woff") format("woff"),
+		url("../fonts/museosans_500-webfont.ttf") format("truetype"),
+		url("../fonts/museosans_500-webfont.svg") format("svg");
+}
+
+/* === MuseoSans - 900 */
+@font-face {
+	font-family: 'MuseoSans-Black';
+	font-style: normal;
+	font-weight: 900;
+	src: url("../fonts/MuseoSans_900.eot");
+	src: local("MuseoSans-Black"),
+		local("MuseoSans-Black"),
+		url("../fonts/MuseoSans_900.eot") format("embedded-opentype"),
+		url("../fonts/MuseoSans_900.woff") format("woff"),
+		url("../fonts/MuseoSans_900.ttf") format("truetype"),
+		url("../fonts/MuseoSans_900.svg") format("svg");
+}
