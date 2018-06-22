@@ -276,7 +276,20 @@ ul.submenu {
   }
 }
 
+.search-black {
+  @include sprite($busca-escuro);
+  border: none;
+  text-indent: -3000px;
+  background-color: transparent;
+}
 
+.ico-navegacao-white {
+    @include sprite($nav-claro);
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+    text-indent: -3000px;
+  }
 
 header#main-header.busca-ativa {
   color: #222 !important;

@@ -7,6 +7,8 @@ export default class DestaqueTopo {
 	    $('.links-destaque').css('filter','invert(100)')
 	    $('.link-vlibras').css('filter','invert(100)');
 	    $('#breadcrumbs-home').css('filter','invert(100)');
+	    $('.ico-navegacao').removeClass('ico-navegacao').addClass('ico-navegacao-white');
+	    $('.searchButton').removeClass('searchButton').addClass('search-black');
 	}
   }
 }
