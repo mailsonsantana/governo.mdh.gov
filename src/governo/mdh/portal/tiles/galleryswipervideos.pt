@@ -18,7 +18,7 @@
                                  data-content-type obj/portal_type;
                                  data-content-uuid python:view.get_uuid(obj)">
               <tal:image define="scales obj/@@images;
-                                 thumbnail python:scales.scale('image', scale=None)"
+                                 thumbnail python:scales.scale('image', scale='galeria_de_foto_view', direction='down')"
                          condition="thumbnail">
                 <img tal:attributes="src thumbnail/url;
                                      class string:gallery-image ${view/get_image_position};
@@ -44,7 +44,7 @@
             <tal:items repeat="obj view/results">
               <div class="swiper-slide">
                 <tal:image define="scales obj/@@images;
-                                   thumbnail python:scales.scale('image', scale='mini')"
+                                   thumbnail python:scales.scale('image', scale='mini', direction='down')"
                            condition="thumbnail">
                   <img tal:attributes="src thumbnail/url|string:${item/absolute_url}/download;
                                        width thumbnail/width;

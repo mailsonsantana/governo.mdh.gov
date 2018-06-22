@@ -25,14 +25,15 @@
                     <a class="imag"
                        tal:attributes="href python:view.get_url(obj);
                                        data-url python:view.get_url(obj)">
-                        <tal:image define="thumbnail python:view.thumbnail(obj);">
-                          <img  tal:condition="thumbnail"
-                                tal:attributes="src thumbnail/url;
-                                                width thumbnail/width;
+                        <tal:image define="scales obj/@@images;
+                                   thumbnail python:scales.scale('image', scale='composicao_foto_view', direction='down')"
+                                   condition="thumbnail">
+                          <img tal:attributes="src thumbnail/url|string:${item/absolute_url}/download;
+                                               width thumbnail/width;
                                                 height thumbnail/height;
                                                 alt python:view.get_alt(obj);
                                                 title python:view.get_alt(obj);
-                                                data-url python:view.get_url(obj)">
+                                                data-url python:view.get_url(obj)" />
                         </tal:image>
                     </a>           
                     <h4>

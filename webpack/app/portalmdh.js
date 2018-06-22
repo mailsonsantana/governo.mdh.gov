@@ -68,7 +68,7 @@ $(() => {
     //   new SocialLike(tile);
     // }
     var path = window.location.pathname
-    if (path == '/' || path == '/mdh'){
+    if (path == '/' || path == '/mdh' || path == '/mdh/'){
       $('#portal-breadcrumbs').hide()
     }
 
