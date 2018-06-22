@@ -94,6 +94,14 @@ $(document).ready(function(){
     }
   });
 
+  $(".ico-navegacao-white").click(function(){
+    $(".navigation-wrapper").toggleClass("ativo");
+    $(".ico-navegacao-white").toggleClass("ico-close");
+    if ($(".inverter-white").length > 0){
+      $(".ico-navegacao-white").removeClass("ico-navegacao-white").addClass('ico-close-white');
+    }
+  });
+
   $(".ico-busca").click(function(){
     $("#main-header").toggleClass("busca-ativa");
     $("#portal-searchbox").toggleClass("ativo");
