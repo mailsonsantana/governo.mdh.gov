@@ -1,0 +1,20 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup">
+
+  <genericsetup:registerProfile
+      name="default"
+      title="governo.mdh.portal (v10000)"
+      directory="profile"
+      description='Configuration for version 10000'
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:upgradeSteps
+      source="10000"
+      destination="10000"
+      profile="governo.mdh.portal:default">
+
+  </genericsetup:upgradeSteps>
+
+</configure>

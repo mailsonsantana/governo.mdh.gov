@@ -37,18 +37,13 @@
 
   <include file="themes.zcml" />
 
+  <!-- Profiles de Generic Setup -->
+  <include file='profiles.zcml' />
+
   <include package=".browser" />
   <include package=".tiles" />
 
-  <genericsetup:registerProfile
-      name="default"
-      title="Portal do Ministério dos Direitos Humanos"
-      directory="profiles/default"
-      description=""
-      provides="Products.GenericSetup.interfaces.EXTENSION"
-      post_handler=".setuphandlers.post_install"
-      i18n:attributes="title; description"
-      />
+
 
   <utility factory=".setuphandlers.NonInstallable" name="governo.mdh.portal" />
 

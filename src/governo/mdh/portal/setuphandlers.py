@@ -158,7 +158,6 @@ def post_install(context):
     """Post install script."""
     add_catalog_indexes()
     add_content_central_menu()
-    #add_content_portalmdh(context)
     update_menu()
 
 

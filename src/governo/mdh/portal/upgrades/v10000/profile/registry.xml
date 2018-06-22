@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<registry xmlns:i18n="http://xml.zope.org/namespaces/i18n">
+  <record name="plone.app.tiles">
+    <value purge="false">
+      <element>brasil.gallery</element>
+      <element>brasil.carousel</element>
+      <element>brasil.navigation</element>
+      <element>brasileficiente.highlights</element>
+      <element>brasil.photoday</element>
+      <element>brasil.photogallery</element>
+      <element>brasil.search</element>
+      <element>brasil.theme</element>
+      <element>brasil.documentfinder</element>
+      <element>brasil.quote</element>
+      <element>brasil.services</element>
+      <element>brasil.timeline</element>
+      <element>brasil.composicao</element>
+      <element>brasil.carouselvideos</element>
+      <element>tile.galleryswipervideos</element>
+    </value>
+  </record>
+  <record name="collective.cover.controlpanel.ICoverSettings.available_tiles">
+    <value purge="false">
+      <element>brasil.gallery</element>
+      <element>brasil.carousel</element>
+      <element>brasil.navigation</element>
+      <element>brasileficiente.highlights</element>
+      <element>brasil.photoday</element>
+      <element>brasil.photogallery</element>
+      <element>brasil.search</element>
+      <element>brasil.theme</element>
+      <element>brasil.documentfinder</element>
+      <element>brasil.quote</element>
+      <element>brasil.services</element>
+      <element>brasil.timeline</element>
+      <element>brasil.composicao</element>
+      <element>brasil.carouselvideos</element>
+      <element>tile.galleryswipervideos</element>
+    </value>
+  </record>
+  <!-- estilos do collective.cover -->
+  <record name="collective.cover.controlpanel.ICoverSettings.styles" interface="collective.cover.controlpanel.ICoverSettings" field="styles">
+    <value>
+      <element>Box Branco|box-branco</element>
+      <element>Box Cinza|box-cinza</element>
+      <element>Box Cinza sem Redes Sociais|box-cinza-sem-redes-sociais</element>
+      <element>Box Cinza Noticias|box-cinza-noticias</element>
+      <element>Box Colorido|box-colorido</element>
+      <element>Bloco Contato|bloco-contato</element>
+      <element>FAQ|tile-faq</element>
+      <element>Foto Sobreposta|foto-sobreposta</element>
+      <element>Foto Sobreposta fonte branca|foto-sobreposta-fonte-branca</element>
+      <element>Linha destacada|linha-destacada</element>
+      <element>Linha destaque topo|linha-destaquetopo</element>
+      <element>Linha discreta|linha-discreta</element>
+      <element>Linha diferenciada|linha-diferenciada</element>
+      <element>Linha altura fixa|linha-altura-fixa</element>
+      <element>Linha recuada|linha-recuada</element>
+      <element>Lista Blocos|lista-blocos</element>
+      <element>Lista Blocos Laranja|lista-blocos-laranja</element>
+    </value>
+  </record>
+
+  <record name="collective.cover.controlpanel.ICoverSettings.grid_system">
+    <value>bootstrap3</value>
+  </record>
+
+  <record name="sc.social.like.interfaces.ISocialLikeSettings.typebutton">
+    <value>vertical</value>
+  </record>
+
+  <records interface="governo.mdh.portal.browser.controlpanel.IMdhSettings" />
+
+</registry>
