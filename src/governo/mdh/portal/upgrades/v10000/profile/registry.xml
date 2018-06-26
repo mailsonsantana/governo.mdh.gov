@@ -54,6 +54,7 @@
       <element>Linha destaque topo|linha-destaquetopo</element>
       <element>Linha discreta|linha-discreta</element>
       <element>Linha diferenciada|linha-diferenciada</element>
+      <element>Linha separadora|linha-separadora</element>
       <element>Linha altura fixa|linha-altura-fixa</element>
       <element>Linha recuada|linha-recuada</element>
       <element>Lista Blocos|lista-blocos</element>
