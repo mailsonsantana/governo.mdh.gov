@@ -142,6 +142,15 @@
       layer="governo.mdh.portal.interfaces.IBrowserLayer"
       />
 
+  <browser:page
+      name="broken-files"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".broken_files.BrokenFilesView"
+      permission="zope2.View"
+      template="brokenfiles.pt"
+      layer="governo.mdh.portal.interfaces.IBrowserLayer"
+      />
+
   <browser:viewlet
       name="sc.social.likes"
       manager="plone.app.layout.viewlets.interfaces.IAboveContentBody"

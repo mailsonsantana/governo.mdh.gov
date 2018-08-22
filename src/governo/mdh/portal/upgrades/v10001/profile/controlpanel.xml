@@ -3,14 +3,15 @@
     xmlns:i18n="http://xml.zope.org/namespaces/i18n"
     i18n:domain="governo.mdh.portal"
     purge="False">
-  <configlet title="Portal Ministerio dos Direitos Humanos"
-      action_id="mdh"
+  <configlet title="Arquivos Corrompidos"
+      action_id="broken"
       appId="governo.mdh.portal"
       category="Products"
       condition_expr=""
-      url_expr="string:${portal_url}/@@mdh-settings"
-      icon_expr="string:${portal_url}/++resource++portalmdh/img/planalto-icon.png"
+      url_expr="string:${portal_url}/@@broken-files"
+      icon_expr="string:${portal_url}/++resource++portalmdh/img/file_broken.png"
       visible="True"
       i18n:attributes="title">
     <permission>governo.mdh.portal: Setup</permission>
+  </configlet>
 </object>
