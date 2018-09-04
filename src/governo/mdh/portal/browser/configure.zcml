@@ -65,21 +65,21 @@
       template="composition_viewlet.pt"
       /> -->
 
-  <browser:menuItem
+  <!--browser:menuItem
       for="plone.app.contenttypes.interfaces.ICollection"
       menu="plone_displayviews"
       title="Filtro de resultados"
       action="filter-results"
       description="Aplica uma query customizada aos resultados da coleção."
-      />
+      /-->
 
-  <browser:menuItem
+  <!--browser:menuItem
       for="plone.app.contenttypes.interfaces.ICollection"
       menu="plone_displayviews"
       title="Busca Biblioteca"
       action="search-library"
       description="Aplica uma query customizada aos resultados da coleção."
-      />
+      /-->
 
   <browser:menuItem
       for="plone.app.contenttypes.interfaces.ICollection"
