@@ -30,13 +30,13 @@
       template="timeline.pt"
       />
 
-  <browser:menuItem
+  <!--browser:menuItem
       for="plone.app.contenttypes.interfaces.IFolder"
       menu="plone_displayviews"
       title="Centrais de conteúdo"
       action="centrais-de-conteudo"
       description="Mostra um formulário de busca de conteúdo."
-      />
+      /-->
 
   <browser:page
       name="centrais-de-conteudo"
