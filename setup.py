@@ -39,6 +39,7 @@ setup(
     install_requires=[
         'brasil.gov.portal',
         'collective.texttospeech',
+        'cssselect',
         'ftw.upgrade',
         'plone.app.imagecropping',
         'plone.app.theming',

@@ -12,5 +12,6 @@
       icon_expr="string:${portal_url}/++resource++portalmdh/img/planalto-icon.png"
       visible="True"
       i18n:attributes="title">
-    <permission>governo.mdh.portal: Setup</permission>
+      <permission>governo.mdh.portal: Setup</permission>
+ </configlet>
 </object>
