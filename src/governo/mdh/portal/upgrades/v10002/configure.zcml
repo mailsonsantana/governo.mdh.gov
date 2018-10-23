@@ -1,0 +1,27 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup">
+
+  <genericsetup:upgradeSteps
+        source="10001"
+        destination="10002"
+        profile="governo.mdh.portal:default">
+
+    <genericsetup:upgradeStep
+        title="Remove static resources from registries"
+        handler=".deprecate_resource_registries"
+        />
+
+    <genericsetup:upgradeStep
+        title="Cook CSS resources"
+        handler="..cook_css_resources"
+        />
+
+    <genericsetup:upgradeStep
+        title="Cook JS resources"
+        handler="..cook_javascript_resources"
+        />
+
+  </genericsetup:upgradeSteps>
+
+</configure>

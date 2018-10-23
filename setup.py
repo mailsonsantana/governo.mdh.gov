@@ -2,7 +2,7 @@
 from setuptools import find_packages
 from setuptools import setup
 
-version = '1.0'
+version = '2.0'
 description = 'Portal Ministério dos Direitos Humanos'
 long_description = (
     open('README.rst').read() + '\n' +
@@ -38,6 +38,7 @@ setup(
     zip_safe=False,
     install_requires=[
         'brasil.gov.portal',
+        'brasil.gov.timeline',
         'collective.texttospeech',
         'cssselect',
         'ftw.upgrade',
