@@ -9,9 +9,8 @@ export default class SocialLike {
       if (this.$('.likes').lenght > 0) {
         continue;
       }
-      if (link.className !== 'imag'){
         this.$tile.append(this.template(link.href, link.innerText.trim()));
-      }
+      
     }
     this.$('.likes-more').on('click', this.moreClick.bind(this));
   }

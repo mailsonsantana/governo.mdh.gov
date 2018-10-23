@@ -2,6 +2,9 @@
 #content .cover-richtext-tile,
 #relatedItemBox .contenttype-collective-nitf-content,
 #content .nitf-basic-tile {
+  ul {
+    display: none;
+  }
   .likes {
     position: relative;
     right: 0;
