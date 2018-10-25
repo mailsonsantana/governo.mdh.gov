@@ -1,7 +1,7 @@
 {
-  "name": "portalmdh",
+  "name": "governomdhportal",
   "version": "2.0.0",
-  "main": "app/portalmdh.js",
+  "main": "app/governomdhportal.js",
   "scripts": {
     "build": "./node_modules/.bin/webpack -p",
     "debug": "NODE_ENV=debug ./node_modules/.bin/webpack --watch",
@@ -25,6 +25,8 @@
   "repository": {},
   "license": "GPL-2.0",
   "dependencies": {
+    "babel-loader": "^7.1.5",
+    "jquery.cookie": "^1.4.1",
     "clipboard": "^2.0.1",
     "sc-recipe-staticresources": "simplesconsultoria/sc.recipe.staticresources#1.1b5",
     "swiper": "^4.3.5"

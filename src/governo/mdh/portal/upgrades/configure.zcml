@@ -2,4 +2,5 @@
   <include package=".v10000" />
   <include package=".v10001" />
   <include package=".v10002" />
+  <include package=".v10003" />
 </configure>
