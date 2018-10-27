@@ -10,7 +10,7 @@
 
   <browser:jbot directory="overrides" />
 
-  <browser:resourceDirectory name="portalmdh" directory="static" />
+  <browser:resourceDirectory name="governo.mdh.portal" directory="static" />
 
   <browser:page
       class="governo.mdh.portal.browser.ministry.View"
@@ -30,20 +30,13 @@
       template="timeline.pt"
       />
 
-  <!--browser:menuItem
-      for="plone.app.contenttypes.interfaces.IFolder"
-      menu="plone_displayviews"
-      title="Centrais de conteúdo"
-      action="centrais-de-conteudo"
-      description="Mostra um formulário de busca de conteúdo."
-      /-->
-
-  <browser:page
-      name="centrais-de-conteudo"
-      for="plone.app.contenttypes.interfaces.IFolder"
-      class=".contentcentral.ContentCentralView"
-      permission="zope2.View"
-      template="contentcentral.pt"
+  <browser:viewlet
+      name="governo.mdh.portal.resources"
+      for="plone.app.contenttypes.interfaces.ICollection"
+      manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
+      class=".ResourcesViewlet"
+      template="static/resources.pt"
+      permission="zope2.Public"
       layer="governo.mdh.portal.interfaces.IBrowserLayer"
       />
 
@@ -55,38 +48,20 @@
       permission="zope.Public"
       />
 
-  <!-- <browser:viewlet
-      class=".viewlets.CompositionViewlet"
-      for="governo.mdh.portal.interfaces.IMinistry"
-      layer="governo.mdh.portal.interfaces.IBrowserLayer"
-      manager="plone.app.layout.viewlets.interfaces.IBelowContent"
-      name="mdh.compostion"
-      permission="zope2.View"
-      template="composition_viewlet.pt"
-      /> -->
-
-  <!--browser:menuItem
-      for="plone.app.contenttypes.interfaces.ICollection"
-      menu="plone_displayviews"
-      title="Filtro de resultados"
-      action="filter-results"
-      description="Aplica uma query customizada aos resultados da coleção."
-      /-->
-
-  <!--browser:menuItem
-      for="plone.app.contenttypes.interfaces.ICollection"
-      menu="plone_displayviews"
-      title="Busca Biblioteca"
-      action="search-library"
-      description="Aplica uma query customizada aos resultados da coleção."
-      /-->
-
   <browser:menuItem
       for="plone.app.contenttypes.interfaces.ICollection"
       menu="plone_displayviews"
       title="Últimas notícias"
       action="latest-news"
-      description="Aplica uma query customizada aos resultados da coleção."
+      description="Apresenta as últimas notícias por ordem de criação"
+      />
+
+  <browser:menuItem
+      for="plone.app.contenttypes.interfaces.ICollection"
+      menu="plone_displayviews"
+      title="Biblioteca de Arquivos"
+      action="search-library"
+      description="Apresenta os últimos arquivos por data de criação"
       />
 
   <browser:page
@@ -110,9 +85,9 @@
   <browser:page
       name="latest-news"
       for="plone.app.contenttypes.interfaces.ICollection"
-      class=".news.NewsView"
+      class=".latest_news.LatestNewsView"
       permission="zope2.View"
-      template="news.pt"
+      template="latest_news.pt"
       layer="governo.mdh.portal.interfaces.IBrowserLayer"
       />
       

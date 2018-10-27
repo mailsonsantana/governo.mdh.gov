@@ -33,3 +33,4 @@ var/
 py27/
 src/governo/mdh/portal/browser/static/*
 src/governo/mdh/portal/themes/*
+webpack/node_modules

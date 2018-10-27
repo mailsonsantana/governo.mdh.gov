@@ -1,19 +1,5 @@
 @import 'scss/sprite';
 
-@import 'scss/contentcentral';
-@import 'scss/ministerios';
-@import 'scss/sociallike';
-@import 'scss/accessibility';
-
-@import 'scss/tiles/carousel';
-@import 'scss/tiles/carouselvideos';
-@import 'scss/tiles/gallery';
-@import 'scss/tiles/highlights';
-@import 'scss/tiles/navigation';
-@import 'scss/tiles/photoday';
-@import 'scss/tiles/photogallery';
-@import 'scss/tiles/theme';
-@import 'scss/tiles/timeline';
-@import 'scss/tiles/composicao';
-
-@import 'scss/basicfixes';
+/* Pages */
+@import 'scss/pages/library';
+@import 'scss/pages/latest_news';

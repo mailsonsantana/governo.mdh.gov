@@ -9,18 +9,17 @@ from plone.app.search.browser import quote_chars
 from Products.CMFPlone.PloneBatch import Batch
 from Products.Five.browser import BrowserView
 from zope.component import getUtility
-from zope.schema.interfaces import IVocabularyFactory
-
 
 
 MEDIA = [
-    'File',
+    'News Item',
+    'collective.nitf.content'
 ]
 
 EVER = DateTime(0).Date()
 
 
-class SearchLibraryView(BrowserView):
+class LatestNewsView(BrowserView):
     """View for media types with filter."""
 
     def __call__(self):
@@ -111,11 +110,6 @@ class SearchLibraryView(BrowserView):
         except (AttributeError, IndexError, TypeError):
             # select EVER if value is not what we expect
             return EVER
-
-    def get_document_types(self):
-        name = 'governo.mdh.portal.DocumentTypes'
-        vocabulary = getUtility(IVocabularyFactory, name)
-        return vocabulary(None)
 
     def get_all_subjects(self):
         subjects = subjects_under_context()
