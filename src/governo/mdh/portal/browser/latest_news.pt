@@ -24,7 +24,7 @@
                  name="SearchableText"
                  type="text"
                  size="25"
-                 placeholder="Buscar em centrais de conteúdo"
+                 placeholder="Buscar em últimas notícias"
                  title="Search Site"
                  i18n:attributes="title title_search_title;"
                  tal:attributes="value st;"

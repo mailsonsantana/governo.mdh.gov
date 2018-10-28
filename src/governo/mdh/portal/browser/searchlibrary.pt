@@ -24,7 +24,7 @@
                  name="SearchableText"
                  type="text"
                  size="25"
-                 placeholder="Buscar em centrais de conteúdo"
+                 placeholder="Buscar em biblioteca"
                  title="Search Site"
                  i18n:attributes="title title_search_title;"
                  tal:attributes="value st;"
@@ -52,7 +52,7 @@
                   <dd class="actionMenuContent closed">
                     <div id="filters">
                       <fieldset class="noborder">
-                        <legend i18n:translate="">Content types</legend>
+                        <legend i18n:translate="">Por Tipo de Conteúdo</legend>
 
                         <div class="field"
                              tal:define="media view/media;">

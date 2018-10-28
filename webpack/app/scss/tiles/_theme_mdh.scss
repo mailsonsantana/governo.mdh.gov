@@ -1,0 +1,118 @@
+/* Scss for Theme */
+.template-compose.portaltype-collective-cover-content {
+    #portal-title,
+    #portal-description,
+    .link-contraste,
+    .link-vlibras,
+    #portal-services li a,
+    #portal-breadcrumbs span {
+        color: #000 !important;
+    }
+    .header-accessibility .link-contraste:before {
+        @include sprite($contraste);
+      }
+    .header-accessibility .link-vlibras:before {
+        @include sprite($vlibras); 
+      }
+    .ico-navegacao{
+        @include sprite($nav-escuro);
+    }
+
+}
+
+.brasil-theme-tile {
+    #content-core h1 {
+        text-align: center;
+    }
+    .image-right {
+        margin-right: 10vw;
+    }
+    .image-left {
+        margin-left: 10vw;
+    }
+    .image-inline {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        dd {
+            max-width: 100%;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    .linha-destaquetopo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #d8d8d8;
+    }
+    #parent-fieldname-theme_top_image img {
+        width: 100%;
+        object-fit: cover;
+        position: absolute!important;
+        top: -265px;
+        left: 0;
+        z-index: -2;
+    }
+    #parent-fieldname-theme_top_image:before {
+        background-color: transparent;
+        content: " ";
+        white-space: nowrap;
+        display: block;
+        height: 210px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        opacity: .8;
+        z-index: -1;
+        text-indent: -3000px;
+    }
+}
+
+/* Inverter theme for top white */
+    header.inverter-white {
+        background-color: transparent !important;
+        margin-bottom: 0 !important;
+        .link-contraste:before {
+            @include sprite($contraste);
+        }
+        #portal-searchbox .searchButton {
+            @include sprite($busca-escuro);
+            background-color: transparent;
+        }
+        .link-vlibras:before {
+            @include sprite($vlibras);
+        }
+        .ico-navegacao {
+            @include sprite($nav);
+        }
+    }
+
+    .inverter-white #portal-title, .inverter-white #portal-description {
+        color: #fff !important;
+    }
+
+    .links-destaque.inverter-white a{
+        color: #fff !important;
+    }
+
+    a.link-contraste.inverter-white, a.link-vlibras.inverter-white{
+    color:#fff !important;
+
+ }
+
+#portal-breadcrumbs.inverter-white {
+    border-bottom: 1px solid hsla(0,0%,100%,.2);
+    color: #fff;
+    margin-bottom: 0;
+    a, .breadcrumbSeparator {
+        color: #fff !important;
+    }
+    #breadcrumbs-home a:before {
+         filter:invert(100%);
+    }
+}

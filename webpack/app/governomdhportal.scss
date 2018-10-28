@@ -3,3 +3,18 @@
 /* Pages */
 @import 'scss/pages/library';
 @import 'scss/pages/latest_news';
+
+/* Tiles */
+@import 'scss/tiles/tiles';
+@import 'scss/tiles/carousel_mdh';
+@import 'scss/tiles/theme_mdh';
+@import 'scss/tiles/navigation_mdh';
+@import 'scss/tiles/composicao_mdh';
+@import 'scss/tiles/carousel_videos_mdh';
+
+
+/* General */
+#content .tile-content a.outstanding-link:hover{
+	background:#ff6d26 !important;
+	border-color:#ff6d26 !important;
+}

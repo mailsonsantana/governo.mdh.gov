@@ -1,0 +1,376 @@
+/* Styles tiles for MDH */
+
+/* tile de foto sobreposta */
+.tile.foto-sobreposta {
+    position: relative;
+    height: 270px !important;
+    display: flex;
+
+    .tile-content {
+        align-self: flex-end;
+    }
+    div:before{
+    	background-image:none !important;
+    }
+    img {
+        object-fit: cover;
+        height: 270px;
+        width:270px;
+        position: absolute;
+        top: 0;
+        z-index: -2;
+    }
+    h1,
+    h2,
+    h3 {
+        padding: 0 50px 20px 20px;
+        margin: 0 !important;
+    }
+    h2 {
+        font-size: 1.75rem;
+        line-height: 2.188rem;
+    }
+    h2 .internal-link, h1 a, h3 a,
+    h2 a:hover, h1 a:hover, h3 a:hover {
+        color: #000 !important;
+    }
+
+    .tile-section {
+        color: #0094ff;
+        left: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 0 100px 10px 20px;
+    }
+    .tile-description,.tile-subtitle,.tile-section{
+        padding-left:20px;
+    }
+    .likes {
+        float:right;
+        position:absolute !important;
+        filter: invert(100%);
+    }
+}
+#content .tile.foto-sobreposta p {
+    color: #fff;
+    line-height: 1.563rem !important;
+}
+
+/* tile de foto sobreposta */
+#content .col-md-6 .tile.foto-sobreposta {
+    position: relative;
+    height: 560px;
+    display: flex;
+
+    .tile-content {
+        align-self: flex-end;
+    }
+    img {
+        object-fit: cover;
+        height: 560px;
+        width:100%;
+        position: absolute;
+        top: 0;
+        z-index: -2;
+    }
+    h1,
+    h2,
+    h3 {
+        padding: 0 100px 20px 20px;
+        margin: 0 !important;
+
+    }
+    h2 {
+        font-size: 1.75rem;
+        line-height: 2.188rem;
+    }
+    h1 a:link, h2 a:link, h3 a:link,
+    h1 a:visited, h2 a:visited, h3 a:visited,
+    h1 a:hover, h2 a:hover, h3 a:hover {
+        color: #fff !important;
+    }
+
+    .tile-section {
+        color: #0094ff;
+        left: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 0 100px 10px 20px;
+    }
+}
+#content .tile.foto-sobreposta p {
+    color: #fff;
+    line-height: 1.563rem !important;
+}
+
+/* tile de foto sobreposta fonte branca */
+#content .foto-sobreposta-fonte-branca {
+   .tile-content h2 a:hover, h1 a:hover, h3 a:hover {
+        color: #FFF !important;
+    } 
+}
+.tile.foto-sobreposta-fonte-branca {
+    position: relative;
+    height: 270px;
+    display: flex;
+
+    .tile-content {
+        align-self: flex-end;
+    }
+    img {
+        object-fit: cover;
+        height: 270px;
+        width:270px;
+        position: absolute;
+        top: 0;
+        z-index: -2;
+    }
+    h1,
+    h2,
+    h3 {
+        padding: 0 55px 20px 20px;
+        margin: 0 !important;
+        color: #FFF !important;
+
+    }
+    h2 {
+        font-size: 1.75rem;
+        line-height: 2.188rem;
+    }
+    h2 a, h1 a, h3 a,
+    h2 a:hover, h1 a:hover, h3 a:hover {
+        color: #FFF !important;
+    }
+
+    .tile-section {
+        color: #0094ff;
+        left: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: 0 50px 10px 20px;
+    }
+}
+#content .tile.foto-sobreposta p {
+    color: #fff;
+    line-height: 1.563rem !important;
+}
+
+
+/* tile de foto sobreposta grande */
+.tile.foto-sobreposta-grande {
+    position: relative;
+    height: 560px;
+    display: flex;
+
+    .tile-content {
+        align-self: flex-end;
+        padding-bottom: 90px;
+    }
+    img {
+        object-fit: cover;
+        height: 560px !important;
+        position: absolute;
+        top: 0;
+        z-index: -2;
+    }
+    h1,
+    h2,
+    h3,
+    p {
+        margin: 20px 20px 20px 33px !important;
+        width: 60%;
+        color: #fff !important;
+    }
+    h2 {
+        font-size: 1.75rem;
+        line-height: 2.188rem;
+    }
+
+    p a {
+        color: #fff !important;
+        background: transparent;
+        border-radius: 30px;
+        display: inline-block;
+        padding: 11px 29px;
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        border: 2px solid #fff !important;
+    }
+}
+
+/*linha discreta */
+.portaltype-collective-cover-content div.row.linha-discreta {
+    width: 100%!important;
+    justify-content: center;
+    background: #F9F9F9;
+    padding: 0 0 10px 0;
+    margin: 0;
+    z-index: 1;
+
+    .box-branco {
+        background: #fff;
+        h1, h2, h3, {
+            color: #244a7c;
+            }
+        }
+
+    .tile {
+        box-sizing:border-box;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        h1, h2, h3 {
+            color: #000;
+        }
+    }
+    .collection-item {
+        background: #fff;
+    }
+
+    .col-md-3 {flex-basis: 285px;}
+    .col-md-4 {flex-basis: 335px;}
+    .col-md-5 {flex-basis: 475px;}
+    .col-md-6 {flex-basis: 570px;}
+    .col-md-12 {flex-basis: 1110px;}
+    .col-md-16 {flex-basis: 1110px;}
+}
+
+/* tile linha-altura-fixa */
+
+.linha-altura-fixa {
+    height:440px !important;
+}
+
+/* tile box cinza */
+.tile.box-cinza, .tile.box-cinza-sem-redes-sociais {
+        background: #f6f6f6;
+        h1, h2, {
+            color: #000;
+        }
+        h3 {
+            color: #ff6d26;
+            font-size: 3.75rem;
+            line-height: 3.063rem;
+            letter-spacing: -0.0625rem;
+        }
+        img {
+            margin-top:10px;
+        }
+        a {
+            color: #000 !important;
+            background: #f8f8f8;
+            border-radius: 30px;
+            display: inline-block;
+            padding: 0px 30px;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            border: solid 2px #000;
+            border-bottom: solid 2px #000 !important;
+        }
+
+        a:hover {
+            color: #ff6d26 !important;
+        }
+
+    }
+/* tile box cinza noticias */
+.tile.box-cinza-noticias {
+        background: #f6f6f6;
+        width:270px;
+        height:auto;
+
+        h2{
+            padding: 40px 30px 30px 30px;
+            a{
+              font-size: 22px;
+              font-weight: bold;
+              font-style: normal;
+              font-stretch: normal;
+              line-height: 1.32;
+              letter-spacing: normal;
+              text-align: left;
+              color: #333333;
+            }
+        }
+        .likes {
+            float:right;
+        }
+
+}        
+/* bloco contato */
+
+.tile.bloco-contato{
+    display: inline-block !important;
+    h2 {
+        font-size: 22px;
+        font-weight: 800;
+        font-style: normal;
+        font-stretch: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #333333;
+    }
+    p {
+        font-size: 22px !important;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        margin: 0 !important;
+        letter-spacing: normal;
+        text-align: left;
+        color: #333333;
+    }   
+}
+
+/* box colorido */
+.tile.box-colorido {
+    display: flex;
+    >div {
+        background: #37120d;
+        padding: 20px 40px;
+        color: #fff !important;
+        font-size: 1.3rem;
+        line-height: 120%;
+        align-self: inherit !important;
+        align-self: flex-end;
+    }
+    a {
+        color: #fff !important;
+        background: #37120d;
+        border-radius: 30px;
+        display: inline-block;
+        padding: 0px 30px;
+        font-size: 0.875rem;
+        text-transform: uppercase;
+        font-weight: bold;
+        border: solid 2px #ffffff;
+        border-bottom: solid 2px #fff !important;
+    }
+    a:hover {
+        color: #fff !important;
+    }
+    h1 {
+        color: #ff6d26;
+        font-size: 3.75rem;
+        line-height: 3.063rem;
+        letter-spacing: -0.0625rem;
+    }
+    h2{
+        color: #fff;
+        font-family: Raleway;
+        font-size: 24px;
+        font-weight: 800;
+    }
+    h3 {
+        color: #ff6d26;
+        font-size: 3.75rem;
+        line-height: 1.063rem;
+        letter-spacing: -0.0625rem;
+    }
+    p {    
+        font-size: 120%;
+        margin-top: 10px;
+    }
+}
