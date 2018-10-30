@@ -8,14 +8,12 @@ JS = [
     '++resource++contraste.js',
     '++resource++brasil.gov.portal/js/main.js',
     '++resource++brasil.gov.tiles/brasilgovtiles.js',
-    '++resource++brasil.gov.timeline/swiper.min.js',
-    '++resource++brasil.gov.tiles/vendor/swiper.min.js'
+    '++resource++brasil.gov.timeline/swiper.min.js'
 ]
 CSS = [
     '++resource++calendar_styles/calendar.css',
     '++resource++brasil.gov.agenda/brasilgovagenda.css',
     '++resource++brasil.gov.tiles/brasilgovtiles.css',
-    '++resource++brasil.gov.tiles/vendor/swiper.min.css'
 ]
 
 def deprecate_resource_registries(setup_tool):

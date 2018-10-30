@@ -18,3 +18,16 @@
 	background:#ff6d26 !important;
 	border-color:#ff6d26 !important;
 }
+
+.portaltype-collective-cover-content.template-view 
+	div.row.linha-destaquetopo {
+		img {top: -265px !important;}
+}
+
+.portaltype-collective-cover-content 
+div.row.linha-discreta .tile h1,
+.portaltype-collective-cover-content 
+div.row.linha-discreta .tile h2,
+.portaltype-collective-cover-content div.row.linha-discreta .tile h3{
+	color: #333 !important;
+}

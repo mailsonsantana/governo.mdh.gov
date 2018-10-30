@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <metadata>
-  <version>10003</version>
+  <version>10005</version>
   <dependencies>
     <dependency>profile-brasil.gov.portal:default</dependency>
     <dependency>profile-collective.texttospeech:default</dependency>

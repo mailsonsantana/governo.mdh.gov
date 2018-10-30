@@ -3,4 +3,6 @@
   <include package=".v10001" />
   <include package=".v10002" />
   <include package=".v10003" />
+  <include package=".v10004" />
+  <include package=".v10005" />
 </configure>
