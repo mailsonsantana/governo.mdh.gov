@@ -116,7 +116,7 @@
                 <span tal:content="python:'Encontrado(s) '+str(len(batch))+' resultado(s) por'"> </span>
                 <b><span tal:content="python:'arquivos de ' + view.documents_select()"></span></b>
               </div>
-
+              <br />
               <metal:searchresults define-macro="search_results">
                 <div id="results"
                      tal:define="navigation_root_url context/@@plone_portal_state/navigation_root_url;">
@@ -131,53 +131,60 @@
                                              site_properties context/portal_properties/site_properties;
                                              use_view_action site_properties/typesUseViewActionInListings|python:();
                                              allowAnonymousViewAbout site_properties/allowAnonymousViewAbout;
-                                             show_about python:not isAnon or allowAnonymousViewAbout;">
-                    <ul class="">
+                                             show_about python: not isAnon or allowAnonymousViewAbout;">
+                    <div class="">
                       <tal:results repeat="item batch">
-                        <li class=""
+                        <article class=""
                             tal:define="obj item/getObject;
-                                        thumbnail obj/@@images/image/preview|nothing;
+                                        thumbnail obj/@@images/image/thumb|nothing;
                                         noimage python: 'no-image' if thumbnail is None else ''"
                             tal:attributes="class string: ${item/ContentTypeClass} ${noimage}">
-                          <h3>
-                            <a href="#"
-                               tal:attributes="href item/getURL;
-                                               class string:state-${item/review_state}"
-                               tal:content="python: item.Title() or item.id" />
-                            <img tal:replace="structure thumbnail">
-                          </h3>
-                          <div tal:content="item/CroppedDescription">
-                            Cropped description
-                          </div>
-                          <span class="discreet" i18n:domain="plone"
-                            tal:condition="show_about"
-                            tal:define="portal_settings context/@@portal_settings;
-                                        mostra_data not:portal_settings/get_esconde_data;
-                                        mostra_autor not:portal_settings/get_esconde_autor;">
-
+                          <div class="tileContent">
+                            <div class="tileImage">
+                              <img tal:replace="structure thumbnail">
+                            </div>
+                            <span tal:content="item/subtitle" class="subtitle">
+                              Subtitle
+                            </span>
+                            <h2 class="tileHeadline">
+                              <a href="#"
+                                 tal:attributes="href item/getURL;
+                                                 class string:state-${item/review_state}"
+                                 tal:content="python: item.Title() or item.id" />
+                            </h2>
+                            <p tal:content="item/CroppedDescription" class="description">
+                              Cropped description
+                            </p>
+                            <div i18n:domain="plone"
+                              tal:condition="show_about"
+                              tal:define="portal_settings context/@@portal_settings;
+                                          mostra_data not: portal_settings/get_esconde_data;
+                                          mostra_autor not: portal_settings/get_esconde_autor;">
                             <span class="documentAuthor">
                                 <span class="block-date" tal:content="python: item.created.strftime('%d/%m/%Y')"> 15/04/1988</span>
                             </span>
-                            <span tal:define="categories item/Subject|nothing;
-                                              std modules/Products.PythonScripts.standard;
-                                              url_quote nocall: std/url_quote;"
-                                  tal:condition="categories">
-                              <tal:filedunder i18n:translate="">filed under:</tal:filedunder>
-                              <span tal:repeat="category categories">
-                                <a href=""
-                                   class="link-category"
-                                   rel="tag"
-                                   tal:content="category"
-                                   tal:define="category_quote python:url_quote(category)"
-                                   tal:attributes="href string:$navigation_root_url/@@busca?Subject%3Alist=${category_quote}">
-                                  Category
-                                </a><tal:separator condition="not: repeat/category/end">,</tal:separator>
-                              </span>
-                            </span>
-                          </span>
-                        </li>
+
+                              <div tal:define="categories item/Subject|nothing;
+                                                std modules/Products.PythonScripts.standard;
+                                                url_quote nocall: std/url_quote;"
+                                    tal:condition="categories"
+                                    class="keywords">
+                                <span tal:repeat="category categories">
+                                  <a href=""
+                                     class="link-category"
+                                     rel="tag"
+                                     tal:content="category"
+                                     tal:define="category_quote python: url_quote(category)"
+                                     tal:attributes="href string:$navigation_root_url/@@busca?Subject%3Alist=${category_quote}">
+                                    Category
+                                  </a>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+                        </article>
                       </tal:results>
-                    </ul>
+                    </div>
                     <div metal:use-macro="context/batch_macros/macros/navigation" />
                   </metal:results>
                 </div>

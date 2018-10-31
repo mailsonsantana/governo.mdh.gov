@@ -12,14 +12,11 @@
     div:before{
     	background-image:none !important;
     }
-    img {
-        object-fit: cover;
-        height: 270px;
-        width:270px;
-        position: absolute;
-        top: 0;
-        z-index: -2;
-    }
+
+    .cover-richtext-tile img {
+        height: 270px !important;
+        width:270px !important;
+        }
     h1,
     h2,
     h3 {
@@ -328,13 +325,19 @@
 .tile.box-colorido {
     display: flex;
     >div {
-        background: #37120d;
+        background: #37120d !important;
         padding: 20px 40px;
         color: #fff !important;
         font-size: 1.3rem;
         line-height: 120%;
         align-self: inherit !important;
         align-self: flex-end;
+    }
+    
+    p {
+        a {
+            color: #000 !important; 
+        }
     }
     a {
         color: #fff !important;
@@ -372,5 +375,9 @@
     p {    
         font-size: 120%;
         margin-top: 10px;
+    }
+
+    .share {
+        display: none !important;
     }
 }
